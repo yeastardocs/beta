@@ -1,0 +1,35 @@
+/*功能列表样式*/
+.md-typeset table:not([class]) td {
+  border: none !important;
+}
+.md-typeset table:not([class]) {
+  border: none !important;
+}
+.fl-table-title {
+  border-bottom: 1px solid #c2c8cc !important;
+  padding: 0;
+  font-size: 16px
+}
+.fl-icon-td{
+  font-size: 14px;
+  text-align: center;
+  border-bottom: 1px solid #eeeeee !important; 
+}
+.fl-icon-td-bottom{
+  font-size: 14px;
+  text-align: center;
+}
+.fl-td-gray{
+  border-bottom: 1px solid #c2c8cc !important;
+  background: #f8f9fa !important;
+  padding: 15px 0px 0px 15px;
+}
+.fl-td-none{
+  border-bottom: 1px solid #c2c8cc !important;
+  padding: 0px 0px 0px 15px;
+}
+.icon-before{
+  width:20px;
+  vertical-align: text-bottom;
+  margin-right: 10px;
+}

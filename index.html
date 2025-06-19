@@ -1,799 +1,724 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <title>Yeastar Beta Testing</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <style>
-            :root {
-                --primary-color: #006ee1;
-                --gray-bg: #f7f9fa;
-                --text-color: #101f3a;
-                --border-color: #e0e0e0;
-            }
+  <head>
+    <meta charset="UTF-8" />
+    <title>Yeastar Beta Testing</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      :root {
+        --primary-color: #006ee1;
+        --gray-bg: #f7f9fa;
+        --text-color: #101f3a;
+        --border-color: #e0e0e0;
+      }
 
-            * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-            }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-            body {
-                color: var(--text-color);
-            }
+      body {
+        color: var(--text-color);
+      }
 
-            a {
-                color: inherit;
-                text-decoration: none;
-            }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
 
-            a:hover {
-                text-decoration: underline;
-            }
+      a:hover {
+        text-decoration: underline;
+      }
 
-            .layout {
-                display: flex;
-                min-height: 100vh;
-            }
+      .layout {
+        display: flex;
+        min-height: 100vh;
+      }
 
-            .sidebar {
-                padding: 55px 40px;
-                width: 20.84vw;
-                border-right: 1px solid var(--border-color);
-                overflow-y: auto;
-            }
+      .sidebar {
+        padding: 55px 40px;
+        width: 20.84vw;
+        border-right: 1px solid var(--border-color);
+        overflow-y: auto;
+      }
 
-            .sidebar h3 {
-                font-size: 16px;
-                margin: 16px 0 8px;
-            }
+      .sidebar h3 {
+        font-size: 16px;
+        margin: 16px 0 8px;
+      }
 
-            .tree-menu {
-                margin-top: 40px;
-            }
+      .tree-menu {
+        margin-top: 40px;
+      }
 
-            .tree-menu ul {
-                list-style: none;
-                padding-left: 18px;
-            }
+      .tree-menu ul {
+        list-style: none;
+        padding-left: 18px;
+      }
 
-            .tree-menu ul:first-child {
-                padding-left: 0;
-            }
+      .tree-menu ul:first-child {
+        padding-left: 0;
+      }
 
-            .tree-menu li {
-                cursor: pointer;
-                user-select: none;
-                position: relative;
-            }
+      .tree-menu li {
+        cursor: pointer;
+        user-select: none;
+        position: relative;
+      }
 
-            .tree-menu li > span {
-                display: flex;
-                align-items: center;
-                margin: 8px 0;
-                border-radius: 4px;
-                padding: 8px 0 8px 24px;
-                position: relative;
-            }
+      .tree-menu li > span {
+        display: flex;
+        align-items: center;
+        margin: 8px 0;
+        border-radius: 4px;
+        padding: 8px 0 8px 24px;
+        position: relative;
+      }
 
-            .tree-menu li > .third-menu {
-                padding-left: 18px;
-            }
+      .tree-menu li > .third-menu {
+        padding-left: 18px;
+      }
 
-            .tree-menu li > span:hover,
-            .tree-menu li.active > span {
-                background: var(--gray-bg);
-            }
+      .tree-menu li > span:hover,
+      .tree-menu li.active > span {
+        background: var(--gray-bg);
+      }
 
-            /* .tree-menu li.active > span {
+      /* .tree-menu li.active > span {
         color: var(--primary-color);
         font-weight: bold;
       } */
 
-            .tree-menu li > span > a {
-                display: inline-block;
-                width: 100%;
-            }
+      .tree-menu li > span > a {
+        display: inline-block;
+        width: 100%;
+      }
 
-            .tree-menu .first-menu {
-                font-size: 20px;
-                font-weight: 600;
-                font-family: Manrope;
-                color: #101f3a;
-            }
+      .tree-menu .first-menu {
+        font-size: 20px;
+        font-weight: 600;
+        font-family: Manrope;
+        color: #101f3a;
+      }
 
-            .tree-menu .second-menu,
-            .tree-menu .third-menu,
-            .tree-menu .forth-menu {
-                font-size: 16px;
-                font-family: Open Sans;
-                color: #101f3a;
-            }
+      .tree-menu .second-menu,
+      .tree-menu .third-menu,
+      .tree-menu .forth-menu {
+        font-size: 16px;
+        font-family: Open Sans;
+        color: #101f3a;
+      }
 
-            span.third-menu {
-                position: relative;
-            }
+      span.third-menu {
+        position: relative;
+      }
 
-            .tree-menu li > span.third-menu:hover::before,
-            .tree-menu li.active > span.third-menu::before {
-                content: "";
-                position: absolute;
-                left: 0;
-                top: 0;
-                bottom: 0;
-                width: 4px;
-                background-color: var(--primary-color);
-                border-radius: 4px 0 0 4px;
-            }
+      .tree-menu li > span.third-menu:hover::before,
+      .tree-menu li.active > span.third-menu::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 4px;
+        background-color: var(--primary-color);
+        border-radius: 4px 0 0 4px;
+      }
 
-            .tree-menu li > span.third-menu:hover,
-            .tree-menu li.active > span.third-menu {
-                color: var(--primary-color);
-            }
+      .tree-menu li > span.third-menu:hover,
+      .tree-menu li.active > span.third-menu {
+        color: var(--primary-color);
+      }
 
-            .tree-menu li > span.arrow::before {
-                content: "";
-                position: absolute;
-                left: 6px;
-                top: 50%;
-                transform: translateY(-50%) rotate(-90deg);
-                width: 12px;
-                height: 12px;
-                background: url("./img/homepage-arrow-icon.svg") no-repeat
-                    center center;
-                background-size: contain;
-                transition: transform 0.3s ease;
-            }
+      .tree-menu li > span.arrow::before {
+        content: "";
+        position: absolute;
+        left: 6px;
+        top: 50%;
+        transform: translateY(-50%) rotate(-90deg);
+        width: 12px;
+        height: 12px;
+        background: url("./img/homepage-arrow-icon.svg") no-repeat center center;
+        background-size: contain;
+        transition: transform 0.3s ease;
+      }
 
-            .tree-menu li.open > span.arrow::before {
-                transform: translateY(-50%) rotate(0deg);
-            }
+      .tree-menu li.open > span.arrow::before {
+        transform: translateY(-50%) rotate(0deg);
+      }
 
-            .tree-menu li ul {
-                display: none;
-            }
+      .tree-menu li ul {
+        display: none;
+      }
 
-            .tree-menu li.open > ul {
-                display: block;
-            }
+      .tree-menu li.open > ul {
+        display: block;
+      }
 
-            .main {
-                flex: 1;
-                background: var(--gray-bg);
-                overflow: auto;
-            }
+      .main {
+        flex: 1;
+        background: var(--gray-bg);
+        overflow: auto;
+      }
 
-            #content-container {
-                min-height: 100%;
-            }
+      #content-container {
+        min-height: 100%;
+      }
 
-            .banner {
-                padding: 4.15vw 0 2.5vw 10.5vw;
-                background: url("./img/homepage-banner.png") center no-repeat;
-                background-size: cover;
-                display: flex;
-                justify-content: space-between;
-                border-bottom: 1px dashed #ccc;
-            }
+      .banner {
+        padding: 4.15vw 0 2.5vw 10.5vw;
+        background: url("./img/homepage-banner.png") center no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px dashed #ccc;
+      }
 
-            .banner .text-content {
-                width: 28.41%;
-                margin-left: -40px;
-            }
+      .banner .text-content {
+        width: 28.41%;
+        margin-left: -40px;
+      }
 
-            .banner h1 {
-                font-size: 32px;
-                margin-bottom: 10px;
-            }
+      .banner h1 {
+        font-size: 32px;
+        margin-bottom: 10px;
+      }
 
-            .banner p {
-                margin: 1.6vw 0 1.7vw;
-                color: #555;
-            }
+      .banner p {
+        margin: 1.6vw 0 1.7vw;
+        color: #555;
+      }
 
-            .download-title {
-                position: relative;
-                margin-bottom: 1.3vw;
-                margin-left: 40px;
-                line-height: 27px;
-                font-size: 24px;
-                font-family: Manrope;
-                font-weight: 600;
-                color: #101f3a;
-            }
+      .download-title {
+        position: relative;
+        margin-bottom: 1.3vw;
+        margin-left: 40px;
+        line-height: 27px;
+        font-size: 24px;
+        font-family: Manrope;
+        font-weight: 600;
+        color: #101f3a;
+      }
 
-            .download-title::before {
-                content: "";
-                background: url(./img/homepage-download-icon.svg) center
-                    no-repeat;
-                background-size: cover;
-                position: absolute;
-                left: -40px;
-                bottom: -3px;
-                width: 32px;
-                height: 32px;
-                border-radius: 50%;
-                background-color: var(--primary-color);
-            }
+      .download-title::before {
+        content: "";
+        background: url(./img/homepage-download-icon.svg) center no-repeat;
+        background-size: cover;
+        position: absolute;
+        left: -40px;
+        bottom: -3px;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background-color: var(--primary-color);
+      }
 
-            .download-links {
-                width: 130%;
-            }
+      .download-links {
+        width: 130%;
+      }
 
-            .download-links a {
-                position: relative;
-                display: inline-block;
-                margin-bottom: 1.05vw;
-                margin-right: 2.3vw;
-                font-size: 18px;
-                font-family: Open Sans;
-                color: var(--primary-color);
-            }
+      .download-links a {
+        position: relative;
+        display: inline-block;
+        margin-bottom: 1.05vw;
+        margin-right: 2.3vw;
+        font-size: 18px;
+        font-family: Open Sans;
+        color: var(--primary-color);
+      }
 
-            .download-links a::after {
-                content: "";
-                background: url(https://help.yeastar.com/en/p-series-appliance-edition/oxygen-webhelp/template/images/arrow-right-blue.svg)
-                    center no-repeat;
-                background-size: cover;
-                position: absolute;
-                right: -16px;
-                top: 8px;
-                width: 11px;
-                height: 9px;
-            }
+      .download-links a::after {
+        content: "";
+        background: url(https://help.yeastar.com/en/p-series-appliance-edition/oxygen-webhelp/template/images/arrow-right-blue.svg) center no-repeat;
+        background-size: cover;
+        position: absolute;
+        right: -16px;
+        top: 8px;
+        width: 11px;
+        height: 9px;
+      }
 
-            .cards {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 1.62vw;
-                margin: 2vw 0;
-            }
+      .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.62vw;
+        margin: 2vw 0;
+      }
 
-            .card {
-                position: relative;
-                padding: 1.6vw 0 2.1vw 2.1vw;
-                width: 20vw;
-                height: 17.3vw;
-                border-radius: 27px;
-                background: #fff;
-            }
+      .card {
+        position: relative;
+        padding: 1.6vw 0 2.1vw 2.1vw;
+        width: 20vw;
+        height: 17.3vw;
+        border-radius: 27px;
+        background: #fff;
+      }
 
-            .card .icon {
-                margin-bottom: 1.1vw;
-                width: 3.11vw;
-                height: 3.11vw;
-                border-radius: 50%;
-                background: #f4f4f4;
-            }
+      .card .icon {
+        margin-bottom: 1.1vw;
+        width: 3.11vw;
+        height: 3.11vw;
+        border-radius: 50%;
+        background: #f4f4f4;
+      }
 
-            .card .icon img {
-                width: 3.11vw;
-                height: 3.11vw;
-            }
+      .card .icon img {
+        width: 3.11vw;
+        height: 3.11vw;
+      }
 
-            .card-title {
-                font-weight: 600;
-                line-height: 32px;
-                color: #101f3a;
-                font-size: 20px;
-                font-family: Manrope;
-            }
+      .card-title {
+        font-weight: 600;
+        line-height: 32px;
+        color: #101f3a;
+        font-size: 20px;
+        font-family: Manrope;
+      }
 
-            .bg-img {
-                position: absolute;
-                right: 0;
-                bottom: 0;
-                width: 15vw;
-            }
+      .bg-img {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 15vw;
+      }
 
-            .doc-links {
-                display: flex;
-                flex-direction: column;
-                position: absolute;
-                bottom: 2.1vw;
-            }
+      .doc-links {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        bottom: 2.1vw;
+      }
 
-            .doc-links a {
-                position: relative;
-                padding-left: 21px;
-                line-height: 32px;
-                font-family: Open Sans;
-                color: var(--primary-color);
-            }
+      .doc-links a {
+        position: relative;
+        padding-left: 21px;
+        line-height: 32px;
+        font-family: Open Sans;
+        color: var(--primary-color);
+      }
 
-            .doc-links a.html-href::before {
-                content: "";
-                background: url(https://help.yeastar.com/en/p-series-appliance-edition/oxygen-webhelp/template/images/p-series/user-guide-html-icon.png)
-                    center no-repeat;
-                background-size: cover;
-                position: absolute;
-                left: 0;
-                bottom: 7px;
-                width: 13px;
-                height: 17px;
-            }
+      .doc-links a.html-href::before {
+        content: "";
+        background: url(https://help.yeastar.com/en/p-series-appliance-edition/oxygen-webhelp/template/images/p-series/user-guide-html-icon.png) center no-repeat;
+        background-size: cover;
+        position: absolute;
+        left: 0;
+        bottom: 7px;
+        width: 13px;
+        height: 17px;
+      }
 
-            .doc-links a.html-href:hover::after {
-                content: "";
-                background: url(https://help.yeastar.com/en/p-series-appliance-edition/oxygen-webhelp/template/images/arrow-right-blue.svg)
-                    center no-repeat;
-                background-size: cover;
-                position: absolute;
-                right: -16px;
-                top: 11px;
-                width: 11px;
-                height: 9px;
-            }
+      .doc-links a.html-href:hover::after {
+        content: "";
+        background: url(https://help.yeastar.com/en/p-series-appliance-edition/oxygen-webhelp/template/images/arrow-right-blue.svg) center no-repeat;
+        background-size: cover;
+        position: absolute;
+        right: -16px;
+        top: 11px;
+        width: 11px;
+        height: 9px;
+      }
 
-            .doc-links a.pdf-href::before {
-                content: "";
-                background: url(https://help.yeastar.com/en/p-series-appliance-edition/oxygen-webhelp/template/images/p-series/user-guide-pdf-icon.png)
-                    center no-repeat;
-                background-size: cover;
-                position: absolute;
-                left: -3px;
-                bottom: 7px;
-                width: 17px;
-                height: 17px;
-            }
+      .doc-links a.pdf-href::before {
+        content: "";
+        background: url(https://help.yeastar.com/en/p-series-appliance-edition/oxygen-webhelp/template/images/p-series/user-guide-pdf-icon.png) center no-repeat;
+        background-size: cover;
+        position: absolute;
+        left: -3px;
+        bottom: 7px;
+        width: 17px;
+        height: 17px;
+      }
 
-            .doc-links a.pdf-href:hover::after {
-                content: "";
-                background: url(https://help.yeastar.com/en/p-series-appliance-edition/oxygen-webhelp/template/images/arrow-right-blue.svg)
-                    center no-repeat;
-                background-size: cover;
-                position: absolute;
-                right: -5px;
-                top: 11px;
-                width: 11px;
-                height: 9px;
-            }
+      .doc-links a.pdf-href:hover::after {
+        content: "";
+        background: url(https://help.yeastar.com/en/p-series-appliance-edition/oxygen-webhelp/template/images/arrow-right-blue.svg) center no-repeat;
+        background-size: cover;
+        position: absolute;
+        right: -5px;
+        top: 11px;
+        width: 11px;
+        height: 9px;
+      }
 
-            .content-block {
-                display: none;
-            }
+      .content-block {
+        display: none;
+      }
 
-            .content-block.active {
-                display: block;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="layout">
-            <aside class="sidebar">
-                <img
-                    src="https://help.yeastar.com/en/p-series-appliance-edition/oxygen-webhelp/template/images/yeastar-logo.svg"
-                    width="54.6%"
-                    alt="Yeastar Logo"
-                />
-                <nav class="tree-menu">
-                    <ul>
-                        <li>
-                            <span class="arrow first-menu"><a>AI</a></span>
-                            <ul>
-                                <li>
-                                    <span>
-                                        <a
-                                            href="javascript:void(0);"
-                                            data-page="ai-integration-guide-overview.html"
-                                            >AI Integration Overview</a
-                                        >
-                                    </span>
-                                    <span class="arrow second-menu">
-                                        <a>AI Text-to-Speech</a>
-                                    </span>
-                                    <ul>
-                                        <li>
-                                            <span class="third-menu"
-                                                ><a
-                                                    href="javascript:void(0);"
-                                                    data-page="ai-text-to-speech-overview.html"
-                                                    >AI Text to Speech
-                                                    Overview</a
-                                                ></span
-                                            >
-                                        </li>
-                                        <li>
-                                            <span class="third-menu"
-                                                ><a
-                                                    href="javascript:void(0);"
-                                                    data-page="enable-ai-text-to-speech.html"
-                                                    >Enable AI Text to Speech</a
-                                                ></span
-                                            >
-                                        </li>
-                                        <li>
-                                            <span class="third-menu"
-                                                ><a
-                                                    href="javascript:void(0);"
-                                                    data-page="generate-audio-prompts-using-ai-text-to-speech.html"
-                                                    >Generate Audio Prompts
-                                                    Using AI Text to Speech</a
-                                                ></span
-                                            >
-                                        </li>
-
-                                        <li></li>
-                                    </ul>
-
-                                    <span class="arrow second-menu">
-                                        <a>AI Voicemail Transcription</a>
-                                    </span>
-                                    <ul>
-                                        <li>
-                                            <span class="third-menu"
-                                                ><a
-                                                    href="javascript:void(0);"
-                                                    data-page="ai-voicemail-transcription-overview.html"
-                                                    >AI Voicemail Transcription
-                                                    Overview</a
-                                                ></span
-                                            >
-                                        </li>
-                                        <li>
-                                            <span class="third-menu"
-                                                ><a
-                                                    href="javascript:void(0);"
-                                                    data-page="configure-ai-voicemail-transcription.html"
-                                                    >Configure AI Voicemail
-                                                    Transcription</a
-                                                ></span
-                                            >
-                                        </li>
-                                        <li>
-                                            <span class="third-menu"
-                                                ><a
-                                                    href="javascript:void(0);"
-                                                    data-page="configure-ai-voicemail-transcription-for-an-extension.html"
-                                                    >Configure AI Voicemail
-                                                    Transcription for an
-                                                    Extension</a
-                                                ></span
-                                            >
-                                        </li>
-                                        <li>
-                                            <span class="third-menu"
-                                                ><a
-                                                    href="javascript:void(0);"
-                                                    data-page="access-transcription-usage-details-report.html"
-                                                    >Access Transcription Usage
-                                                    Details Report</a
-                                                ></span
-                                            >
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-            </aside>
-            <main class="main">
-                <div id="content-container">
-                    <!-- 首页内容 -->
-                    <div class="content-block active" id="index-content">
-                        <section class="banner">
-                            <div class="text-content">
-                                <img
-                                    src="./img/homepage-title.png"
-                                    width="84.5%"
-                                    alt="Beta Testing"
-                                />
-                                <p>
-                                    Join Yeastar Beta and enjoy the new features
-                                    before its official release. Be one of the
-                                    first to enjoy the new features and
-                                    enhancements!
-                                </p>
-                                <div class="download-title">
-                                    Download Firmware
-                                </div>
-                                <div class="download-links">
-                                    <a href="javascript:void(0);"
-                                        >Appliance Edition</a
-                                    >
-                                    <a href="javascript:void(0);"
-                                        >Software Edition</a
-                                    >
-                                    <a href="javascript:void(0);"
-                                        >Cloud Edition</a
-                                    >
-                                </div>
-                            </div>
-                        </section>
-                        <section class="cards">
-                            <div class="card">
-                                <div class="icon">
-                                    <img
-                                        src="./img/homepage-document-icon.svg"
-                                    />
-                                </div>
-                                <div class="card-title">AI Integration</div>
-                                <div class="doc-links">
-                                    <a
-                                        href="javascript:void(0);"
-                                        class="html-href"
-                                        data-page="ai-integration-guide-overview.html"
-                                        >HTML</a
-                                    >
-                                    <a
-                                        href="https://help.yeastar.com/download/docs/ai-integration-guide-p-series-software-edition-en.pdf"
-                                        target="_blank" class="pdf-href"
-                                        download="https://help.yeastar.com/download/docs/ai-integration-guide-p-series-software-edition-en.pdf"
-                                        >PDF</a
-                                    >
-                                </div>
-                                <img
-                                    class="bg-img"
-                                    src="./img/homepage-card-1.png"
-                                />
-                            </div>
-                            <div class="card" style="visibility: hidden">
-                                <div class="icon">
-                                    <img
-                                        src="./img/homepage-document-icon.svg"
-                                    />
-                                </div>
-                                <div class="card-title">AI</div>
-                                <div class="doc-links">
-                                    <a
-                                        href="javascript:void(0);"
-                                        class="html-href"
-                                        data-page="aaa.html"
-                                        >HTML</a
-                                    >
-                                    <a
-                                        href="https://help.yeastar.com/download/docs/p-series-call-flow-designer-en.pdf"
-                                        class="pdf-href"
-                                        download="p-series-call-flow-designer-en.pdf"
-                                        >PDF</a
-                                    >
-                                </div>
-                                <img
-                                    class="bg-img"
-                                    src="./img/homepage-card-1.png"
-                                />
-                            </div>
-                            <div class="card" style="visibility: hidden">
-                                <div class="icon">
-                                    <img
-                                        src="./img/homepage-document-icon.svg"
-                                    />
-                                </div>
-                                <div class="card-title">AI</div>
-                                <div class="doc-links">
-                                    <a
-                                        href="javascript:void(0);"
-                                        class="html-href"
-                                        data-page="aaa.html"
-                                        >HTML</a
-                                    >
-                                    <a
-                                        href="https://help.yeastar.com/download/docs/p-series-call-flow-designer-en.pdf"
-                                        class="pdf-href"
-                                        download="p-series-call-flow-designer-en.pdf"
-                                        >PDF</a
-                                    >
-                                </div>
-                                <img
-                                    class="bg-img"
-                                    src="./img/homepage-card-1.png"
-                                />
-                            </div>
-                        </section>
-                    </div>
-
-                    <!-- iframe容器 -->
-                    <div class="content-block" id="iframe-container">
-                        <iframe
-                            id="content-frame"
-                            style="width: 100%; height: 100vh; border: none"
-                        ></iframe>
-                    </div>
+      .content-block.active {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="layout">
+      <aside class="sidebar">
+        <img src="https://help.yeastar.com/en/p-series-appliance-edition/oxygen-webhelp/template/images/yeastar-logo.svg" width="54.6%" alt="Yeastar Logo" />
+        <nav class="tree-menu">
+          <ul>
+            <li>
+              <span class="arrow first-menu">AI</span>
+              <ul>
+                <li>
+                  <span>
+                    <a href="javascript:void(0);" data-page="ai-integration-guide-overview.html">AI Integration Overview</a>
+                  </span>
+                </li>
+                <li>
+                  <span class="arrow second-menu">AI Text-to-Speech</span>
+                  <ul>
+                    <li>
+                      <span class="third-menu"><a href="javascript:void(0);" data-page="ai-text-to-speech-overview.html">AI Text to Speech Overview</a></span>
+                    </li>
+                    <li>
+                      <span class="third-menu"><a href="javascript:void(0);" data-page="enable-ai-text-to-speech.html">Enable AI Text to Speech</a></span>
+                    </li>
+                    <li>
+                      <span class="third-menu"><a href="javascript:void(0);" data-page="generate-audio-prompts-using-ai-text-to-speech.html">Generate Audio Prompts Using AI Text to Speech</a></span>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <span class="arrow second-menu">AI Voicemail Transcription</span>
+                  <ul>
+                    <li>
+                      <span class="third-menu"><a href="javascript:void(0);" data-page="ai-voicemail-transcription-overview.html">AI Voicemail Transcription Overview</a></span>
+                    </li>
+                    <li>
+                      <span class="third-menu"><a href="javascript:void(0);" data-page="configure-ai-voicemail-transcription.html">Configure AI Voicemail Transcription</a></span>
+                    </li>
+                    <li>
+                      <span class="third-menu"><a href="javascript:void(0);" data-page="configure-ai-voicemail-transcription-for-an-extension.html">Configure AI Voicemail Transcription for an Extension</a></span>
+                    </li>
+                    <li>
+                      <span class="third-menu"><a href="javascript:void(0);" data-page="access-transcription-usage-details-report.html">Access Transcription Usage Details Report</a></span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <span class="arrow first-menu">Call Flow Designer</span>
+              <ul>
+                <li>
+                  <span class="second-menu"><a href="javascript:void(0);" data-page="call-flow-designer-overview.html">Call Flow Designer Overview</a></span>
+                </li>
+                <li>
+                  <span class="arrow second-menu">Call Flow Setup</span>
+                  <ul>
+                    <li>
+                      <span class="third-menu"><a href="javascript:void(0);" data-page="set-up-a-call-flow-from-template.html">Set up a Call Flow from Template</a></span>
+                    </li>
+                    <li>
+                      <span class="third-menu"><a href="javascript:void(0);" data-page="set-up-a-call-flow-from-scratch.html">Set up a Call Flow from Scratch</a></span>
+                    </li>
+                    <li>
+                      <span class="third-menu"><a href="javascript:void(0);" data-page="set-up-a-call-flow-from-existing-flow.html">Set up a Call Flow from Existing Flow</a></span>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <span class="arrow second-menu">Call Flow Components Basics</span>
+                  <ul>
+                    <li>
+                      <span class="third-menu"><a href="javascript:void(0);" data-page="initial-action.html">Initial Action</a></span>
+                    </li>
+                    <li>
+                      <span class="third-menu"><a href="javascript:void(0);" data-page="prompt.html">Prompt</a></span>
+                    </li>
+                    <li>
+                      <span class="third-menu"><a href="javascript:void(0);" data-page="business-hours.html">Business Hours</a></span>
+                    </li>
+                    <li>
+                      <span class="third-menu"><a href="javascript:void(0);" data-page="user-input.html">User Input</a></span>
+                    </li>
+                    <li>
+                      <span class="third-menu"><a href="javascript:void(0);" data-page="language.html">Language</a></span>
+                    </li>
+                    <li>
+                      <span class="third-menu"><a href="javascript:void(0);" data-page="record.html">Record</a></span>
+                    </li>
+                    <li>
+                      <span class="third-menu"><a href="javascript:void(0);" data-page="dial-by-number.html">Dial by Number</a></span>
+                    </li>
+                    <li>
+                      <span class="third-menu"><a href="javascript:void(0);" data-page="dial-by-name.html">Dial by Name</a></span>
+                    </li>
+                    <li>
+                      <span class="third-menu"><a href="javascript:void(0);" data-page="transfer.html">Transfer</a></span>
+                    </li>
+                    <li>
+                      <span class="third-menu"><a href="javascript:void(0);" data-page="hang-up-call.html">Hang Up Call</a></span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+      <main class="main">
+        <div id="content-container">
+          <!-- 首页内容 -->
+          <div class="content-block active" id="index-content">
+            <section class="banner">
+              <div class="text-content">
+                <img src="./img/homepage-title.png" width="84.5%" alt="Beta Testing" />
+                <p>Join Yeastar Beta and enjoy the new features before its official release. Be one of the first to enjoy the new features and enhancements!</p>
+                <div class="download-title">Download Firmware</div>
+                <div class="download-links">
+                  <a href="https://help.yeastar.com/download/docs/beta-firmware/37.19.0.96.bin">Appliance Edition</a>
+                  <a href="https://help.yeastar.com/download/docs/beta-firmware/83.19.0.96-ubuntu.bin">Software Edition (Ubuntu)</a>
+                  <a href="https://help.yeastar.com/download/docs/beta-firmware/83.19.0.96-debian.bin">Software Edition (Debian)</a>
                 </div>
-            </main>
+              </div>
+            </section>
+            <section class="cards">
+              <div class="card">
+                <div class="icon">
+                  <img src="./img/homepage-document-icon.svg" />
+                </div>
+                <div class="card-title">AI Integration</div>
+                <div class="doc-links">
+                  <a href="javascript:void(0);" class="html-href" data-page="ai-integration-guide-overview.html">HTML</a>
+                  <a href="https://help.yeastar.com/download/docs/ai-integration-guide-p-series-software-edition-en.pdf" target="_blank" class="pdf-href" download="https://help.yeastar.com/download/docs/ai-integration-guide-p-series-software-edition-en.pdf">PDF</a>
+                </div>
+                <img class="bg-img" src="./img/homepage-card-1.png" />
+              </div>
+              <div class="card">
+                <div class="icon">
+                  <img src="./img/homepage-document-icon.svg" />
+                </div>
+                <div class="card-title">Call Flow Designer</div>
+                <div class="doc-links">
+                  <a href="javascript:void(0);" class="html-href" data-page="call-flow-designer-overview.html">HTML</a>
+                  <a href="https://help.yeastar.com/download/docs/call-flow-designer-guide-p-series-software-edition-en.pdf" target="_blank" class="pdf-href" download="https://help.yeastar.com/download/docs/call-flow-designer-guide-p-series-software-edition-en.pdf">PDF</a>
+                </div>
+                <img class="bg-img" src="./img/homepage-card-1.png" />
+              </div>
+              <div class="card" style="visibility: hidden">
+                <div class="icon">
+                  <img src="./img/homepage-document-icon.svg" />
+                </div>
+                <div class="card-title">AI</div>
+                <div class="doc-links">
+                  <a href="javascript:void(0);" class="html-href" data-page="aaa.html">HTML</a>
+                  <a href="https://help.yeastar.com/download/docs/p-series-call-flow-designer-en.pdf" class="pdf-href" download="p-series-call-flow-designer-en.pdf">PDF</a>
+                </div>
+                <img class="bg-img" src="./img/homepage-card-1.png" />
+              </div>
+            </section>
+          </div>
+
+          <!-- iframe容器 -->
+          <div class="content-block" id="iframe-container">
+            <iframe id="content-frame" style="width: 100%; height: 100vh; border: none"></iframe>
+          </div>
         </div>
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                const iframe = document.getElementById("content-frame");
-                const indexContent = document.getElementById("index-content");
-                const iframeContainer =
-                    document.getElementById("iframe-container");
-                const HOME_PAGE = "index.html";
-                let lastNavigationTimestamp = 0; // 防止短时间内重复导航的时间戳
-                let isHandlingPopState = false; // 标识是否正在处理 popstate 事件
+      </main>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const iframe = document.getElementById("content-frame");
+        const indexContent = document.getElementById("index-content");
+        const iframeContainer = document.getElementById("iframe-container");
+        const HOME_PAGE = "index.html";
+        let lastNavigationTimestamp = 0; // 防止短时间内重复导航的时间戳
+        let isHandlingPopState = false; // 标识是否正在处理 popstate 事件
 
-                // 获取当前页面的基础路径（去掉最后一级路径）
-                const BASE_PATH = window.location.pathname.substring(
-                    0,
-                    window.location.pathname.lastIndexOf("/") + 1
-                );
+        // 获取当前页面的基础路径（去掉最后一级路径）
+        const BASE_PATH = window.location.pathname.substring(0, window.location.pathname.lastIndexOf("/") + 1);
 
-                /**
-                 * 从当前 URL 中解析出页面名
-                 * @returns {string} 页面文件名，默认为 HOME_PAGE
-                 */
-                function getCurrentPageFromURL() {
-                    const fullPath = window.location.pathname;
-                    const relativePath = fullPath.startsWith(BASE_PATH)
-                        ? fullPath.substring(BASE_PATH.length)
-                        : fullPath;
-                    const page = relativePath || HOME_PAGE;
-                    return page;
+        /**
+         * 从当前 URL 中解析出页面名
+         * @returns {string} 页面文件名，默认为 HOME_PAGE
+         */
+        function getCurrentPageFromURL() {
+          const fullPath = window.location.pathname;
+          const relativePath = fullPath.startsWith(BASE_PATH) ? fullPath.substring(BASE_PATH.length) : fullPath;
+          const page = relativePath || HOME_PAGE;
+          return page;
+        }
+
+        /**
+         * 更新页面内容和菜单状态
+         * @param {string} page 当前页面名
+         * @param {boolean} isHome 是否首页
+         */
+        function updatePageContent(page, isHome) {
+          // 用 location.replace 更新 iframe 避免产生新历史记录
+          if (iframe.contentWindow) {
+            if (isHome) {
+              iframe.src = "";
+            } else {
+              try {
+                const currentSrc = iframe.src;
+                iframe.contentWindow.location.replace(page);
+
+                // 如果是通过 popstate 导航，更新 history.state 保存 iframe src
+                if (isHandlingPopState) {
+                  const state = history.state || {};
+                  history.replaceState(
+                    {
+                      ...state,
+                      iframeSrc: currentSrc,
+                    },
+                    "",
+                    window.location.pathname
+                  );
                 }
+              } catch (e) {
+                // 失败时直接赋值
+                iframe.src = page;
+              }
+            }
+          } else {
+            iframe.src = isHome ? "" : page;
+          }
 
-                /**
-                 * 更新页面内容和菜单状态
-                 * @param {string} page 当前页面名
-                 * @param {boolean} isHome 是否首页
-                 */
-                function updatePageContent(page, isHome) {
-                    // 用 location.replace 更新 iframe 避免产生新历史记录
-                    if (iframe.contentWindow) {
-                        if (isHome) {
-                            iframe.src = "";
-                        } else {
-                            try {
-                                const currentSrc = iframe.src;
-                                iframe.contentWindow.location.replace(page);
+          // 首页内容和 iframe 容器的显示切换
+          indexContent.classList.toggle("active", isHome);
+          iframeContainer.classList.toggle("active", !isHome);
 
-                                // 如果是通过 popstate 导航，更新 history.state 保存 iframe src
-                                if (isHandlingPopState) {
-                                    const state = history.state || {};
-                                    history.replaceState(
-                                        {
-                                            ...state,
-                                            iframeSrc: currentSrc,
-                                        },
-                                        "",
-                                        window.location.pathname
-                                    );
-                                }
-                            } catch (e) {
-                                // 失败时直接赋值
-                                iframe.src = page;
-                            }
-                        }
-                    } else {
-                        iframe.src = isHome ? "" : page;
-                    }
+          // 更新菜单高亮
+          updateActiveMenu(page);
+        }
 
-                    // 首页内容和 iframe 容器的显示切换
-                    indexContent.classList.toggle("active", isHome);
-                    iframeContainer.classList.toggle("active", !isHome);
+        /**
+         * 页面跳转函数
+         * @param {string} page 目标页面名
+         * @param {boolean} updateHistory 是否更新浏览器历史记录
+         */
+        function navigateTo(page, updateHistory = true) {
+          // 防止短时间内重复触发导航，避免卡顿或错误
+          const now = Date.now();
+          if (!isHandlingPopState && now - lastNavigationTimestamp < 100) {
+            return;
+          }
+          lastNavigationTimestamp = now;
 
-                    // 更新菜单高亮
-                    updateActiveMenu(page);
-                }
+          const isHome = !page || page === HOME_PAGE;
+          const newPath = BASE_PATH + (isHome ? HOME_PAGE : page);
+          const currentState = history.state || {};
 
-                /**
-                 * 页面跳转函数
-                 * @param {string} page 目标页面名
-                 * @param {boolean} updateHistory 是否更新浏览器历史记录
-                 */
-                function navigateTo(page, updateHistory = true) {
-                    // 防止短时间内重复触发导航，避免卡顿或错误
-                    const now = Date.now();
-                    if (
-                        !isHandlingPopState &&
-                        now - lastNavigationTimestamp < 100
-                    ) {
-                        return;
-                    }
-                    lastNavigationTimestamp = now;
+          if (isHandlingPopState) {
+            // popstate 事件处理时，强制更新页面内容
+            updatePageContent(page, isHome);
+          } else {
+            // 普通导航时，检查是否需要更新
+            const needsUpdate = window.location.pathname !== newPath || currentState.page !== page;
+            if (!needsUpdate) {
+              return;
+            }
+            updatePageContent(page, isHome);
+          }
 
-                    const isHome = !page || page === HOME_PAGE;
-                    const newPath = BASE_PATH + (isHome ? HOME_PAGE : page);
-                    const currentState = history.state || {};
+          // 根据参数更新浏览器历史记录
+          if (updateHistory) {
+            const newState = {
+              page,
+              basePath: BASE_PATH,
+              timestamp: now,
+              isIframeNavigation: false,
+              iframeSrc: iframe.src, // 记录当前 iframe src，方便后续恢复
+              direction: isHandlingPopState ? "popstate" : "navigation", // 标记导航类型
+            };
 
-                    if (isHandlingPopState) {
-                        // popstate 事件处理时，强制更新页面内容
-                        updatePageContent(page, isHome);
-                    } else {
-                        // 普通导航时，检查是否需要更新
-                        const needsUpdate =
-                            window.location.pathname !== newPath ||
-                            currentState.page !== page;
-                        if (!needsUpdate) {
-                            return;
-                        }
-                        updatePageContent(page, isHome);
-                    }
+            if (!currentState.timestamp) {
+              // 初始状态替换
+              history.replaceState(newState, "", newPath);
+            } else {
+              // 普通导航压入历史
+              history.pushState(newState, "", newPath);
+            }
+          }
+        }
 
-                    // 根据参数更新浏览器历史记录
-                    if (updateHistory) {
-                        const newState = {
-                            page,
-                            basePath: BASE_PATH,
-                            timestamp: now,
-                            isIframeNavigation: false,
-                            iframeSrc: iframe.src, // 记录当前 iframe src，方便后续恢复
-                            direction: isHandlingPopState
-                                ? "popstate"
-                                : "navigation", // 标记导航类型
-                        };
+        // 菜单箭头点击处理，控制展开/收起子菜单
+        document.querySelectorAll(".tree-menu li > span.arrow").forEach((span) => {
+          span.addEventListener("click", (e) => {
+            const x = e.clientX - span.getBoundingClientRect().left;
+            if (x <= 24) {
+              const li = span.parentElement;
+              const submenu = li.querySelector("ul");
+              if (submenu) li.classList.toggle("open");
+            }
+          });
+        });
 
-                        if (!currentState.timestamp) {
-                            // 初始状态替换
-                            history.replaceState(newState, "", newPath);
-                        } else {
-                            // 普通导航压入历史
-                            history.pushState(newState, "", newPath);
-                        }
-                    }
-                }
+        // 菜单链接点击事件，调用 navigateTo 进行页面切换
+        document.querySelectorAll("a[data-page]").forEach((a) => {
+          a.addEventListener("click", (e) => {
+            e.preventDefault();
+            const page = a.getAttribute("data-page");
+            navigateTo(page, true);
+          });
+        });
 
-                // 菜单箭头点击处理，控制展开/收起子菜单
-                document
-                    .querySelectorAll(".tree-menu li > span.arrow")
-                    .forEach((span) => {
-                        span.addEventListener("click", (e) => {
-                            const x =
-                                e.clientX - span.getBoundingClientRect().left;
-                            if (x <= 24) {
-                                const li = span.parentElement;
-                                const submenu = li.querySelector("ul");
-                                if (submenu) li.classList.toggle("open");
-                            }
-                        });
-                    });
+        // 监听浏览器前进后退事件，处理 popstate
+        window.addEventListener("popstate", (event) => {
+          isHandlingPopState = true;
+          const state = event.state || {};
+          const page = state.page || getCurrentPageFromURL();
 
-                // 菜单链接点击事件，调用 navigateTo 进行页面切换
-                document.querySelectorAll("a[data-page]").forEach((a) => {
-                    a.addEventListener("click", (e) => {
-                        e.preventDefault();
-                        const page = a.getAttribute("data-page");
-                        navigateTo(page, true);
-                    });
-                });
+          // popstate 时不再更新历史，避免循环触发
+          navigateTo(page, false);
+          isHandlingPopState = false;
+        });
 
-                // 监听浏览器前进后退事件，处理 popstate
-                window.addEventListener("popstate", (event) => {
-                    isHandlingPopState = true;
-                    const state = event.state || {};
-                    const page = state.page || getCurrentPageFromURL();
+        /**
+         * 菜单高亮状态更新
+         * @param {string} page 当前页面名
+         */
+        function updateActiveMenu(page) {
+          // 先清除之前的高亮
+          document.querySelectorAll(".tree-menu li.active").forEach((li) => {
+            li.classList.remove("active");
+          });
 
-                    // popstate 时不再更新历史，避免循环触发
-                    navigateTo(page, false);
-                    isHandlingPopState = false;
-                });
+          if (!page || page === HOME_PAGE) return;
 
-                /**
-                 * 菜单高亮状态更新
-                 * @param {string} page 当前页面名
-                 */
-                function updateActiveMenu(page) {
-                    // 先清除之前的高亮
-                    document
-                        .querySelectorAll(".tree-menu li.active")
-                        .forEach((li) => {
-                            li.classList.remove("active");
-                        });
+          // 找到对应菜单项并高亮，展开所有父菜单
+          const activeLink = document.querySelector(`a[data-page="${page}"]`);
+          if (activeLink) {
+            const li = activeLink.closest("li");
+            if (li) {
+              li.classList.add("active");
+              let parent = li.parentElement.closest("li");
+              while (parent) {
+                parent.classList.add("open");
+                parent = parent.parentElement.closest("li");
+              }
+            }
+          }
+        }
 
-                    if (!page || page === HOME_PAGE) return;
+        // 页面首次加载，确保历史记录和内容同步
+        const initialPage = getCurrentPageFromURL();
+        navigateTo(initialPage, true);
 
-                    // 找到对应菜单项并高亮，展开所有父菜单
-                    const activeLink = document.querySelector(
-                        `a[data-page="${page}"]`
-                    );
-                    if (activeLink) {
-                        const li = activeLink.closest("li");
-                        if (li) {
-                            li.classList.add("active");
-                            let parent = li.parentElement.closest("li");
-                            while (parent) {
-                                parent.classList.add("open");
-                                parent = parent.parentElement.closest("li");
-                            }
-                        }
-                    }
-                }
+        // 监听来自 iframe 的跳转请求
+        window.addEventListener("message", (event) => {
+          const { type, href } = event.data || {};
+          if (type === "navigate" && typeof href === "string") {
+            if (!href.endsWith(".html")) return;
+            navigateTo(href, true); // 复用原有导航逻辑
+          }
+        });
 
-                // 页面首次加载，确保历史记录和内容同步
-                const initialPage = getCurrentPageFromURL();
-                navigateTo(initialPage, true);
-            });
-        </script>
-    </body>
+        /**
+         * 点击logo回首页
+         */
+        const logo = document.querySelector('img[alt="Yeastar Logo"]');
+        if (logo) {
+          logo.style.cursor = "pointer";
+          logo.addEventListener("click", () => {
+            navigateTo("index.html", true);
+          });
+        }
+      });
+    </script>
+  </body>
 </html>

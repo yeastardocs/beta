@@ -1,0 +1,235 @@
+<link rel="stylesheet" href="./css/p-series.css">   
+<link rel="stylesheet" href="./css/notes.css">   
+<script src="./iframe-navigation.js"></script>  
+
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                        
+                       
+                        
+                    
+                    
+                    <div class="col-lg-7 col-md-9 col-sm-12" id="wh_topic_body">
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="- topic/title title topictitle1" id="ariaid-title1">Business Hours</h1>
+    
+    <div class="- topic/body body"><p class="- topic/shortdesc shortdesc">This topic provides an overview of the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Business Hours</span>
+        component, and describes its configuration as well as supported component
+        connections.</p>
+        <section class="- topic/section section" id="business-hours__section_bqj_jr4_rfc" data-ofbid="business-hours__section_bqj_jr4_rfc"><h2 class="- topic/title title sectiontitle">Component introduction</h2>
+            
+            <p class="- topic/p p"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Business Hours</span> component allows you to route calls to
+                different destinations based on the time of day. A variety of time-based modes are
+                available to flexibly define office hours and implement time-based call routing.</p>
+            <div class="- topic/p p">
+                <dl class="- topic/dl dl" id="business-hours__dl_qmg_rfp_rfc" data-ofbid="business-hours__dl_qmg_rfp_rfc">
+                    
+                        <dt class="- topic/dt dt dlterm">Supported time-based modes</dt>
+                        <dd class="- topic/dd dd">
+                            <table class="- topic/table table frame-all" id="business-hours__table_nmp_sfp_rfc" data-ofbid="business-hours__table_nmp_sfp_rfc"><caption></caption><colgroup><col style="width:29.069767441860467%"/><col style="width:70.93023255813954%"/></colgroup><thead class="- topic/thead thead">
+                                        <tr class="- topic/row">
+                                            <th class="- topic/entry entry colsep-1 rowsep-1" id="business-hours__table_nmp_sfp_rfc__entry__1">Type</th>
+                                            <th class="- topic/entry entry colsep-0 rowsep-1" id="business-hours__table_nmp_sfp_rfc__entry__2">Description</th>
+                                        </tr>
+                                    </thead><tbody class="- topic/tbody tbody">
+                                        <tr class="- topic/row">
+                                            <td class="- topic/entry entry colsep-1 rowsep-1" headers="business-hours__table_nmp_sfp_rfc__entry__1">Business Hours Across Time Zones</td>
+                                            <td class="- topic/entry entry colsep-0 rowsep-1" headers="business-hours__table_nmp_sfp_rfc__entry__2">
+                                                <p class="- topic/p p">Use pre-configured business hours for specific
+                                                  time zone.</p>
+                                                <div class="- topic/p p">
+                                                  <div class="- topic/note note note note_note" id="business-hours__note_npv_3gp_rfc" data-ofbid="business-hours__note_npv_3gp_rfc"><span class="note__title">Note:</span> This requires you to
+                                                  configure business hours in advance. To configure
+                                                  this, go to <span class="+ topic/ph ui-d/menucascade ph menucascade"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Call Control</span><abbr title="and then"> &gt; </abbr><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Business Hours and Holidays</span></span>.</div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="- topic/row">
+                                            <td class="- topic/entry entry colsep-1 rowsep-1" headers="business-hours__table_nmp_sfp_rfc__entry__1">Custom Business Hours</td>
+                                            <td class="- topic/entry entry colsep-0 rowsep-1" headers="business-hours__table_nmp_sfp_rfc__entry__2">
+                                                <p class="- topic/p p">Create custom business hours with a uniform or
+                                                  varied schedule through the week, or full time
+                                                  (24x7) schedule.</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="- topic/row">
+                                            <td class="- topic/entry entry colsep-1 rowsep-0" headers="business-hours__table_nmp_sfp_rfc__entry__1">Custom Time Periods</td>
+                                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="business-hours__table_nmp_sfp_rfc__entry__2">
+                                                <p class="- topic/p p">Create custom time periods to accommodate
+                                                  granular scheduling needs.</p>
+                                            </td>
+                                        </tr>
+                                    </tbody></table>
+                        </dd>
+                    
+                </dl>
+            </div>
+        </section>
+        <section class="- topic/section section" id="business-hours__section_o4q_mr4_rfc" data-ofbid="business-hours__section_o4q_mr4_rfc"><h2 class="- topic/title title sectiontitle">Component configuration</h2>
+            
+            <ol class="- topic/ol ol" id="business-hours__ol_ix4_1gp_rfc" data-ofbid="business-hours__ol_ix4_1gp_rfc">
+                <li class="- topic/li li">After adding <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Business Hours</span> component to a call flow,
+                    click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Business Hours</span> component to proceed with the
+                            configuration.<p class="- topic/p p"><img class="- topic/image image" id="business-hours__image_f3d_l2q_rfc" src="screenshots/business-hours-cfd.png" width="550"/></p></li>
+                <li class="- topic/li li">Select a time-based mode according to your business schedule, then configure its
+                    related settings.<div class="- topic/p p">
+                        <table class="- topic/table table frame-all" id="business-hours__table_crh_tgp_rfc" data-ofbid="business-hours__table_crh_tgp_rfc"><caption></caption><colgroup><col style="width:32.154340836012864%"/><col style="width:67.84565916398714%"/></colgroup><thead class="- topic/thead thead">
+                                    <tr class="- topic/row">
+                                        <th class="- topic/entry entry colsep-1 rowsep-1" id="business-hours__table_crh_tgp_rfc__entry__1">Scenario</th>
+                                        <th class="- topic/entry entry colsep-0 rowsep-1" id="business-hours__table_crh_tgp_rfc__entry__2">Instruction</th>
+                                    </tr>
+                                </thead><tbody class="- topic/tbody tbody">
+                                    <tr class="- topic/row">
+                                        <td class="- topic/entry entry colsep-1 rowsep-1" headers="business-hours__table_crh_tgp_rfc__entry__1">Use Business Hours Configured for Time Zone</td>
+                                        <td class="- topic/entry entry colsep-0 rowsep-1" headers="business-hours__table_crh_tgp_rfc__entry__2">
+                                            <p class="- topic/p p"><img class="- topic/image image" id="business-hours__image_vsh_fgq_rfc" src="screenshots/global-business-hours-cfd.png" width="400"/></p>
+                                            <ol class="- topic/ol ol" type="a" id="business-hours__ol_ihv_vgp_rfc" data-ofbid="business-hours__ol_ihv_vgp_rfc">
+                                                <li class="- topic/li li">In the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Time-based Mode</span>
+                                                  drop-down list, select <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Based on
+                                                  Business Hours Configured for the Time
+                                                  Zone</span>.</li>
+                                                <li class="- topic/li li" id="business-hours__time-zone" data-ofbid="business-hours__time-zone"> In the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Time
+                                                  Zone</span> drop-down list, select a time
+                                                  zone.</li>
+                                                <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Optional:</strong> To prevent incoming calls from
+                                                  being distributed to the holiday destination,
+                                                  select the checkbox of <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Ignore the
+                                                  Holiday Destination</span>.<div class="- topic/p p">
+                                                  <div class="- topic/note note note note_note" id="business-hours__note_sw3_q2v_rfc" data-ofbid="business-hours__note_sw3_q2v_rfc"><span class="note__title">Note:</span> If enabled, incoming
+                                                  calls during holidays will be routed to the
+                                                  destination defined for Business Hours or Outside
+                                                  Business Hours.</div>
+                                                  </div></li>
+                                                <li class="- topic/li li">Click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Confirm</span>.<p class="- topic/p p">The
+                                                  selected time zone will appear on the
+                                                  component.</p><p class="- topic/p p"><img class="- topic/image image" id="business-hours__image_k2d_ljq_rfc" src="screenshots/global-business-hours-done.png" width="500"/></p></li>
+                                            </ol>
+                                        </td>
+                                    </tr>
+                                    <tr class="- topic/row">
+                                        <td class="- topic/entry entry colsep-1 rowsep-1" headers="business-hours__table_crh_tgp_rfc__entry__1">Use Custom Business Hours</td>
+                                        <td class="- topic/entry entry colsep-0 rowsep-1" headers="business-hours__table_crh_tgp_rfc__entry__2">
+                                            <p class="- topic/p p"><img class="- topic/image image" id="business-hours__image_slt_53q_rfc" src="screenshots/custom-business-hours-cfd.png" width="400"/></p>
+                                            <ol class="- topic/ol ol" type="a" id="business-hours__ol_yqd_ghp_rfc" data-ofbid="business-hours__ol_yqd_ghp_rfc">
+                                                <li class="- topic/li li">In the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Time-based Mode</span>
+                                                  drop-down list, select <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Based on Custom
+                                                  Business Hours</span>.</li>
+                                                <li class="- topic/li li"> In the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Time
+                                                  Zone</span> drop-down list, select a time
+                                                  zone.</li>
+                                                <li class="- topic/li li" id="business-hours__daylight" data-ofbid="business-hours__daylight">In the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Daylight Saving
+                                                  Time</span> drop-down list, select an option
+                                                  to enable or disable the feature.</li>
+                                                <li class="- topic/li li">Select a business hour type, then configure its
+                                                  related settings to customize business hours.<div class="- topic/p p">
+                                                  <div class="- topic/note note note note_note" id="business-hours__note_u2l_44q_rfc" data-ofbid="business-hours__note_u2l_44q_rfc"><span class="note__title">Note:</span> Up to <strong class="+ topic/ph hi-d/b ph b">10</strong> time
+                                                  periods are supported for both business hours and
+                                                  break hours respectively.</div>
+                                                  </div></li>
+                                                <li class="- topic/li li" id="business-hours__holiday" data-ofbid="business-hours__holiday"><strong class="+ topic/ph hi-d/b ph b">Optional:</strong> Turn on the switch
+                                                  of <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Holidays</span>, then add holidays.<div class="- topic/p p">
+                                                  <div class="- topic/note note note note_note" id="business-hours__note_qgs_mpq_rfc" data-ofbid="business-hours__note_qgs_mpq_rfc"><span class="note__title">Note:</span> Up to <strong class="+ topic/ph hi-d/b ph b">50</strong>
+                                                  holidays are supported.</div>
+                                                  </div></li>
+                                                <li class="- topic/li li">Click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Confirm</span>.<p class="- topic/p p">The
+                                                  custom business hours will appear on the
+                                                  component.</p><p class="- topic/p p"><img class="- topic/image image" id="business-hours__image_lwb_2jq_rfc" src="screenshots/custom-business-hours-done.png" width="500"/></p></li>
+                                            </ol>
+                                        </td>
+                                    </tr>
+                                    <tr class="- topic/row">
+                                        <td class="- topic/entry entry colsep-1 rowsep-0" headers="business-hours__table_crh_tgp_rfc__entry__1">Use Custom Time Periods</td>
+                                        <td class="- topic/entry entry colsep-0 rowsep-0" headers="business-hours__table_crh_tgp_rfc__entry__2">
+                                            <p class="- topic/p p"><img class="- topic/image image" id="business-hours__image_f2t_4nq_rfc" src="screenshots/custom-time-period-done.png" width="500"/></p>
+                                            <ol class="- topic/ol ol" type="a" id="business-hours__ol_mhm_hkp_rfc" data-ofbid="business-hours__ol_mhm_hkp_rfc">
+                                                <li class="- topic/li li">In the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Time-based Mode</span>
+                                                  drop-down list, select <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Based on Custom
+                                                  Time Periods</span>.</li>
+                                                <li class="- topic/li li"> In the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Time
+                                                  Zone</span> drop-down list, select a time
+                                                  zone.</li>
+                                                <li class="- topic/li li">In the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Daylight Saving
+                                                  Time</span> drop-down list, select an option
+                                                  to enable or disable the feature.</li>
+                                                <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Optional:</strong> Turn on the switch
+                                                  of <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Holidays</span>, then add holidays.<div class="- topic/p p">
+                                                  <div class="- topic/note note note note_note" id="business-hours__d1616e271" data-ofbid="business-hours__d1616e271"><span class="note__title">Note:</span> Up to <strong class="+ topic/ph hi-d/b ph b">50</strong>
+                                                  holidays are supported.</div>
+                                                  </div></li>
+                                                <li class="- topic/li li">Click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Confirm</span>.</li>
+                                                <li class="- topic/li li">Click <img class="- topic/image image" id="business-hours__image_esx_flp_rfc" src="screenshots/add-branch.png" width="20"/> on the
+                                                  component to add and configure custom time periods.<div class="- topic/p p">
+                                                  <div class="- topic/note note note note_note" id="business-hours__note_uqg_rpq_rfc" data-ofbid="business-hours__note_uqg_rpq_rfc"><span class="note__title">Note:</span> Up to <strong class="+ topic/ph hi-d/b ph b">50</strong> custom
+                                                  time periods are supported.</div>
+                                                  </div><p class="- topic/p p">The custom time periods will appear on the
+                                                  component.</p><p class="- topic/p p"><img class="- topic/image image" id="business-hours__image_bt3_wnq_rfc" src="screenshots/custom-business-hours-ddone.png" width="500"/></p><div class="- topic/p p">
+                                                  <div class="- topic/note note note note_note" id="business-hours__note_d2b_4hv_rfc" data-ofbid="business-hours__note_d2b_4hv_rfc"><span class="note__title">Note:</span> <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Default</span> branch indicates
+                                                  the failover destination for incoming calls that
+                                                  don't match any configured time conditions.</div>
+                                                  </div></li>
+                                            </ol>
+                                        </td>
+                                    </tr>
+                                </tbody></table>
+                    </div></li>
+                <li class="- topic/li li">
+                    <p class="- topic/p p">Click <img class="- topic/image image" id="business-hours__image_ab3_m3v_rfc" src="screenshots/add-branch.png" width="20"/> on the branches to add the desired component as its destination.</p>
+                    <p class="- topic/p p"><img class="- topic/image image" id="business-hours__image_x1x_4jv_rfc" src="screenshots/branch-add-component-cfd.png" width="450"/></p>
+                </li>
+            </ol>
+        </section>
+        <section class="- topic/section section" id="business-hours__section_ryc_nr4_rfc" data-ofbid="business-hours__section_ryc_nr4_rfc"><h2 class="- topic/title title sectiontitle">Component connections</h2>
+            
+            <p class="- topic/p p"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Business
+                    Hours</span> component comes with built-in branches - such as
+                    <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Business Hours</span>, <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Outside Business
+                    Hours</span>, and <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Holidays</span> - that defines the time
+                condition. Each branch can be connected to <strong class="+ topic/ph hi-d/b ph b">one</strong> component to specify the
+                corresponding call destination, which can be any of the supported
+                components.</p>
+        </section>
+    </div>
+</article></main></div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                    
+                        
+                        
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div> 
+        <footer class="navbar navbar-default wh_footer" whc:version="23.1">
+  <div class=" footer-container mx-auto ">
+    <div class="footer-html-en"></div>
+  </div>
+</footer>
+        
+        <div id="go2top" class="d-print-none">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </div>
+        
+        <!-- The modal container for images -->
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <!-- Modal Content (The Image) -->
+            <img class="modal-content" id="modal-img" alt=""/>
+            <!-- Modal Caption (Image Text) -->
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
+</html>

@@ -1,0 +1,276 @@
+<link rel="stylesheet" href="./css/p-series.css">   
+<link rel="stylesheet" href="./css/notes.css">   
+<script src="./iframe-navigation.js"></script> 
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                        
+                      
+                        
+                    
+                    
+                    <div class="col-lg-7 col-md-9 col-sm-12" id="wh_topic_body">
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="- topic/title title topictitle1" id="ariaid-title1">Set up a Call Flow from Template</h1>
+    
+    <div class="- topic/body body"><p class="- topic/shortdesc shortdesc"><span class="- topic/ph ph">Yeastar P-Series Software Edition</span> provides built-in templates that cover common use cases.
+        You can use a ready-made template to build a custom call flow.</p>
+        <section class="- topic/section section" id="create-a-call-flow-from-template__section_t52_pb5_qfc" data-ofbid="create-a-call-flow-from-template__section_t52_pb5_qfc"><h2 class="- topic/title title sectiontitle">Template introduction</h2>
+            
+            <div class="- topic/p p">
+                <table class="- topic/table table frame-all" id="create-a-call-flow-from-template__table_kfc_ctz_qfc" data-ofbid="create-a-call-flow-from-template__table_kfc_ctz_qfc"><caption></caption><colgroup><col style="width:20%"/><col style="width:30%"/><col style="width:50%"/></colgroup><thead class="- topic/thead thead">
+                            <tr class="- topic/row">
+                                <th class="- topic/entry entry colsep-1 rowsep-1" id="create-a-call-flow-from-template__table_kfc_ctz_qfc__entry__1">Template</th>
+                                <th class="- topic/entry entry colsep-1 rowsep-1" id="create-a-call-flow-from-template__table_kfc_ctz_qfc__entry__2">Description</th>
+                                <th class="- topic/entry entry colsep-0 rowsep-1" id="create-a-call-flow-from-template__table_kfc_ctz_qfc__entry__3">Screenshot</th>
+                            </tr>
+                        </thead><tbody class="- topic/tbody tbody">
+                            <tr class="- topic/row">
+                                <td class="- topic/entry entry colsep-1 rowsep-1" headers="create-a-call-flow-from-template__table_kfc_ctz_qfc__entry__1">Linear Call Flow</td>
+                                <td class="- topic/entry entry colsep-1 rowsep-1" headers="create-a-call-flow-from-template__table_kfc_ctz_qfc__entry__2">
+                                    <p class="- topic/p p">A linear call flow allows you to route calls to different
+                                        destinations based on the DTMF digit entered by callers.</p>
+                                </td>
+                                <td class="- topic/entry entry colsep-0 rowsep-1" headers="create-a-call-flow-from-template__table_kfc_ctz_qfc__entry__3"><img class="- topic/image image" id="create-a-call-flow-from-template__image_hkj_p5z_qfc" src="screenshots/linear-cfd.png" width="400"/></td>
+                            </tr>
+                            <tr class="- topic/row">
+                                <td class="- topic/entry entry colsep-1 rowsep-1" headers="create-a-call-flow-from-template__table_kfc_ctz_qfc__entry__1">Time-based Call Flow</td>
+                                <td class="- topic/entry entry colsep-1 rowsep-1" headers="create-a-call-flow-from-template__table_kfc_ctz_qfc__entry__2">
+                                    <p class="- topic/p p">A time-based call flow allows you to route calls to different
+                                        destinations based on the business hours configured for
+                                        default time zone.</p>
+                                </td>
+                                <td class="- topic/entry entry colsep-0 rowsep-1" headers="create-a-call-flow-from-template__table_kfc_ctz_qfc__entry__3"><img class="- topic/image image" id="create-a-call-flow-from-template__image_w3s_x5z_qfc" src="screenshots/time-based-cfd.png" width="400"/></td>
+                            </tr>
+                            <tr class="- topic/row">
+                                <td class="- topic/entry entry colsep-1 rowsep-1" headers="create-a-call-flow-from-template__table_kfc_ctz_qfc__entry__1">Certified Call Flow</td>
+                                <td class="- topic/entry entry colsep-1 rowsep-1" headers="create-a-call-flow-from-template__table_kfc_ctz_qfc__entry__2">
+                                    <p class="- topic/p p">A certified call flow allows you route calls to different
+                                        destinations by evaluating user input against pre-defined
+                                        expressions.</p>
+                                </td>
+                                <td class="- topic/entry entry colsep-0 rowsep-1" headers="create-a-call-flow-from-template__table_kfc_ctz_qfc__entry__3"><img class="- topic/image image" id="create-a-call-flow-from-template__image_gmv_bvz_qfc" src="screenshots/certified-cfd.png" width="400"/></td>
+                            </tr>
+                            <tr class="- topic/row">
+                                <td class="- topic/entry entry colsep-1 rowsep-0" headers="create-a-call-flow-from-template__table_kfc_ctz_qfc__entry__1">Database Authentication</td>
+                                <td class="- topic/entry entry colsep-1 rowsep-0" headers="create-a-call-flow-from-template__table_kfc_ctz_qfc__entry__2">A database authentication call flow allows you to route calls
+                                    to different destinations by validating user input against
+                                    database.</td>
+                                <td class="- topic/entry entry colsep-0 rowsep-0" headers="create-a-call-flow-from-template__table_kfc_ctz_qfc__entry__3"><img class="- topic/image image" id="create-a-call-flow-from-template__image_whv_3vz_qfc" src="screenshots/database-authentication-cfd.png" width="400"/></td>
+                            </tr>
+                        </tbody></table>
+            </div>
+        </section>
+        <section class="- topic/section section" id="create-a-call-flow-from-template__section_mnl_jb5_qfc" data-ofbid="create-a-call-flow-from-template__section_mnl_jb5_qfc"><h2 class="- topic/title title sectiontitle">Step 1. Create a call flow from template</h2>
+            
+            <ol class="- topic/ol ol" id="create-a-call-flow-from-template__ol_ewz_jb5_qfc" data-ofbid="create-a-call-flow-from-template__ol_ewz_jb5_qfc">
+                <li class="- topic/li li" id="create-a-call-flow-from-template__creation-page" data-ofbid="create-a-call-flow-from-template__creation-page">Access the creation page of call flow.<p class="- topic/p p"><img class="- topic/image image" id="create-a-call-flow-from-template__image_xfh_c3z_qfc" src="screenshots/creation-page-cfd.png" width="650"/></p><ol class="- topic/ol ol" type="a" id="create-a-call-flow-from-template__ol_ztr_shz_qfc" data-ofbid="create-a-call-flow-from-template__ol_ztr_shz_qfc">
+                        <li class="- topic/li li" id="create-a-call-flow-from-template__cfd-path" data-ofbid="create-a-call-flow-from-template__cfd-path">Log in to PBX web portal, go to <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Call Flow
+                                Designer</span>.</li>
+                        <li class="- topic/li li">Click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Add</span>.</li>
+                    </ol></li>
+                <li class="- topic/li li">In the pop-up window, complete the following settings, then click
+                        <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Save</span>.<p class="- topic/p p"><img class="- topic/image image" id="create-a-call-flow-from-template__image_tg2_vqz_qfc" src="screenshots/template-cfd.png" width="400"/></p><div class="- topic/p p">
+                        <ul class="- topic/ul ul">
+                            <li class="- topic/li li" id="create-a-call-flow-from-template__name" data-ofbid="create-a-call-flow-from-template__name"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Name</span>: Enter a name to help you
+                                identify the call flow.</li>
+                            <li class="- topic/li li" id="create-a-call-flow-from-template__remark" data-ofbid="create-a-call-flow-from-template__remark"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Remark</span>: Add a brief
+                                description.</li>
+                            <li class="- topic/li li"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Create Method</span>: Select <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Create by
+                                    Template</span>.</li>
+                            <li class="- topic/li li"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Template Name</span>: Select a template.</li>
+                        </ul>
+                    </div><p class="- topic/p p">The call flow is created, and the webpage is redirected to the call flow
+                        canvas.</p></li>
+            </ol>
+        </section>
+        <section class="- topic/section section" id="create-a-call-flow-from-template__section_exv_mb5_qfc" data-ofbid="create-a-call-flow-from-template__section_exv_mb5_qfc"><h2 class="- topic/title title sectiontitle">Step 2. Add and connect components</h2>
+            
+            <div class="- topic/p p">
+                <ol class="- topic/ol ol">
+                    <li class="- topic/li li">Add and configure components.<ol class="- topic/ol ol" type="a" id="create-a-call-flow-from-template__ol_hyb_jqw_rfc" data-ofbid="create-a-call-flow-from-template__ol_hyb_jqw_rfc">
+                            <li class="- topic/li li">Add components using one of the following methods:<ul class="- topic/ul ul" id="create-a-call-flow-from-template__ul_eyn_3pw_rfc" data-ofbid="create-a-call-flow-from-template__ul_eyn_3pw_rfc">
+                                    <li class="- topic/li li">Click <img class="- topic/image image" id="create-a-call-flow-from-template__image_xsp_fpw_rfc" src="screenshots/add-branch.png" width="20"/> on an component,
+                                        then select a component.<p class="- topic/p p"><img class="- topic/image image" id="create-a-call-flow-from-template__image_ipf_5pw_rfc" src="screenshots/add-component-cfd.png"/></p></li>
+                                    <li class="- topic/li li">From the left components toolbox, click or drag a component
+                                        to the canvas.<p class="- topic/p p"><img class="- topic/image image" id="create-a-call-flow-from-template__image_ajm_swz_qfc" src="screenshots/components-toolbox-cfd.png" width="400"/></p></li>
+                                </ul></li>
+                            <li class="- topic/li li">Click the component to edit its settings.<p class="- topic/p p">Refer to the table below
+                                    for introduction and instruction on each component.</p><div class="- topic/p p">
+                                    <table class="- topic/table table frame-all" id="create-a-call-flow-from-template__table_nxt_5zz_qfc" data-ofbid="create-a-call-flow-from-template__table_nxt_5zz_qfc"><caption></caption><colgroup><col style="width:24.213075060532688%"/><col style="width:75.78692493946731%"/></colgroup><thead class="- topic/thead thead">
+                            <tr class="- topic/row">
+                                <th class="- topic/entry entry colsep-1 rowsep-1" id="create-a-call-flow-from-template__table_nxt_5zz_qfc__entry__1">Component</th>
+                                <th class="- topic/entry entry colsep-0 rowsep-1" id="create-a-call-flow-from-template__table_nxt_5zz_qfc__entry__2">Description</th>
+                            </tr>
+                        </thead><tbody class="- topic/tbody tbody">
+                            <tr class="- topic/row">
+                                <td class="- topic/entry entry colsep-1 rowsep-1" headers="create-a-call-flow-from-template__table_nxt_5zz_qfc__entry__1">Initial Action</td>
+                                <td class="- topic/entry entry colsep-0 rowsep-1" headers="create-a-call-flow-from-template__table_nxt_5zz_qfc__entry__2">
+                                    <p class="- topic/p p"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Initial Action</span> component is the entry
+                                        point of a call flow. It allows you to specify the phone
+                                        number(s) that callers can dial to initiate the flow, and
+                                        optionally configure an audio prompt to welcome callers or
+                                        provide instructions for them.</p>
+                                    <p class="- topic/p p">For more information, see <a class="- topic/xref xref" href="initial-action.html" title="This topic provides an overview of the Initial Action component, and describes its restriction, configuration, as well as supported component connections.">Initial Action</a>.</p>
+                                </td>
+                            </tr>
+                            <tr class="- topic/row">
+                                <td class="- topic/entry entry colsep-1 rowsep-1" headers="create-a-call-flow-from-template__table_nxt_5zz_qfc__entry__1">Prompt</td>
+                                <td class="- topic/entry entry colsep-0 rowsep-1" headers="create-a-call-flow-from-template__table_nxt_5zz_qfc__entry__2">
+                                    <p class="- topic/p p"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Prompt</span> component allows you to play
+                                        audio prompt(s) or a text-to-speech message to callers.</p>
+                                    <p class="- topic/p p">For more information, see <a class="- topic/xref xref" href="prompt.html" title="This topic provides an overview of the Prompt component, and describes its configuration as well as supported component connections.">Prompt</a>.</p>
+                                </td>
+                            </tr>
+                            <tr class="- topic/row">
+                                <td class="- topic/entry entry colsep-1 rowsep-1" headers="create-a-call-flow-from-template__table_nxt_5zz_qfc__entry__1">Business Hours</td>
+                                <td class="- topic/entry entry colsep-0 rowsep-1" headers="create-a-call-flow-from-template__table_nxt_5zz_qfc__entry__2">
+                                    <p class="- topic/p p"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Business Hours</span> component allows you to
+                                        route calls to different destinations based on the time of
+                                        day.</p>
+                                    <p class="- topic/p p">For more information, see <a class="- topic/xref xref" href="business-hours.html" title="This topic provides an overview of the Business Hours component, and describes its configuration as well as supported component connections.">Business Hours</a>.</p>
+                                </td>
+                            </tr>
+                            <tr class="- topic/row">
+                                <td class="- topic/entry entry colsep-1 rowsep-1" headers="create-a-call-flow-from-template__table_nxt_5zz_qfc__entry__1">Menu</td>
+                                <td class="- topic/entry entry colsep-0 rowsep-1" headers="create-a-call-flow-from-template__table_nxt_5zz_qfc__entry__2"></td>
+                            </tr>
+                            <tr class="- topic/row">
+                                <td class="- topic/entry entry colsep-1 rowsep-1" headers="create-a-call-flow-from-template__table_nxt_5zz_qfc__entry__1">User Input</td>
+                                <td class="- topic/entry entry colsep-0 rowsep-1" headers="create-a-call-flow-from-template__table_nxt_5zz_qfc__entry__2">
+                                    <p class="- topic/p p"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">User Input</span> component allows you to
+                                        collect DTMF digits from callers, typically used with
+                                            <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Condition</span> component to process
+                                        user input and route calls. </p>
+                                    <p class="- topic/p p">For more information, see <a class="- topic/xref xref" href="user-input.html" title="This topic provides an overview of the User Input component, and describes its configuration as well as supported component connections.">User Input</a>.</p>
+                                </td>
+                            </tr>
+                            <tr class="- topic/row">
+                                <td class="- topic/entry entry colsep-1 rowsep-1" headers="create-a-call-flow-from-template__table_nxt_5zz_qfc__entry__1">Language</td>
+                                <td class="- topic/entry entry colsep-0 rowsep-1" headers="create-a-call-flow-from-template__table_nxt_5zz_qfc__entry__2">
+                                    <p class="- topic/p p"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Language</span> component allows you to
+                                        change the system prompt language for subsequent components
+                                        in a call flow.</p>
+                                    <p class="- topic/p p">For more information, see <a class="- topic/xref xref" href="language.html" title="This topic provides an overview of the Language component, and describes its configuration as well as supported component connections.">Language</a>.</p>
+                                </td>
+                            </tr>
+                            <tr class="- topic/row">
+                                <td class="- topic/entry entry colsep-1 rowsep-1" headers="create-a-call-flow-from-template__table_nxt_5zz_qfc__entry__1">Record</td>
+                                <td class="- topic/entry entry colsep-0 rowsep-1" headers="create-a-call-flow-from-template__table_nxt_5zz_qfc__entry__2"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Record</span> component allows you to start
+                                    or stop recording a call when it reaches the component in the
+                                    call flow, and optionally configure prompts to inform call
+                                    participants at the start and during the recording.<p class="- topic/p p">For more
+                                        information, see <a class="- topic/xref xref" href="record.html" title="This topic provides an overview of the Record component, and describes its requirement, configuration, as well as supported component connections.">Record</a>.</p></td>
+                            </tr>
+                            <tr class="- topic/row">
+                                <td class="- topic/entry entry colsep-1 rowsep-1" headers="create-a-call-flow-from-template__table_nxt_5zz_qfc__entry__1">Dial by Number</td>
+                                <td class="- topic/entry entry colsep-0 rowsep-1" headers="create-a-call-flow-from-template__table_nxt_5zz_qfc__entry__2">
+                                    <p class="- topic/p p"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Dial by Number</span> component allows
+                                        callers to directly dial a number to reach the
+                                        destination.</p>
+                                    <p class="- topic/p p">For more information, see <a class="- topic/xref xref" href="dial-by-number.html" title="This topic provides an overview of the Dial by Number component, and describes its configuration as well as supported component connections.">Dial by Number</a>.</p>
+                                </td>
+                            </tr>
+                            <tr class="- topic/row">
+                                <td class="- topic/entry entry colsep-1 rowsep-1" headers="create-a-call-flow-from-template__table_nxt_5zz_qfc__entry__1">Dial by Name</td>
+                                <td class="- topic/entry entry colsep-0 rowsep-1" headers="create-a-call-flow-from-template__table_nxt_5zz_qfc__entry__2">
+                                    <p class="- topic/p p"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Dial by Name</span> component is one of the
+                                        end components to terminate a call flow. It allows callers
+                                        to reach extension user by entering the first three letters
+                                        of the user's name.</p>
+                                    <p class="- topic/p p">For more information, see <a class="- topic/xref xref" href="dial-by-name.html" title="This topic provides an overview of the Dial by Name component, and describes its configuration as well as supported component connections.">Dial by Name</a>.</p>
+                                </td>
+                            </tr>
+                            <tr class="- topic/row">
+                                <td class="- topic/entry entry colsep-1 rowsep-1" headers="create-a-call-flow-from-template__table_nxt_5zz_qfc__entry__1">Transfer</td>
+                                <td class="- topic/entry entry colsep-0 rowsep-1" headers="create-a-call-flow-from-template__table_nxt_5zz_qfc__entry__2">
+                                    <p class="- topic/p p"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Transfer</span> component is one of the end
+                                        components to terminate a call flow. It allows you to
+                                        transfer callers to a designated destination, and optionally
+                                        configure prompts to inform them of the transfer.</p>
+                                    <p class="- topic/p p">For more information, see <a class="- topic/xref xref" href="transfer.html" title="This topic provides an overview of the Transfer component, and describes its configuration as well as supported component connections.">Transfer</a>.</p>
+                                </td>
+                            </tr>
+                            <tr class="- topic/row">
+                                <td class="- topic/entry entry colsep-1 rowsep-1" headers="create-a-call-flow-from-template__table_nxt_5zz_qfc__entry__1">Hang Up Call</td>
+                                <td class="- topic/entry entry colsep-0 rowsep-1" headers="create-a-call-flow-from-template__table_nxt_5zz_qfc__entry__2">
+                                    <p class="- topic/p p"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Hang Up Call</span> component is one of the
+                                        end components to terminate a call flow. When callers are
+                                        routed to the component, the call will be disconnected.</p>
+                                    <p class="- topic/p p">For more information, see <a class="- topic/xref xref" href="hang-up-call.html" title="This topic provides an overview of the Hang Up Call component, and describes its configuration as well as supported component connections.">Hang Up Call</a>.</p>
+                                </td>
+                            </tr>
+                            <tr class="- topic/row">
+                                <td class="- topic/entry entry colsep-1 rowsep-1" headers="create-a-call-flow-from-template__table_nxt_5zz_qfc__entry__1">Condition</td>
+                                <td class="- topic/entry entry colsep-0 rowsep-1" headers="create-a-call-flow-from-template__table_nxt_5zz_qfc__entry__2"></td>
+                            </tr>
+                            <tr class="- topic/row">
+                                <td class="- topic/entry entry colsep-1 rowsep-1" headers="create-a-call-flow-from-template__table_nxt_5zz_qfc__entry__1">Loop</td>
+                                <td class="- topic/entry entry colsep-0 rowsep-1" headers="create-a-call-flow-from-template__table_nxt_5zz_qfc__entry__2"></td>
+                            </tr>
+                            <tr class="- topic/row">
+                                <td class="- topic/entry entry colsep-1 rowsep-0" headers="create-a-call-flow-from-template__table_nxt_5zz_qfc__entry__1">Developer</td>
+                                <td class="- topic/entry entry colsep-0 rowsep-0" headers="create-a-call-flow-from-template__table_nxt_5zz_qfc__entry__2"></td>
+                            </tr>
+                        </tbody></table>
+                                </div></li>
+                        </ol></li>
+                    <li class="- topic/li li">Click <img class="- topic/image image" id="create-a-call-flow-from-template__image_ols_nqw_rfc" src="screenshots/add-branch.png" width="20"/> and drag to connect components.<p class="- topic/p p"><img class="- topic/image image" id="create-a-call-flow-from-template__image_hn5_2rw_rfc" src="screenshots/connect-components.gif"/></p></li>
+                    <li class="- topic/li li">At the top-right corner, click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Save</span>.</li>
+                </ol>
+            </div>
+        </section>
+        <section class="- topic/section section" id="create-a-call-flow-from-template__section_hdx_nb5_qfc" data-ofbid="create-a-call-flow-from-template__section_hdx_nb5_qfc"><h2 class="- topic/title title sectiontitle">Step 3. Enable the call flow</h2>
+            
+            <div class="- topic/p p">
+                <ol class="- topic/ol ol">
+                    <li class="- topic/li li">On the call flow list, turn on the switch of the desired call flow.<p class="- topic/p p"><img class="- topic/image image" id="create-a-call-flow-from-template__image_tbt_ttz_qfc" src="screenshots/enable-template-call-flow.png" width="400"/></p></li>
+                    <li class="- topic/li li">In the pop-up window, click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">OK</span>.<p class="- topic/p p"><img class="- topic/image image" id="create-a-call-flow-from-template__image_v25_wtz_qfc" src="screenshots/confirm-enable-cfd.png" width="400"/></p></li>
+                </ol>
+            </div>
+        </section>
+    </div>
+</article></main></div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                    
+                        
+                       
+                        
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div> 
+        <footer class="navbar navbar-default wh_footer" whc:version="23.1">
+  <div class=" footer-container mx-auto ">
+    <div class="footer-html-en"></div>
+  </div>
+</footer>
+        
+        <div id="go2top" class="d-print-none">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </div>
+        
+        <!-- The modal container for images -->
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <!-- Modal Content (The Image) -->
+            <img class="modal-content" id="modal-img" alt=""/>
+            <!-- Modal Caption (Image Text) -->
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
+</html>

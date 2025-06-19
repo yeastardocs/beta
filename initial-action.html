@@ -1,0 +1,310 @@
+<link rel="stylesheet" href="./css/p-series.css">   
+<link rel="stylesheet" href="./css/notes.css">   
+<script src="./iframe-navigation.js"></script>
+
+            
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                        
+                 
+                    
+                    
+                    <div class="col-lg-7 col-md-9 col-sm-12" id="wh_topic_body">
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="- topic/title title topictitle1" id="ariaid-title1">Initial Action</h1>
+    
+    <div class="- topic/body body"><p class="- topic/shortdesc shortdesc">This topic provides an overview of the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Initial Action</span>
+        component, and describes its restriction, configuration, as well as supported component
+        connections.</p>
+        <section class="- topic/section section" id="initial-action__section_l2w_snq_pfc" data-ofbid="initial-action__section_l2w_snq_pfc"><h2 class="- topic/title title sectiontitle">Component restriction</h2>
+            
+            <p class="- topic/p p">Each call flow contains exactly one <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Initial Action</span> component.
+                This component is automatically added upon call flow creation and can not be
+                deleted.</p>
+        </section>
+        <section class="- topic/section section" id="initial-action__section_rfs_w4p_pfc" data-ofbid="initial-action__section_rfs_w4p_pfc"><h2 class="- topic/title title sectiontitle">Component introduction</h2>
+            
+            <p class="- topic/p p"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Initial Action</span> component is the entry point of a call flow. It
+                allows you to specify the phone number(s) that callers can dial to initiate the
+                flow, and optionally configure an audio prompt to welcome callers or provide
+                instructions for them.</p>
+            <p class="- topic/p p"><img class="- topic/image image" id="initial-action__image_ps3_hdq_rfc" src="screenshots/initial-action-component-cfd.png" width="550"/></p>
+            <div class="- topic/p p">
+                <dl class="- topic/dl dl" id="initial-action__dl_fkz_spy_pfc" data-ofbid="initial-action__dl_fkz_spy_pfc">
+                    
+                        <dt class="- topic/dt dt dlterm">Supported number types</dt>
+                        <dd class="- topic/dd dd">You can assign <strong class="+ topic/ph hi-d/b ph b">extension number</strong> or <strong class="+ topic/ph hi-d/b ph b">trunk DID number(s)</strong> to
+                            the component.</dd>
+                        <dd class="- topic/dd dd ddexpand">
+                            <table class="- topic/table table frame-all" id="initial-action__table_b2m_3pq_pfc" data-ofbid="initial-action__table_b2m_3pq_pfc"><caption></caption><colgroup><col style="width:20%"/><col style="width:80%"/></colgroup><thead class="- topic/thead thead">
+                                        <tr class="- topic/row">
+                                            <th class="- topic/entry entry colsep-1 rowsep-1" id="initial-action__table_b2m_3pq_pfc__entry__1">Number Type</th>
+                                            <th class="- topic/entry entry colsep-0 rowsep-1" id="initial-action__table_b2m_3pq_pfc__entry__2">Description</th>
+                                        </tr>
+                                    </thead><tbody class="- topic/tbody tbody">
+                                        <tr class="- topic/row">
+                                            <td class="- topic/entry entry colsep-1 rowsep-1" headers="initial-action__table_b2m_3pq_pfc__entry__1">Extension Number</td>
+                                            <td class="- topic/entry entry colsep-0 rowsep-1" headers="initial-action__table_b2m_3pq_pfc__entry__2">The system reserves a range of extension numbers
+                                                for call flow - <strong class="+ topic/ph hi-d/b ph b">6900 - 6999</strong><span class="- topic/ph ph"> (max. extensions  ≤ 6000) or
+                                                  <strong class="+ topic/ph hi-d/b ph b">50900 - 50999</strong> (max. extensions ＞
+                                                  6000)</span>.<p class="- topic/p p">By default, the first available
+                                                  extension number within the range is assigned upon
+                                                  call flow creation, you can also assign a custom
+                                                  number outside the reserved range.</p><div class="- topic/p p">
+                                                  <div class="- topic/note note note note_note" id="initial-action__note_c5q_jpq_pfc" data-ofbid="initial-action__note_c5q_jpq_pfc"><span class="note__title">Note:</span> To change the default
+                                                  extension range for call flow, go to <span class="+ topic/ph ui-d/menucascade ph menucascade"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">PBX Settings</span><abbr title="and then"> &gt; </abbr><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Preferences</span><abbr title="and then"> &gt; </abbr><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Extension Preferences</span><abbr title="and then"> &gt; </abbr><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Call Flow</span></span>.<p class="- topic/p p"><img class="- topic/image image" id="initial-action__image_rt3_rwq_pfc" src="screenshots/call-flow-ext-range.png" width="400"/></p></div>
+                                                </div></td>
+                                        </tr>
+                                        <tr class="- topic/row">
+                                            <td class="- topic/entry entry colsep-1 rowsep-0" headers="initial-action__table_b2m_3pq_pfc__entry__1">Trunk DID Number(s)</td>
+                                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="initial-action__table_b2m_3pq_pfc__entry__2">
+                                                <p class="- topic/p p">You can assign trunk DID number(s) to the
+                                                  component when creating a call flow.</p>
+                                                <div class="- topic/p p">
+                                                  <div class="- topic/note note note note_note" id="initial-action__note_tnk_kpq_pfc" data-ofbid="initial-action__note_tnk_kpq_pfc"><span class="note__title">Note:</span> To customize DID
+                                                  numbers for SIP trunks, go to <span class="+ topic/ph ui-d/menucascade ph menucascade"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Extension and Trunk</span><abbr title="and then"> &gt; </abbr><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Trunk</span><abbr title="and then"> &gt; </abbr><span class="+ topic/ph ui-d/uicontrol ph uicontrol">DIDs/DDIs</span></span>.<p class="- topic/p p"><img class="- topic/image image" id="initial-action__image_tmg_syq_pfc" src="screenshots/did-call-flow.png" width="550"/></p></div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody></table>
+                        </dd>
+                    
+                </dl>
+                <dl class="- topic/dl dl" id="initial-action__dl_h4w_5py_pfc" data-ofbid="initial-action__dl_h4w_5py_pfc">
+                    
+                        <dt class="- topic/dt dt dlterm">Supported prompt types</dt>
+                        <dd class="- topic/dd dd">You can add audio prompt(s) or a text-to-speech message to interact with
+                            callers.</dd>
+                        <dd class="- topic/dd dd ddexpand">
+                            <div class="- topic/p p">
+                                <table class="- topic/table table frame-all" id="initial-action__table_g2n_lpq_pfc" data-ofbid="initial-action__table_g2n_lpq_pfc"><caption></caption><colgroup><col style="width:20%"/><col style="width:80%"/></colgroup><thead class="- topic/thead thead">
+                                            <tr class="- topic/row">
+                                                <th class="- topic/entry entry colsep-1 rowsep-1" id="initial-action__table_g2n_lpq_pfc__entry__1">Prompt Type</th>
+                                                <th class="- topic/entry entry colsep-0 rowsep-1" id="initial-action__table_g2n_lpq_pfc__entry__2">Description</th>
+                                            </tr>
+                                        </thead><tbody class="- topic/tbody tbody">
+                                            <tr class="- topic/row" id="initial-action__custom-type">
+                                                <td class="- topic/entry entry colsep-1 rowsep-1" headers="initial-action__table_g2n_lpq_pfc__entry__1">Custom Prompt</td>
+                                                <td class="- topic/entry entry colsep-0 rowsep-1" headers="initial-action__table_g2n_lpq_pfc__entry__2">Choose from existing custom prompts, or
+                                                  create a new one by recording with an extension or
+                                                  uploading an audio file.</td>
+                                            </tr>
+                                            <tr class="- topic/row">
+                                                <td class="- topic/entry entry colsep-1 rowsep-1" headers="initial-action__table_g2n_lpq_pfc__entry__1">Music on Hold (MoH)</td>
+                                                <td class="- topic/entry entry colsep-0 rowsep-1" headers="initial-action__table_g2n_lpq_pfc__entry__2">Choose from existing MoH.<div class="- topic/p p">
+                                                  <div class="- topic/note note note note_note" id="initial-action__note_qjs_fpq_pfc" data-ofbid="initial-action__note_qjs_fpq_pfc"><span class="note__title">Note:</span> Before you begin, make
+                                                  sure the desired MoH is configured in <span class="+ topic/ph ui-d/menucascade ph menucascade"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">PBX Settings</span><abbr title="and then"> &gt; </abbr><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Voice Prompt</span><abbr title="and then"> &gt; </abbr><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Music on Hold</span></span>.<p class="- topic/p p"><img class="- topic/image image" id="initial-action__image_blr_4hr_pfc" src="screenshots/moh-call-flow.png" width="550"/></p></div>
+                                                  </div></td>
+                                            </tr>
+                                            <tr class="- topic/row" id="initial-action__tts-type">
+                                                <td class="- topic/entry entry colsep-1 rowsep-0" headers="initial-action__table_g2n_lpq_pfc__entry__1">Text to Speech (TTS)</td>
+                                                <td class="- topic/entry entry colsep-0 rowsep-0" headers="initial-action__table_g2n_lpq_pfc__entry__2">
+                                                  <p class="- topic/p p">Enter the desired text, which will be converted
+                                                  to speech in the selected language and voice
+                                                  style.</p>
+                                                  <div class="- topic/p p">
+                                                  <div class="- topic/note note note note_note" id="initial-action__note_klx_yqw_pfc" data-ofbid="initial-action__note_klx_yqw_pfc"><span class="note__title">Note:</span> Before you begin, make
+                                                  sure the desired TTS language is available in <span class="+ topic/ph ui-d/menucascade ph menucascade"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">PBX Settings</span><abbr title="and then"> &gt; </abbr><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Voice Prompt</span><abbr title="and then"> &gt; </abbr><span class="+ topic/ph ui-d/uicontrol ph uicontrol">System Prompt</span></span>.</div>
+                                                  </div>
+                                                </td>
+                                            </tr>
+                                        </tbody></table>
+                            </div>
+                        </dd>
+                    
+                </dl>
+            </div>
+        </section>
+        <section class="- topic/section section" id="initial-action__section_o14_fpp_pfc" data-ofbid="initial-action__section_o14_fpp_pfc"><h2 class="- topic/title title sectiontitle">Component configuration</h2>
+            
+            <div class="- topic/p p">
+                <ol class="- topic/ol ol">
+                    <li class="- topic/li li">After creating a call flow, click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Initial Action</span>
+                        component to proceed with the configuration.<p class="- topic/p p"><img class="- topic/image image" id="initial-action__image_amf_svd_qfc" src="screenshots/initial-action-cfd.png" width="500"/></p></li>
+                    <li class="- topic/li li">Specify the number(s) that callers can dial to initiate the call
+                                flow.<p class="- topic/p p"><img class="- topic/image image" id="initial-action__image_qkg_mnr_pfc" src="screenshots/number-initial-action.png" width="400"/></p><div class="- topic/p p">
+                            <table class="- topic/table table frame-all" id="initial-action__table_st2_n5d_qfc" data-ofbid="initial-action__table_st2_n5d_qfc"><caption></caption><colgroup><col style="width:19.011406844106464%"/><col style="width:80.98859315589354%"/></colgroup><thead class="- topic/thead thead">
+                                        <tr class="- topic/row">
+                                            <th class="- topic/entry entry colsep-1 rowsep-1" id="initial-action__table_st2_n5d_qfc__entry__1">Item</th>
+                                            <th class="- topic/entry entry colsep-0 rowsep-1" id="initial-action__table_st2_n5d_qfc__entry__2">Instruction</th>
+                                        </tr>
+                                    </thead><tbody class="- topic/tbody tbody">
+                                        <tr class="- topic/row">
+                                            <td class="- topic/entry entry colsep-1 rowsep-1" headers="initial-action__table_st2_n5d_qfc__entry__1">Number</td>
+                                            <td class="- topic/entry entry colsep-0 rowsep-1" headers="initial-action__table_st2_n5d_qfc__entry__2">Retain the default extension number, or customize
+                                                a number.<div class="- topic/p p">
+                                                  <div class="- topic/note note note note_note" id="initial-action__note_s2q_45d_qfc" data-ofbid="initial-action__note_s2q_45d_qfc"><span class="note__title">Note:</span> 
+                                                  <ul class="- topic/ul ul" id="initial-action__ul_t2q_45d_qfc" data-ofbid="initial-action__ul_t2q_45d_qfc">
+                                                  <li class="- topic/li li">The custom number can fall outside of the
+                                                  default range (6900 - 6999<span class="- topic/ph ph">
+                                                  / 50900 - 50999</span>).</li>
+                                                  <li class="- topic/li li">Once saved, the number can not be
+                                                  modified.</li>
+                                                  </ul>
+                                                  </div>
+                                                </div></td>
+                                        </tr>
+                                        <tr class="- topic/row">
+                                            <td class="- topic/entry entry colsep-1 rowsep-0" headers="initial-action__table_st2_n5d_qfc__entry__1">DID</td>
+                                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="initial-action__table_st2_n5d_qfc__entry__2">Optional. Select one or more trunk DID number(s)
+                                                from the drop-down list.<div class="- topic/p p">
+                                                  <div class="- topic/note note note note_note" id="initial-action__note_zvt_s5d_qfc" data-ofbid="initial-action__note_zvt_s5d_qfc"><span class="note__title">Note:</span> 
+                                                  <ul class="- topic/ul ul" id="initial-action__ul_awt_s5d_qfc" data-ofbid="initial-action__ul_awt_s5d_qfc">
+                                                  <li class="- topic/li li">Up to <strong class="+ topic/ph hi-d/b ph b">500</strong> DID numbers are supported.
+                                                  Note that the more DID numbers assigned, the
+                                                  longer it takes to match inbound call with the
+                                                  call flow.</li>
+                                                  <li class="- topic/li li">Inbound calls from DID numbers can be routed
+                                                  to the call flow only in the following cases:<ul class="- topic/ul ul" id="initial-action__ul_rs2_g12_qfc" data-ofbid="initial-action__ul_rs2_g12_qfc">
+                                                  <li class="- topic/li li">
+                                                  <p class="- topic/p p">If the
+                                                  received
+                                                  DID number is 7 digits or
+                                                  fewer, it exactly matches a configured DID
+                                                  number.</p>
+                                                  </li>
+                                                  <li class="- topic/li li">
+                                                  <p class="- topic/p p">If the received DID number is longer than 7
+                                                  digits, its last 7 digits exactly match a
+                                                  configured DID number.</p>
+                                                  </li>
+                                                  </ul></li>
+                                                  </ul>
+                                                  </div>
+                                                </div></td>
+                                        </tr>
+                                    </tbody></table>
+                        </div></li>
+                    <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Optional:</strong> Configure audio prompt(s) or a text-to-speech message to
+                        welcome callers or provide instructions for them.<div class="- topic/p p">
+                            <table class="- topic/table table frame-all" id="initial-action__table_is2_trp_pfc" data-ofbid="initial-action__table_is2_trp_pfc"><caption></caption><colgroup><col style="width:21.14164904862579%"/><col style="width:78.8583509513742%"/></colgroup><thead class="- topic/thead thead">
+                                        <tr class="- topic/row">
+                                            <th class="- topic/entry entry colsep-1 rowsep-1" id="initial-action__table_is2_trp_pfc__entry__1">Item</th>
+                                            <th class="- topic/entry entry colsep-0 rowsep-1" id="initial-action__table_is2_trp_pfc__entry__2">Instruction</th>
+                                        </tr>
+                                    </thead><tbody class="- topic/tbody tbody">
+                                        <tr class="- topic/row" id="initial-action__custom-prompt">
+                                            <td class="- topic/entry entry colsep-1 rowsep-1" headers="initial-action__table_is2_trp_pfc__entry__1">Custom Prompt</td>
+                                            <td class="- topic/entry entry colsep-0 rowsep-1" headers="initial-action__table_is2_trp_pfc__entry__2">
+                                                <p class="- topic/p p"><img class="- topic/image image" id="initial-action__image_wxr_bmr_pfc" src="screenshots/custom-prompt-initial-action.png" width="400"/></p>
+                                                <div class="- topic/p p">
+                                                  <ol class="- topic/ol ol" type="a">
+                                                  <li class="- topic/li li">Click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Custom
+                                                  Prompt</span>.</li>
+                                                  <li class="- topic/li li" id="initial-action__specify-custom-prompt" data-ofbid="initial-action__specify-custom-prompt">Specify custom prompt(s).<div class="- topic/p p">
+                                                  <div class="- topic/note note note note_note" id="initial-action__note_i1n_srw_pfc" data-ofbid="initial-action__note_i1n_srw_pfc"><span class="note__title">Note:</span> A maximum of <strong class="+ topic/ph hi-d/b ph b">5</strong>
+                                                  custom prompts is supported.</div>
+                                                  </div><ul class="- topic/ul ul" id="initial-action__ul_xfq_ksp_pfc" data-ofbid="initial-action__ul_xfq_ksp_pfc">
+                                                  <li class="- topic/li li">To choose from an existing prompt, select it
+                                                  from the drop-down list of
+                                                  <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Prompt</span>.</li>
+                                                  <li class="- topic/li li">To use a new prompt, click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Record
+                                                  New</span> to record prompt with an
+                                                  extension, or click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Upload</span>
+                                                  to upload an audio file.<div class="- topic/p p">
+                                                  <div class="- topic/note note note note_note" id="initial-action__note_otq_2yw_pfc" data-ofbid="initial-action__note_otq_2yw_pfc"><span class="note__title">Note:</span> The new prompt will be
+                                                  saved in <span class="+ topic/ph ui-d/menucascade ph menucascade"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">PBX Settings</span><abbr title="and then"> &gt; </abbr><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Voice Prompt</span><abbr title="and then"> &gt; </abbr><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Custom Prompt</span></span>.</div>
+                                                  </div></li>
+                                                  </ul></li>
+                                                  <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Optional:</strong> To play the custom prompt in
+                                                  a loop, select the checkbox of <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Enable
+                                                  Loop Playback</span>.<div class="- topic/p p">
+                                                  <div class="- topic/note note note note_note" id="initial-action__note_axq_wc2_qfc" data-ofbid="initial-action__note_axq_wc2_qfc"><span class="note__title">Note:</span> The looped prompt will
+                                                  be overridden if the next connected component is
+                                                  configured with a prompt.</div>
+                                                  </div></li>
+                                                  </ol>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="- topic/row">
+                                            <td class="- topic/entry entry colsep-1 rowsep-1" headers="initial-action__table_is2_trp_pfc__entry__1">Music on Hold</td>
+                                            <td class="- topic/entry entry colsep-0 rowsep-1" headers="initial-action__table_is2_trp_pfc__entry__2">
+                                                <p class="- topic/p p"><img class="- topic/image image" id="initial-action__image_im4_hlr_pfc" src="screenshots/select-moh-initial-action.png" width="400"/></p>
+                                                <div class="- topic/p p">
+                                                  <ol class="- topic/ol ol" type="a">
+                                                  <li class="- topic/li li">Select <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Music on
+                                                  Hold</span>.</li>
+                                                  <li class="- topic/li li">Select an existing MoH from the drop-down list
+                                                  of <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Music on Hold</span>.</li>
+                                                  </ol>
+                                                </div>
+                                                <div class="- topic/p p">
+                                                  <div class="- topic/note note note note_note" id="initial-action__note_r2g_rbx_pfc" data-ofbid="initial-action__note_r2g_rbx_pfc"><span class="note__title">Note:</span> The MoH will be
+                                                  overridden
+                                                  if the next connected component is configured with
+                                                  a prompt.</div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="- topic/row" id="initial-action__tts">
+                                            <td class="- topic/entry entry colsep-1 rowsep-0" headers="initial-action__table_is2_trp_pfc__entry__1">Text to Speech (TTS)</td>
+                                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="initial-action__table_is2_trp_pfc__entry__2"><img class="- topic/image image" id="initial-action__image_u3p_xmr_pfc" src="screenshots/tts-initial-action.png" width="300"/><ol class="- topic/ol ol" type="a" id="initial-action__ol_ebk_tsp_pfc" data-ofbid="initial-action__ol_ebk_tsp_pfc">
+                                                  <li class="- topic/li li">Select <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Text to
+                                                  Speech</span>.</li>
+                                                  <li class="- topic/li li" id="initial-action__tts-config" data-ofbid="initial-action__tts-config">Complete the rest of the configurations.<div class="- topic/p p">
+                                                  
+                                                  <div class="- topic/note note note note_note" id="initial-action__note_j3x_1zw_pfc" data-ofbid="initial-action__note_j3x_1zw_pfc"><span class="note__title">Note:</span> The new TTS message
+                                                  will be saved to the system and synchronized to <span class="+ topic/ph ui-d/menucascade ph menucascade"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">PBX Settings</span><abbr title="and then"> &gt; </abbr><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Voice Prompt</span><abbr title="and then"> &gt; </abbr><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Custom Prompt</span></span>.</div>
+                                                  </div></li>
+                                                </ol></td>
+                                        </tr>
+                                    </tbody></table>
+                        </div></li>
+                    <li class="- topic/li li" id="initial-action__confirm" data-ofbid="initial-action__confirm">Click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Confirm</span>.<p class="- topic/p p">The selected number
+                            will appear on the component.</p><p class="- topic/p p"><img class="- topic/image image" id="initial-action__image_qtt_x5m_qfc" src="screenshots/initial-action-selected-cfd.png"/></p></li>
+                </ol>
+            </div>
+        </section>
+        <section class="- topic/section section" id="initial-action__section_stn_ttp_pfc" data-ofbid="initial-action__section_stn_ttp_pfc"><h2 class="- topic/title title sectiontitle">Component connections</h2>
+            
+            <p class="- topic/p p"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Initial Action</span> component can be connected to <strong class="+ topic/ph hi-d/b ph b">one</strong>
+                component, which can be any of the supported
+                components.</p>
+        </section>
+    </div>
+</article></main></div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                    
+                        
+                      
+                        
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div> 
+        <footer class="navbar navbar-default wh_footer" whc:version="23.1">
+  <div class=" footer-container mx-auto ">
+    <div class="footer-html-en"></div>
+  </div>
+</footer>
+        
+        <div id="go2top" class="d-print-none">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </div>
+        
+        <!-- The modal container for images -->
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <!-- Modal Content (The Image) -->
+            <img class="modal-content" id="modal-img" alt=""/>
+            <!-- Modal Caption (Image Text) -->
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
+</html>

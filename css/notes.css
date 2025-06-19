@@ -6,6 +6,7 @@
   border-style: solid;
   border-width:0px 0px 0px 4px;
   border-left-color:#448aff;
+  margin: 10px;
 }
 
 /*notes-content-two-lines*/
@@ -33,7 +34,7 @@ span.note__title {
 }
 
 div.note, div.note[dir='ltr'], *[dir] div.note[dir='ltr'], *[dir] *[dir] div.note[dir='ltr'], *[dir] *[dir] *[dir] div.note[dir='ltr'], *[dir] *[dir] *[dir] *[dir] div.note[dir='ltr'], *[dir='ltr'] div.note, *[dir] *[dir='ltr'] div.note, *[dir] *[dir] *[dir='ltr'] div.note, *[dir] *[dir] *[dir] *[dir='ltr'] div.note, *[dir] *[dir] *[dir] *[dir] *[dir='ltr'] div.note {
-    padding: 0.75em 0.5em 0.75em 3em !important; 
+    padding: 0.75em 0.5em 0.75em 1em !important; 
     background-position: 0.5em 0.5em !important;
 }
 

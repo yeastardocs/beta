@@ -1,0 +1,354 @@
+<link rel="stylesheet" href="./css/p-series.css">   
+<link rel="stylesheet" href="./css/notes.css">   
+<script src="./iframe-navigation.js"></script>
+            
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                        
+                      
+                    
+                    
+                    <div class="col-lg-7 col-md-9 col-sm-12" id="wh_topic_body">
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="- topic/title title topictitle1" id="ariaid-title1">Dial by Number</h1>
+    
+    <div class="- topic/body body"><p class="- topic/shortdesc shortdesc">This topic provides an overview of the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Dial by Number</span>
+        component, and describes its configuration as well as supported component
+        connections.</p>
+        <section class="- topic/section section" id="dial-by-number__section_g4q_hvg_rfc" data-ofbid="dial-by-number__section_g4q_hvg_rfc"><h2 class="- topic/title title sectiontitle">Component introduction</h2><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Dial by
+                Number</span> component allows callers to directly dial a number to reach the
+                destination.<div class="- topic/p p">You can configure when the system stops accepting caller input -
+                either when reaching digit or response timeout or when callers press an end key.
+                Additionally, audio prompt(s) or a text-to-speech message can be set to prompt
+                callers for input.<dl class="- topic/dl dl" id="dial-by-number__dl_ixg_3wg_rfc" data-ofbid="dial-by-number__dl_ixg_3wg_rfc">
+                    
+                        <dt class="- topic/dt dt dlterm">Supported destinations</dt>
+                        <dd class="- topic/dd dd">
+                            <ul class="- topic/ul ul" id="dial-by-number__ul_bdv_qwg_rfc" data-ofbid="dial-by-number__ul_bdv_qwg_rfc">
+                                <li class="- topic/li li">Extension</li>
+                                <li class="- topic/li li">Ring Group</li>
+                                <li class="- topic/li li">Queue</li>
+                                <li class="- topic/li li">Conference</li>
+                                <li class="- topic/li li">Call Flow</li>
+                                <li class="- topic/li li">Paging</li>
+                                <li class="- topic/li li">IVR</li>
+                                <li class="- topic/li li">External Number</li>
+                                <li class="- topic/li li">Check Voicemail (Extension Voicemail or Group Voicemail)</li>
+                            </ul>
+                        </dd>
+                    
+                </dl><dl class="- topic/dl dl" id="dial-by-number__dl_yjb_4wg_rfc" data-ofbid="dial-by-number__dl_yjb_4wg_rfc">
+                    
+                        <dt class="- topic/dt dt dlterm">Supported prompt types</dt>
+                        <dd class="- topic/dd dd">
+                            <table class="- topic/table table frame-all" id="dial-by-number__table_hqm_l5w_pfc" data-ofbid="dial-by-number__table_hqm_l5w_pfc"><caption></caption><colgroup><col style="width:28.169014084507044%"/><col style="width:71.83098591549295%"/></colgroup><thead class="- topic/thead thead">
+                                            <tr class="- topic/row">
+                                                <th class="- topic/entry entry colsep-1 rowsep-1" id="dial-by-number__table_hqm_l5w_pfc__entry__1">Prompt Type</th>
+                                                <th class="- topic/entry entry colsep-0 rowsep-1" id="dial-by-number__table_hqm_l5w_pfc__entry__2">Description</th>
+                                            </tr>
+                                        </thead><tbody class="- topic/tbody tbody">
+                                            <tr class="- topic/row" id="dial-by-number__d850e203">
+                                                <td class="- topic/entry entry colsep-1 rowsep-1" headers="dial-by-number__table_hqm_l5w_pfc__entry__1">Custom Prompt</td>
+                                                <td class="- topic/entry entry colsep-0 rowsep-1" headers="dial-by-number__table_hqm_l5w_pfc__entry__2">Choose from existing custom prompts, or
+                                                  create a new one by recording with an extension or
+                                                  uploading an audio file.</td>
+                                            </tr>
+                                            <tr class="- topic/row">
+                                                <td class="- topic/entry entry colsep-1 rowsep-1" headers="dial-by-number__table_hqm_l5w_pfc__entry__1">Music on Hold (MoH)</td>
+                                                <td class="- topic/entry entry colsep-0 rowsep-1" headers="dial-by-number__table_hqm_l5w_pfc__entry__2">Choose from existing MoH.<div class="- topic/p p">
+                                                  <div class="- topic/note note note note_note" id="dial-by-number__d850e221" data-ofbid="dial-by-number__d850e221"><span class="note__title">Note:</span> Before you begin, make
+                                                  sure the desired MoH is configured in <span class="+ topic/ph ui-d/menucascade ph menucascade"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">PBX Settings</span><abbr title="and then"> &gt; </abbr><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Voice Prompt</span><abbr title="and then"> &gt; </abbr><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Music on Hold</span></span>.<p class="- topic/p p"><img class="- topic/image image" id="dial-by-number__d850e236" src="screenshots/moh-call-flow.png" width="550"/></p></div>
+                                                  </div></td>
+                                            </tr>
+                                            <tr class="- topic/row" id="dial-by-number__d850e240">
+                                                <td class="- topic/entry entry colsep-1 rowsep-0" headers="dial-by-number__table_hqm_l5w_pfc__entry__1">Text to Speech (TTS)</td>
+                                                <td class="- topic/entry entry colsep-0 rowsep-0" headers="dial-by-number__table_hqm_l5w_pfc__entry__2">
+                                                  <p class="- topic/p p">Enter the desired text, which will be converted
+                                                  to speech in the selected language and voice
+                                                  style.</p>
+                                                  <div class="- topic/p p">
+                                                  <div class="- topic/note note note note_note" id="dial-by-number__d850e252" data-ofbid="dial-by-number__d850e252"><span class="note__title">Note:</span> Before you begin, make
+                                                  sure the desired TTS language is available in <span class="+ topic/ph ui-d/menucascade ph menucascade"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">PBX Settings</span><abbr title="and then"> &gt; </abbr><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Voice Prompt</span><abbr title="and then"> &gt; </abbr><span class="+ topic/ph ui-d/uicontrol ph uicontrol">System Prompt</span></span>.</div>
+                                                  </div>
+                                                </td>
+                                            </tr>
+                                        </tbody></table>
+                        </dd>
+                    
+                    
+                        <dt class="- topic/dt dt dlterm">Supported end keys</dt>
+                        <dd class="- topic/dd dd"><code class="+ topic/ph pr-d/codeph ph codeph">#</code> key or <code class="+ topic/ph pr-d/codeph ph codeph">*</code> key.</dd>
+                        <dd class="- topic/dd dd ddexpand">You can set the end key in <span class="+ topic/ph ui-d/menucascade ph menucascade"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Call Flow Designer</span><abbr title="and then"> &gt; </abbr><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Options</span></span>.</dd>
+                        <dd class="- topic/dd dd ddexpand"><img class="- topic/image image" id="dial-by-number__d1051e98" src="screenshots/endkey-cfd.png" width="500"/></dd>
+                    
+                </dl></div></section>
+        <section class="- topic/section section" id="dial-by-number__section_pn4_3vg_rfc" data-ofbid="dial-by-number__section_pn4_3vg_rfc"><h2 class="- topic/title title sectiontitle">Component configuration</h2>
+            
+            <div class="- topic/p p">After adding <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Dial by Number</span> component to a call flow, you can
+                configure the numbers that callers are allowed to dial, as well as the strategy for
+                invalid user input.<ul class="- topic/ul ul" id="dial-by-number__ul_db5_3h4_rfc" data-ofbid="dial-by-number__ul_db5_3h4_rfc">
+                    <li class="- topic/li li"><a class="- topic/xref xref" href="#dial-by-number__specify-number">Specify the numbers that callers can dial</a></li>
+                    <li class="- topic/li li"><a class="- topic/xref xref" href="#dial-by-number__specify-invalid-input">Specify strategy for invalid input</a></li>
+                </ul></div>
+            <dl class="- topic/dl dl" id="dial-by-number__dl_vjt_y13_rfc" data-ofbid="dial-by-number__dl_vjt_y13_rfc">
+                
+                    <dt class="- topic/dt dt dlterm" id="dial-by-number__specify-number" data-ofbid="dial-by-number__specify-number">Specify the numbers that callers can dial</dt>
+                    <dd class="- topic/dd dd">
+                        <ol class="- topic/ol ol" id="dial-by-number__ol_eky_cb3_rfc" data-ofbid="dial-by-number__ol_eky_cb3_rfc">
+                            <li class="- topic/li li">Click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Dial by Number</span> component to proceed
+                                with the configuration.<p class="- topic/p p"><img class="- topic/image image" id="dial-by-number__image_wc3_ys3_rfc" src="screenshots/dial-by-number-cfd.png" width="650"/></p></li>
+                            <li class="- topic/li li">Configure audio prompt(s) or a text-to-speech message to instruct callers.<div class="- topic/p p">
+                                    <table class="- topic/table table frame-all" id="dial-by-number__table_el5_byw_pfc" data-ofbid="dial-by-number__table_el5_byw_pfc"><caption></caption><colgroup><col style="width:21.14164904862579%"/><col style="width:78.8583509513742%"/></colgroup><thead class="- topic/thead thead">
+                                        <tr class="- topic/row">
+                                            <th class="- topic/entry entry colsep-1 rowsep-1" id="dial-by-number__table_el5_byw_pfc__entry__1">Item</th>
+                                            <th class="- topic/entry entry colsep-0 rowsep-1" id="dial-by-number__table_el5_byw_pfc__entry__2">Instruction</th>
+                                        </tr>
+                                    </thead><tbody class="- topic/tbody tbody">
+                                        <tr class="- topic/row" id="dial-by-number__d850e426">
+                                            <td class="- topic/entry entry colsep-1 rowsep-1" headers="dial-by-number__table_el5_byw_pfc__entry__1">Custom Prompt</td>
+                                            <td class="- topic/entry entry colsep-0 rowsep-1" headers="dial-by-number__table_el5_byw_pfc__entry__2">
+                                                <p class="- topic/p p"><img class="- topic/image image" id="dial-by-number__d850e434" src="screenshots/custom-prompt-initial-action.png" width="350"/></p>
+                                                <div class="- topic/p p">
+                                                  <ol class="- topic/ol ol" type="a">
+                                                  <li class="- topic/li li">Click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Custom
+                                                  Prompt</span>.</li>
+                                                  <li class="- topic/li li" id="dial-by-number__d850e446" data-ofbid="dial-by-number__d850e446">Specify custom prompt(s).<div class="- topic/p p">
+                                                  <div class="- topic/note note note note_note" id="dial-by-number__d850e450" data-ofbid="dial-by-number__d850e450"><span class="note__title">Note:</span> A maximum of <strong class="+ topic/ph hi-d/b ph b">5</strong>
+                                                  custom prompts is supported.</div>
+                                                  </div><ul class="- topic/ul ul" id="dial-by-number__d850e456" data-ofbid="dial-by-number__d850e456">
+                                                  <li class="- topic/li li">To choose from an existing prompt, select it
+                                                  from the drop-down list of
+                                                  <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Prompt</span>.</li>
+                                                  <li class="- topic/li li">To use a new prompt, click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Record
+                                                  New</span> to record prompt with an
+                                                  extension, or click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Upload</span>
+                                                  to upload an audio file.<div class="- topic/p p">
+                                                  <div class="- topic/note note note note_note" id="dial-by-number__d850e474" data-ofbid="dial-by-number__d850e474"><span class="note__title">Note:</span> The new prompt will be
+                                                  saved in <span class="+ topic/ph ui-d/menucascade ph menucascade"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">PBX Settings</span><abbr title="and then"> &gt; </abbr><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Voice Prompt</span><abbr title="and then"> &gt; </abbr><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Custom Prompt</span></span>.</div>
+                                                  </div></li>
+                                                  </ul></li>
+                                                  <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Optional:</strong> To play the custom prompt in
+                                                  a loop, select the checkbox of <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Enable
+                                                  Loop Playback</span>.<div class="- topic/p p">
+                                                  <div class="- topic/note note note note_note" id="dial-by-number__d850e500" data-ofbid="dial-by-number__d850e500"><span class="note__title">Note:</span> The looped prompt will
+                                                  be overridden if the next connected component is
+                                                  configured with a prompt.</div>
+                                                  </div></li>
+                                                  </ol>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="- topic/row">
+                                            <td class="- topic/entry entry colsep-1 rowsep-1" headers="dial-by-number__table_el5_byw_pfc__entry__1">Music on Hold</td>
+                                            <td class="- topic/entry entry colsep-0 rowsep-1" headers="dial-by-number__table_el5_byw_pfc__entry__2">
+                                                <p class="- topic/p p"><img class="- topic/image image" id="dial-by-number__d850e516" src="screenshots/select-moh-initial-action.png" width="400"/></p>
+                                                <div class="- topic/p p">
+                                                  <ol class="- topic/ol ol" type="a">
+                                                  <li class="- topic/li li">Select <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Music on
+                                                  Hold</span>.</li>
+                                                  <li class="- topic/li li">Select an existing MoH from the drop-down list
+                                                  of <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Music on Hold</span>.</li>
+                                                  </ol>
+                                                </div>
+                                                <div class="- topic/p p">
+                                                  <div class="- topic/note note note note_note" id="dial-by-number__d850e538" data-ofbid="dial-by-number__d850e538"><span class="note__title">Note:</span> The MoH will be
+                                                  overridden
+                                                  if the next connected component is configured with
+                                                  a prompt.</div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="- topic/row" id="dial-by-number__d850e548">
+                                            <td class="- topic/entry entry colsep-1 rowsep-0" headers="dial-by-number__table_el5_byw_pfc__entry__1">Text to Speech (TTS)</td>
+                                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="dial-by-number__table_el5_byw_pfc__entry__2"><img class="- topic/image image" id="dial-by-number__d850e554" src="screenshots/tts-initial-action.png" width="400"/><ol class="- topic/ol ol" type="a" id="dial-by-number__d850e555" data-ofbid="dial-by-number__d850e555">
+                                                  <li class="- topic/li li">Select <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Text to
+                                                  Speech</span>.</li>
+                                                  <li class="- topic/li li" id="dial-by-number__d850e563" data-ofbid="dial-by-number__d850e563">Complete the rest of the configurations.<div class="- topic/p p">
+                                                  
+                                                  <div class="- topic/note note note note_note" id="dial-by-number__d850e569" data-ofbid="dial-by-number__d850e569"><span class="note__title">Note:</span> The new TTS message
+                                                  will be saved to the system and synchronized to <span class="+ topic/ph ui-d/menucascade ph menucascade"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">PBX Settings</span><abbr title="and then"> &gt; </abbr><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Voice Prompt</span><abbr title="and then"> &gt; </abbr><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Custom Prompt</span></span>.</div>
+                                                  </div></li>
+                                                </ol></td>
+                                        </tr>
+                                    </tbody></table>
+                                </div></li>
+                            <li class="- topic/li li">Specify the numbers that callers can dial upon reaching the component.<div class="- topic/p p">
+                                    <table class="- topic/table table frame-all" id="dial-by-number__table_kwv_xxh_rfc" data-ofbid="dial-by-number__table_kwv_xxh_rfc"><caption></caption><colgroup><col style="width:20%"/><col style="width:80%"/></colgroup><thead class="- topic/thead thead">
+                                                <tr class="- topic/row">
+                                                  <th class="- topic/entry entry colsep-1 rowsep-1" id="dial-by-number__table_kwv_xxh_rfc__entry__1">Item</th>
+                                                  <th class="- topic/entry entry colsep-0 rowsep-1" id="dial-by-number__table_kwv_xxh_rfc__entry__2">Instruction</th>
+                                                </tr>
+                                            </thead><tbody class="- topic/tbody tbody">
+                                                <tr class="- topic/row">
+                                                  <td class="- topic/entry entry colsep-1 rowsep-1" headers="dial-by-number__table_kwv_xxh_rfc__entry__1">Dial Extensions</td>
+                                                  <td class="- topic/entry entry colsep-0 rowsep-1" headers="dial-by-number__table_kwv_xxh_rfc__entry__2">
+                                                  <p class="- topic/p p"><img class="- topic/image image" id="dial-by-number__image_fnh_553_rfc" src="screenshots/dial-ext-cfd.png" width="500"/></p>
+                                                  <div class="- topic/p p">
+                                                  <ol class="- topic/ol ol" type="a" id="dial-by-number__ol_qml_2b3_rfc" data-ofbid="dial-by-number__ol_qml_2b3_rfc">
+                                                  <li class="- topic/li li">Turn on the switch of <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Dial
+                                                  Extensions</span>.</li>
+                                                  <li class="- topic/li li">In the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Extension Scope</span>
+                                                  drop-down list, select an option.<ul class="- topic/ul ul" id="dial-by-number__ul_jjk_jyh_rfc" data-ofbid="dial-by-number__ul_jjk_jyh_rfc">
+                                                  <li class="- topic/li li"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">All Extensions</span>: Allow
+                                                  callers to dial all extensions.</li>
+                                                  <li class="- topic/li li"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Allowed Extensions</span>:
+                                                  Allow callers to dial only specific
+                                                  extensions.<p class="- topic/p p">If you choose this option, select
+                                                  the allowed extensions from
+                                                  <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Available</span> box to
+                                                  <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Selected</span> box.</p></li>
+                                                  <li class="- topic/li li"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Restricted Extensions</span>:
+                                                  Allow callers to dial all extensions EXCEPT the
+                                                  selected ones.<p class="- topic/p p">If you choose this option, select
+                                                  the restricted extensions from
+                                                  <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Available</span> box to
+                                                  <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Selected</span> box.</p></li>
+                                                  </ul></li>
+                                                  </ol>
+                                                  </div>
+                                                  </td>
+                                                </tr>
+                                                <tr class="- topic/row">
+                                                  <td class="- topic/entry entry colsep-1 rowsep-1" headers="dial-by-number__table_kwv_xxh_rfc__entry__1">Dial Numbers</td>
+                                                  <td class="- topic/entry entry colsep-0 rowsep-1" headers="dial-by-number__table_kwv_xxh_rfc__entry__2">
+                                                  <p class="- topic/p p"><img class="- topic/image image" id="dial-by-number__image_zpl_jv3_rfc" src="screenshots/dial-number-cfd.png" width="500"/></p>
+                                                  <ol class="- topic/ol ol" type="a" id="dial-by-number__ol_jl4_xyh_rfc" data-ofbid="dial-by-number__ol_jl4_xyh_rfc">
+                                                  <li class="- topic/li li">Turn on the switch of <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Dial
+                                                  Numbers</span>.</li>
+                                                  <li class="- topic/li li">Select the desired numbers from
+                                                  <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Available</span> box to
+                                                  <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Selected</span> box.</li>
+                                                  </ol>
+                                                  </td>
+                                                </tr>
+                                                <tr class="- topic/row">
+                                                  <td class="- topic/entry entry colsep-1 rowsep-1" headers="dial-by-number__table_kwv_xxh_rfc__entry__1">Dial External Number</td>
+                                                  <td class="- topic/entry entry colsep-0 rowsep-1" headers="dial-by-number__table_kwv_xxh_rfc__entry__2">
+                                                  <p class="- topic/p p"><img class="- topic/image image" id="dial-by-number__image_ukj_zv3_rfc" src="screenshots/dial-ext-number-cfd.png" width="500"/></p>
+                                                  <ol class="- topic/ol ol" type="a" id="dial-by-number__ol_o4b_szh_rfc" data-ofbid="dial-by-number__ol_o4b_szh_rfc">
+                                                  <li class="- topic/li li">Turn on the switch of <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Dial External
+                                                  Number</span>.</li>
+                                                  <li class="- topic/li li">Select the desired outbound routes from
+                                                  <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Available</span> box to
+                                                  <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Selected</span> box.</li>
+                                                  </ol>
+                                                  </td>
+                                                </tr>
+                                                <tr class="- topic/row">
+                                                  <td class="- topic/entry entry colsep-1 rowsep-0" headers="dial-by-number__table_kwv_xxh_rfc__entry__1">Dial to Check Voicemail</td>
+                                                  <td class="- topic/entry entry colsep-0 rowsep-0" headers="dial-by-number__table_kwv_xxh_rfc__entry__2">
+                                                  <p class="- topic/p p"><img class="- topic/image image" id="dial-by-number__image_k1z_hx3_rfc" src="screenshots/dial-check-vm-cfd.png" width="500"/></p>
+                                                  <div class="- topic/p p">
+                                                  <ol class="- topic/ol ol" type="a">
+                                                  <li class="- topic/li li">Turn on the switch of <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Dial to Check
+                                                  Voicemail</span>.</li>
+                                                  <li class="- topic/li li">In the pop-up window, click
+                                                  <span class="+ topic/ph ui-d/uicontrol ph uicontrol">OK</span>.<p class="- topic/p p">Extension users can
+                                                  access extension voicemail or group voicemail by
+                                                  dialing "Check Voicemail Feature Code + Extension
+                                                  Number/Group Voicemail Number", followed by the
+                                                  voicemail access PIN.</p><div class="- topic/p p">
+                                                  <div class="- topic/note note note note_note" id="dial-by-number__note_e5d_fn4_rfc" data-ofbid="dial-by-number__note_e5d_fn4_rfc"><span class="note__title">Note:</span> To change the feature
+                                                  code or access PIN, proceed as follow:<ul class="- topic/ul ul" id="dial-by-number__ul_m3l_mn4_rfc" data-ofbid="dial-by-number__ul_m3l_mn4_rfc">
+                                                  <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Check Voicemail Feature Code</strong>: The
+                                                  default feature code is <code class="+ topic/ph pr-d/codeph ph codeph">*2</code>. <p class="- topic/p p">To
+                                                  change it, go to <span class="+ topic/ph ui-d/menucascade ph menucascade"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Call Features</span><abbr title="and then"> &gt; </abbr><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Feature Code</span><abbr title="and then"> &gt; </abbr><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Voicemail</span><abbr title="and then"> &gt; </abbr><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Check Voicemail/Subscribe Voicemail
+                                                  Status</span></span>.</p><p class="- topic/p p"><img class="- topic/image image" id="dial-by-number__image_j4d_rj4_rfc" src="screenshots/vm-feature-code-cfd.png" width="400"/></p></li>
+                                                  <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Extension Voicemail Access PIN</strong>: To
+                                                  change the PIN, go to <span class="+ topic/ph ui-d/menucascade ph menucascade"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Extension and Trunk</span><abbr title="and then"> &gt; </abbr><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Extension</span><abbr title="and then"> &gt; </abbr><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Voicemail</span><abbr title="and then"> &gt; </abbr><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Voicemail Access PIN</span></span>.<p class="- topic/p p"><img class="- topic/image image" id="dial-by-number__image_nss_jk4_rfc" src="screenshots/ext-vm-pin-cfd.png" width="400"/></p></li>
+                                                  <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Group Voicemail Access PIN</strong>: To change
+                                                  the PIN, go to <span class="+ topic/ph ui-d/menucascade ph menucascade"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Call Features</span><abbr title="and then"> &gt; </abbr><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Voicemail</span><abbr title="and then"> &gt; </abbr><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Group Voicemail</span><abbr title="and then"> &gt; </abbr><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Voicemail Access PIN</span></span>.<p class="- topic/p p"><img class="- topic/image image" id="dial-by-number__image_qmv_xk4_rfc" src="screenshots/group-vm-pin-cfd.png" width="400"/></p></li>
+                                                  </ul></div>
+                                                  </div></li>
+                                                  </ol>
+                                                  </div>
+                                                  </td>
+                                                </tr>
+                                            </tbody></table>
+                                </div></li>
+                            <li class="- topic/li li">Configure the timeout for user input.<p class="- topic/p p"><img class="- topic/image image" id="dial-by-number__image_vmr_gy3_rfc" src="screenshots/dial-by-number-timeout-cfd.png" width="650"/></p><ul class="- topic/ul ul" id="dial-by-number__ul_epd_bxh_rfc" data-ofbid="dial-by-number__ul_epd_bxh_rfc">
+                                    <li class="- topic/li li"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Digit Timeout(s)</span>: Set how long to
+                                        wait for the caller to enter the next digit.<p class="- topic/p p">You can
+                                            select a value from the drop-down list, or enter a value
+                                            between 1 and 9999.</p></li>
+                                    <li class="- topic/li li"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Response Timeout(s)</span>: Set how long to
+                                        wait for the caller to operate.<p class="- topic/p p">You can select a value
+                                            from the drop-down list, or enter a value between 1 and
+                                            9999.</p></li>
+                                </ul></li>
+                        </ol>
+                    </dd>
+                
+            </dl>
+            <dl class="- topic/dl dl" id="dial-by-number__dl_xfc_cb3_rfc" data-ofbid="dial-by-number__dl_xfc_cb3_rfc">
+                
+                    <dt class="- topic/dt dt dlterm" id="dial-by-number__specify-invalid-input" data-ofbid="dial-by-number__specify-invalid-input">Specify strategy for invalid input</dt>
+                    <dd class="- topic/dd dd">
+                        <ol class="- topic/ol ol" id="dial-by-number__ol_tt1_fb3_rfc" data-ofbid="dial-by-number__ol_tt1_fb3_rfc">
+                            <li class="- topic/li li">Click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Invalid Input</span> branch.<p class="- topic/p p"><img class="- topic/image image" id="dial-by-number__image_k53_bgj_rfc" src="screenshots/dial-by-number-invalid.png" width="500"/></p></li>
+                            <li class="- topic/li li">Select the checkbox of <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Return to Previous
+                                    Step</span>.</li>
+                            <li class="- topic/li li">In the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Return Count</span> drop-down list, select
+                                how many times callers can return to the component upon invalid
+                                input.</li>
+                            <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Optional:</strong> Configure audio prompt(s) or a text-to-speech
+                                message to instruct callers to retry dialing.</li>
+                            <li class="- topic/li li">Click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Confirm</span>.</li>
+                        </ol>
+                    </dd>
+                
+            </dl>
+        </section>
+        <section class="- topic/section section" id="dial-by-number__section_dqk_jvg_rfc" data-ofbid="dial-by-number__section_dqk_jvg_rfc"><h2 class="- topic/title title sectiontitle">Component connections</h2>
+            
+            <p class="- topic/p p"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Dial by Number</span> component comes with a built-in
+                    <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Invalid Input</span> branch, and the branch can be connected to
+                    <strong class="+ topic/ph hi-d/b ph b">one</strong> component, which can be any of the supported
+                components.</p>
+        </section>
+    </div>
+</article></main></div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                    
+                        
+                       
+                        
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div> 
+        <footer class="navbar navbar-default wh_footer" whc:version="23.1">
+  <div class=" footer-container mx-auto ">
+    <div class="footer-html-en"></div>
+  </div>
+</footer>
+        
+        <div id="go2top" class="d-print-none">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </div>
+        
+        <!-- The modal container for images -->
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <!-- Modal Content (The Image) -->
+            <img class="modal-content" id="modal-img" alt=""/>
+            <!-- Modal Caption (Image Text) -->
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
+</html>
