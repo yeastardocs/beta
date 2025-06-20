@@ -1,11 +1,10 @@
-
 *[class~="topic/note"]:not([class~="hazard-d/hazardstatement"]) {
   /* border: 1px solid; */
   border-radius: 7px;
   /* padding: 1vw; */
   border-style: solid;
-  border-width:0px 0px 0px 4px;
-  border-left-color:#448aff;
+  border-width: 0px 0px 0px 4px;
+  border-left-color: #448aff;
   margin: 10px;
 }
 
@@ -26,24 +25,46 @@ span.note__title {
 *[class~="topic/note"].note_danger,
 *[class~="topic/note"].note_caution {
   background-color: rgba(255, 202, 45, 0.1);
-  border-color: #FFCA2D;
+  border-color: #ffca2d;
 }
 *[class~="topic/note"].note_restriction {
   background-color: rgba(255, 226, 225, 0.32);
-  border-color: #FF342D;
+  border-color: #ff342d;
 }
 
-div.note, div.note[dir='ltr'], *[dir] div.note[dir='ltr'], *[dir] *[dir] div.note[dir='ltr'], *[dir] *[dir] *[dir] div.note[dir='ltr'], *[dir] *[dir] *[dir] *[dir] div.note[dir='ltr'], *[dir='ltr'] div.note, *[dir] *[dir='ltr'] div.note, *[dir] *[dir] *[dir='ltr'] div.note, *[dir] *[dir] *[dir] *[dir='ltr'] div.note, *[dir] *[dir] *[dir] *[dir] *[dir='ltr'] div.note {
-    padding: 0.75em 0.5em 0.75em 1em !important; 
-    background-position: 0.5em 0.5em !important;
+div.note,
+div.note[dir="ltr"],
+*[dir] div.note[dir="ltr"],
+*[dir] *[dir] div.note[dir="ltr"],
+*[dir] *[dir] *[dir] div.note[dir="ltr"],
+*[dir] *[dir] *[dir] *[dir] div.note[dir="ltr"],
+*[dir="ltr"] div.note,
+*[dir] *[dir="ltr"] div.note,
+*[dir] *[dir] *[dir="ltr"] div.note,
+*[dir] *[dir] *[dir] *[dir="ltr"] div.note,
+*[dir] *[dir] *[dir] *[dir] *[dir="ltr"] div.note {
+  padding: 0.75em 0.5em 0.75em 1em !important;
+  background-position: 0.5em 0.5em !important;
 }
 
 /* 以下样式覆盖软件自带的样式 */
-span.note__title, *[dir] *[dir='ltr'] span.note__title, *[dir] *[dir] *[dir='ltr'] span.note__title, *[dir] *[dir] *[dir] *[dir='ltr'] span.note__title, *[dir] *[dir] *[dir] *[dir] *[dir='ltr'] span.note__title {
-    padding: 0!important;
-    background-position: 0 !important;
+span.note__title,
+*[dir] *[dir="ltr"] span.note__title,
+*[dir] *[dir] *[dir="ltr"] span.note__title,
+*[dir] *[dir] *[dir] *[dir="ltr"] span.note__title,
+*[dir] *[dir] *[dir] *[dir] *[dir="ltr"] span.note__title {
+  padding: 0 !important;
+  background-position: 0 !important;
 }
-div.note>span.note__title {
-    background-repeat: no-repeat;
-    background-image: none!important;  
-    }
+div.note > span.note__title {
+  background-repeat: no-repeat;
+  background-image: none !important;
+}
+
+/* 新增 - 修改嵌入html的样式 */
+body {
+  overflow-x: hidden;
+}
+.row {
+  margin-right: 40px;
+}
