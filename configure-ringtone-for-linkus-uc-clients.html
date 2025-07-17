@@ -1,0 +1,315 @@
+<link rel="stylesheet" href="./css/p-series.css">   
+<link rel="stylesheet" href="./css/notes.css">   
+<script src="./iframe-navigation.js"></script>  
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9CK8527Q6J"></script>
+ <!-- Microsoft Clarity -->  
+     <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "hxj5h8f90e");
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9CK8527Q6J');
+</script><div class="wh_content_area">
+                <div class="row">
+                    
+                    
+                    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12" id="wh_topic_body">
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="- topic/title title topictitle1" id="ariaid-title1">Configure Ringtones for Linkus UC Clients</h1>
+    
+    <div class="- topic/body body"><p class="- topic/shortdesc shortdesc">Linkus allows you to customize incoming call ringtones individually on the Web
+        Client, Desktop Client, and Mobile Client. You can set a default ringtone for all incoming
+        calls, or assign distinctive ringtones based on different call sources, making it easy to
+        distinguish between calls from colleagues, customers, or specific contacts.</p>
+        <section class="- topic/section section" id="Untitled__section_f1s_cmr_zfc" data-ofbid="Untitled__section_f1s_cmr_zfc"><h2 class="- topic/title title sectiontitle">Background information</h2>
+            
+            <p class="- topic/p p">You can customize ringtones for incoming calls directly within each Linkus UC Client.
+                Ringtone settings are managed independently on each Linkus client and are NOT
+                synchronized across clients. </p>
+            <p class="- topic/p p">In addition to the ringtone settings on Linkus clients, system administrator can also
+                configure a <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Linkus Client Distinctive Ringtone</span> for specific
+                call scenarios, including ring group, queue, or IVR. These PBX-assigned ringtones
+                will be applied to Linkus when the users are members of a ring group or queue, or
+                are set as IVR destinations.</p>
+            <p class="- topic/p p">If multiple ringtone rules are applied at the same tine, the following priority is
+                used: <span class="+ topic/ph ui-d/menucascade ph menucascade"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Distinctive ringtones specified for contacts/phonebook</span><abbr title="and then"> &gt; </abbr><span class="+ topic/ph ui-d/uicontrol ph uicontrol">PBX assigned ringtones</span><abbr title="and then"> &gt; </abbr><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Distinctive ringtones specified for internal / external
+                        calls</span><abbr title="and then"> &gt; </abbr><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Default ringtone</span></span>. </p>
+        </section>
+        <section class="- topic/section section" id="Untitled__section_pbk_3sq_zfc" data-ofbid="Untitled__section_pbk_3sq_zfc"><h2 class="- topic/title title sectiontitle">Requirements</h2>
+            
+            <div class="- topic/p p">
+                <dl class="- topic/dl dl">
+                    
+                        <dt class="- topic/dt dt dlterm">PBX Server</dt>
+                        <dd class="- topic/dd dd">The firmware of PBX Server is x.20.0.x or later.</dd>
+                    
+                    
+                        <dt class="- topic/dt dt dlterm">Linkus Mobile Client</dt>
+                        <dd class="- topic/dd dd">The version of your Linkus Mobile Client should meet the following
+                                requirements:<ul class="- topic/ul ul" id="Untitled__ul_lsn_rrs_zfc" data-ofbid="Untitled__ul_lsn_rrs_zfc">
+                                <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Linkus iOS</strong>: Version 5.17.x or later.</li>
+                                <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Linkus Android</strong>: Version 5.17.x or later.</li>
+                            </ul></dd>
+                    
+                </dl>
+            </div>
+        </section>
+        <section class="- topic/section section" id="Untitled__section_yqg_xk2_zfc" data-ofbid="Untitled__section_yqg_xk2_zfc"><h2 class="- topic/title title sectiontitle">Configure ringtone for Linkus Web/Desktop Client</h2>
+            
+            <div class="- topic/p p">
+                <ol class="- topic/ol ol" id="Untitled__ol_oks_xk2_zfc" data-ofbid="Untitled__ol_oks_xk2_zfc">
+                    <li class="- topic/li li">Log in to Linkus Web Client or Desktop Client, go to <span class="+ topic/ph ui-d/menucascade ph menucascade"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Preferences</span><abbr title="and then"> &gt; </abbr><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Features</span><abbr title="and then"> &gt; </abbr><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Ringtone</span></span>.</li>
+                    <li class="- topic/li li">Select the checkbox of <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Play Ringtone</span>.<p class="- topic/p p">When enabled,
+                            Linkus will play a ringtone upon receiving incoming calls. Otherwise,
+                            incoming calls will be muted.</p></li>
+                    <li class="- topic/li li">In the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Default Ringtone</span> drop-down list, select the
+                        default ringtone for incoming calls.<p class="- topic/p p">This ringtone will be used for all
+                            incoming calls unless a distinctive ringtone is set for them.</p></li>
+                    <li class="- topic/li li">In the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Distinctive Ringtone Settings</span> section,
+                        configure distinctive ringtones based on different call sources as needed.<div class="- topic/p p">
+                            <table class="- topic/table table frame-all" id="Untitled__table_evd_kqq_zfc" data-ofbid="Untitled__table_evd_kqq_zfc"><caption></caption><colgroup><col style="width:24.813895781637722%"/><col style="width:75.18610421836229%"/></colgroup><thead class="- topic/thead thead">
+                                        <tr class="- topic/row">
+                                            <th class="- topic/entry entry colsep-1 rowsep-1" id="Untitled__table_evd_kqq_zfc__entry__1">Call Source</th>
+                                            <th class="- topic/entry entry colsep-0 rowsep-1" id="Untitled__table_evd_kqq_zfc__entry__2">Instruction</th>
+                                        </tr>
+                                    </thead><tbody class="- topic/tbody tbody">
+                                        <tr class="- topic/row">
+                                            <td class="- topic/entry entry colsep-1 rowsep-1" headers="Untitled__table_evd_kqq_zfc__entry__1">Contacts or Phonebooks</td>
+                                            <td class="- topic/entry entry colsep-0 rowsep-1" headers="Untitled__table_evd_kqq_zfc__entry__2">
+                                                <div class="- topic/note note note note_note" id="Untitled__note_wjn_5br_zfc" data-ofbid="Untitled__note_wjn_5br_zfc"><span class="note__title">Note:</span> 
+                                                  <ul class="- topic/ul ul" id="Untitled__ul_m5f_whr_zfc" data-ofbid="Untitled__ul_m5f_whr_zfc">
+                                                  <li class="- topic/li li">You can configure up to 10 distinctive
+                                                  ringtones for specific contacts or
+                                                  phonebooks.</li>
+                                                  <li class="- topic/li li">Personal contacts are prioritized over company
+                                                  contacts and phonebooks, while the priority of
+                                                  company contacts and phonebooks is based on their
+                                                  position in the rule list, from top to
+                                                  bottom.</li>
+                                                  </ul>
+                                                </div>
+                                                <p class="- topic/p p"><img class="- topic/image image" id="Untitled__image_trl_tgr_zfc" src="screenshots/distinctive-contact.png" width="450"/></p>
+                                                <ol class="- topic/ol ol" type="a" id="Untitled__ol_hs5_p1r_zfc" data-ofbid="Untitled__ol_hs5_p1r_zfc">
+                                                  <li class="- topic/li li">Click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Add</span>.</li>
+                                                  <li class="- topic/li li">Configure the ringtone setting as follows:<ul class="- topic/ul ul" id="Untitled__ul_hgx_r1r_zfc" data-ofbid="Untitled__ul_hgx_r1r_zfc">
+                                                  <li class="- topic/li li"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Contact Type</span>: Choose
+                                                  whether to apply the ringtone to an individual
+                                                  contact or a group of contacts.</li>
+                                                  <li class="- topic/li li"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Contacts</span> /
+                                                  <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Phonebooks</span>: Select the
+                                                  specific contact (either company or personal) or
+                                                  the phonebook containing the desired
+                                                  contacts.</li>
+                                                  <li class="- topic/li li"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Ringtone</span>: Select or
+                                                  upload a ringtone you want to assign.</li>
+                                                  </ul></li>
+                                                  <li class="- topic/li li">Click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Save</span>.<p class="- topic/p p">Incoming
+                                                  calls from the specified contacts or phonebooks
+                                                  will use the custom ringtone you set.</p></li>
+                                                </ol>
+                                            </td>
+                                        </tr>
+                                        <tr class="- topic/row">
+                                            <td class="- topic/entry entry colsep-1 rowsep-1" headers="Untitled__table_evd_kqq_zfc__entry__1">Internal Calls</td>
+                                            <td class="- topic/entry entry colsep-0 rowsep-1" headers="Untitled__table_evd_kqq_zfc__entry__2">
+                                                <ol class="- topic/ol ol" type="a" id="Untitled__ol_s5g_sbr_zfc" data-ofbid="Untitled__ol_s5g_sbr_zfc">
+                                                  <li class="- topic/li li">In the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Internal Calls</span>
+                                                  drop-down list, select or upload a ringtone for
+                                                  internal calls.<p class="- topic/p p">Incoming calls from internal
+                                                  extensions will use the selected
+                                                  ringtone.</p></li>
+                                                </ol>
+                                            </td>
+                                        </tr>
+                                        <tr class="- topic/row">
+                                            <td class="- topic/entry entry colsep-1 rowsep-0" headers="Untitled__table_evd_kqq_zfc__entry__1">External Calls</td>
+                                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="Untitled__table_evd_kqq_zfc__entry__2">
+                                                <ol class="- topic/ol ol" type="a" id="Untitled__ol_xk1_xbr_zfc" data-ofbid="Untitled__ol_xk1_xbr_zfc">
+                                                  <li class="- topic/li li">In the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">External Calls</span>
+                                                  drop-down list, select a ringtone for external
+                                                  calls.<p class="- topic/p p">Incoming calls from external numbers will
+                                                  use the selected ringtone.</p></li>
+                                                </ol>
+                                            </td>
+                                        </tr>
+                                    </tbody></table>
+                        </div></li>
+                    <li class="- topic/li li">
+                        <p class="- topic/p p">Click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Save</span>.</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+        <section class="- topic/section section" id="Untitled__section_wbh_zbr_zfc" data-ofbid="Untitled__section_wbh_zbr_zfc"><h2 class="- topic/title title sectiontitle">Configure ringtone for Linkus Mobile Client</h2>
+            
+            <div class="- topic/p p">
+                <ol class="- topic/ol ol" id="Untitled__ol_jzt_1cr_zfc" data-ofbid="Untitled__ol_jzt_1cr_zfc">
+                    <li class="- topic/li li">On Linkus Mobile Client, tap your account.</li>
+                    <li class="- topic/li li">Turn on the switch of <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Play Ringtone</span>.<p class="- topic/p p"><img class="- topic/image image" id="Untitled__image_uy5_gms_zfc" src="screenshots/play-ringtone.png" width="300"/></p><p class="- topic/p p">When enabled, Linkus will play a
+                            ringtone upon receiving incoming calls. Otherwise, incoming calls will
+                            be muted.</p></li>
+                    <li class="- topic/li li">Go to <span class="+ topic/ph ui-d/menucascade ph menucascade"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Settings</span><abbr title="and then"> &gt; </abbr><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Audio Options</span><abbr title="and then"> &gt; </abbr><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Ringtone</span></span>, configure ringtone for your Linkus Mobile Client.</li>
+                    <li class="- topic/li li">To set a default ringtone, do as follows:<div class="- topic/p p">
+                            <div class="- topic/note note note note_note" id="Untitled__note_k1q_rcs_zfc" data-ofbid="Untitled__note_k1q_rcs_zfc"><span class="note__title">Note:</span> 
+                                <ul class="- topic/ul ul" id="Untitled__ul_vrw_rcs_zfc" data-ofbid="Untitled__ul_vrw_rcs_zfc">
+                                    <li class="- topic/li li">You can tap the ringtone to preview it.</li>
+                                    <li class="- topic/li li">If you select <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Default</span>, Linkus will
+                                        use your phone's system ringtone for incoming calls.</li>
+                                </ul>
+                                <p class="- topic/p p"><img class="- topic/image image" id="Untitled__image_lb1_2ns_zfc" src="screenshots/set-default-ringtone.png" width="450"/></p>
+                            </div>
+                        </div><ol class="- topic/ol ol" type="a" id="Untitled__ol_v3g_tbs_zfc" data-ofbid="Untitled__ol_v3g_tbs_zfc">
+                            <li class="- topic/li li">Tap <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Default Ringtone</span>.</li>
+                            <li class="- topic/li li">In the ringtone list, select the desired ringtone.<p class="- topic/p p">The ringtone
+                                    will be used for all incoming calls unless a distinctive
+                                    ringtone is set for them.</p></li>
+                            <li class="- topic/li li">To proceed with ringtone setting, tap <img class="- topic/image image" id="Untitled__image_ekj_m2s_zfc" src="screenshots/left-o.png" width="20"/>
+                                at the top-left corner to return to previous page.</li>
+                        </ol></li>
+                    <li class="- topic/li li">To set distinctive ringtones based on different call sources, do as follows:<div class="- topic/p p">
+                            <table class="- topic/table table frame-all" id="Untitled__table_jgx_z1s_zfc" data-ofbid="Untitled__table_jgx_z1s_zfc"><caption></caption><colgroup><col style="width:21.78649237472767%"/><col style="width:78.21350762527233%"/></colgroup><thead class="- topic/thead thead">
+                                        <tr class="- topic/row">
+                                            <th class="- topic/entry entry colsep-1 rowsep-1" id="Untitled__table_jgx_z1s_zfc__entry__1">Call Source</th>
+                                            <th class="- topic/entry entry colsep-0 rowsep-1" id="Untitled__table_jgx_z1s_zfc__entry__2">Instruction</th>
+                                        </tr>
+                                    </thead><tbody class="- topic/tbody tbody">
+                                        <tr class="- topic/row">
+                                            <td class="- topic/entry entry colsep-1 rowsep-1" headers="Untitled__table_jgx_z1s_zfc__entry__1">Contacts or Phonebooks</td>
+                                            <td class="- topic/entry entry colsep-0 rowsep-1" headers="Untitled__table_jgx_z1s_zfc__entry__2">
+                                                <div class="- topic/note note note note_note" id="Untitled__note_kgx_z1s_zfc" data-ofbid="Untitled__note_kgx_z1s_zfc"><span class="note__title">Note:</span> 
+                                                  <ul class="- topic/ul ul" id="Untitled__ul_lgx_z1s_zfc" data-ofbid="Untitled__ul_lgx_z1s_zfc">
+                                                  <li class="- topic/li li">You can configure up to 10 distinctive
+                                                  ringtones for specific
+                                                  contacts or
+                                                  phonebooks.</li>
+                                                  <li class="- topic/li li">Personal contacts are prioritized over company
+                                                  contacts and phonebooks, while the priority of
+                                                  company contacts and phonebooks is based on their
+                                                  position in the rule list, from top to
+                                                  bottom.</li>
+                                                  </ul>
+                                                </div>
+                                                <p class="- topic/p p"><img class="- topic/image image" id="Untitled__image_mgx_z1s_zfc" src="screenshots/set-contact-ringtone.png" width="500"/></p>
+                                                <ol class="- topic/ol ol" type="a" id="Untitled__ol_ngx_z1s_zfc" data-ofbid="Untitled__ol_ngx_z1s_zfc">
+                                                  <li class="- topic/li li">Tap <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Contacts</span>.</li>
+                                                  <li class="- topic/li li">In the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Contacts</span> page,
+                                                  tap <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Add Contact</span> to add a
+                                                  distinctive ringtone rule.</li>
+                                                  <li class="- topic/li li">Tap the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Contacts</span> or
+                                                  <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Phonebooks</span> tab, then select
+                                                  the specific contact (either company or personal)
+                                                  or the phonebook containing the desired
+                                                  contacts.</li>
+                                                  <li class="- topic/li li">In the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Select Ringtone</span>
+                                                  page, select a ringtone you want to
+                                                  assign.<p class="- topic/p p">Incoming calls from the specified
+                                                  contacts or phonebooks will play the custom
+                                                  ringtone you set.</p><div class="- topic/note note note note_note" id="Untitled__note_ynl_fhs_zfc" data-ofbid="Untitled__note_ynl_fhs_zfc"><span class="note__title">Note:</span> 
+                                                  <ul class="- topic/ul ul" id="Untitled__ul_ibc_ghs_zfc" data-ofbid="Untitled__ul_ibc_ghs_zfc">
+                                                  <li class="- topic/li li">If you select <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Default</span>,
+                                                  Linkus will use your phone's system ringtone for
+                                                  incoming calls.</li>
+                                                  <li class="- topic/li li">If you use Linkus Android Client, you can tap
+                                                  <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Custom</span> to select a ringtone
+                                                  from your phone.</li>
+                                                  </ul>
+                                                  </div></li>
+                                                  <li class="- topic/li li">Return to the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Contacts</span>
+                                                  page, and repeat step <strong class="+ topic/ph hi-d/b ph b">b</strong> - <strong class="+ topic/ph hi-d/b ph b">e</strong> to add
+                                                  more rules.<div class="- topic/note note tip note_tip" id="Untitled__note_byz_f3s_zfc" data-ofbid="Untitled__note_byz_f3s_zfc"><span class="note__title">Tip:</span> To delete an assigned rule, swipe left on the
+                                                  rule, then tap
+                                                  <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Delete</span>.<p class="- topic/p p"><img class="- topic/image image" id="Untitled__image_wff_1ps_zfc" src="screenshots/delete-contact-ringtone-rule.png" width="200"/></p></div></li>
+                                                </ol>
+                                            </td>
+                                        </tr>
+                                        <tr class="- topic/row">
+                                            <td class="- topic/entry entry colsep-1 rowsep-1" headers="Untitled__table_jgx_z1s_zfc__entry__1">External Calls</td>
+                                            <td class="- topic/entry entry colsep-0 rowsep-1" headers="Untitled__table_jgx_z1s_zfc__entry__2">
+                                                <p class="- topic/p p"><img class="- topic/image image" id="Untitled__image_wdc_lqs_zfc" src="screenshots/set-external-ringtone.png" width="300"/></p>
+                                                <ol class="- topic/ol ol" type="a" id="Untitled__ol_qgx_z1s_zfc" data-ofbid="Untitled__ol_qgx_z1s_zfc">
+                                                  <li class="- topic/li li">Tap <span class="+ topic/ph ui-d/uicontrol ph uicontrol">External
+                                                  Calls</span>.</li>
+                                                  <li class="- topic/li li">In the ringtone list, tap the desired
+                                                  ringtone.<p class="- topic/p p">Incoming calls from external numbers
+                                                  will use the selected ringtone.</p></li>
+                                                  <li class="- topic/li li">At the top-left corner, tap <img class="- topic/image image" id="Untitled__image_smv_n3s_zfc" src="screenshots/left-o.png" width="20"/> to return to previous
+                                                  page.</li>
+                                                </ol>
+                                            </td>
+                                        </tr>
+                                        <tr class="- topic/row">
+                                            <td class="- topic/entry entry colsep-1 rowsep-0" headers="Untitled__table_jgx_z1s_zfc__entry__1">Internal Calls</td>
+                                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="Untitled__table_jgx_z1s_zfc__entry__2">
+                                                <p class="- topic/p p"><img class="- topic/image image" id="Untitled__image_mf5_nqs_zfc" src="screenshots/set-internal-ringtone.png" width="300"/></p>
+                                                <ol class="- topic/ol ol" type="a" id="Untitled__ol_pgx_z1s_zfc" data-ofbid="Untitled__ol_pgx_z1s_zfc">
+                                                  <li class="- topic/li li">Tap <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Internal
+                                                  Calls</span>.</li>
+                                                  <li class="- topic/li li">In the ringtone list, tap the desired
+                                                  ringtone.<p class="- topic/p p">Incoming calls from internal
+                                                  extensions will use the selected
+                                                  ringtone.</p></li>
+                                                  <li class="- topic/li li">At the top-left corner, tap <img class="- topic/image image" id="Untitled__image_q52_q3s_zfc" src="screenshots/left-o.png" width="20"/> to return to previous
+                                                  page. </li>
+                                                </ol>
+                                            </td>
+                                        </tr>
+                                    </tbody></table>
+                        </div></li>
+                    <li class="- topic/li li">At the top-right corner, tap <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Done</span> to complete the
+                        ringtone setting.</li>
+                </ol>
+            </div>
+        </section>
+    </div>
+</article></main></div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                    
+                        
+                        
+                        
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div> 
+        <footer class="navbar navbar-default wh_footer" whc:version="23.1">
+  <div class=" footer-container mx-auto ">
+    <div class="footer-html-en"></div>
+  </div>
+</footer>
+        
+        <div id="go2top" class="d-print-none">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </div>
+        
+        <!-- The modal container for images -->
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <!-- Modal Content (The Image) -->
+            <img class="modal-content" id="modal-img" alt=""/>
+            <!-- Modal Caption (Image Text) -->
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
+</html>
