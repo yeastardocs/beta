@@ -4,7 +4,7 @@ import shutil
 
 # 定义要保留的 HTML 文件列表
 published_html_files = [
-    'configure-ringtone-for-linkus-uc-clients.html'
+    'configure-ringtone-for-linkus-uc-clients.html','add-a-dnc-list.html','delete-dnc-lists.html','export-and-import-a-dnc-list.html','configure-an-attempt-control-rule.html'
 ]
 
 # 定义要保留的其他文件
