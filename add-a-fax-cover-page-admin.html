@@ -1,0 +1,166 @@
+<link rel="stylesheet" href="./css/p-series.css">   
+<link rel="stylesheet" href="./css/notes.css">   
+<script src="./iframe-navigation.js"></script>  
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9CK8527Q6J"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-9CK8527Q6J');
+</script>
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "hxj5h8f90e");
+</script><div class="wh_content_area">
+                <div class="row">
+                    
+                    
+                    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12" id="wh_topic_body">
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="- topic/title title topictitle1" id="ariaid-title1">Add a Fax Cover Page</h1>
+    
+    <div class="- topic/body body"><p class="- topic/shortdesc shortdesc">Fax Cover Page appears as the first page of an outbound fax, typically displaying
+        essential fields such as sender information, recipient details, brief message, etc. This
+        topic describes how administrator can configure a fax cover page from PBX web
+        portal.</p>
+        <section class="- topic/section section" id="set-up-fax-cover-page-in-yeastar-pbx__section_wxr_cnm_hgc" data-ofbid="set-up-fax-cover-page-in-yeastar-pbx__section_wxr_cnm_hgc"><h2 class="- topic/title title sectiontitle">Introduction</h2>
+            
+            <p class="- topic/p p"><span class="- topic/ph ph">Yeastar P-Series Software Edition</span> provides a default fax cover page for quick and easy
+                outbound faxing. This cover page is built-in and cannot be modified or deleted.</p>
+            <div class="- topic/p p">For greater flexibility, the system allows both <strong class="+ topic/ph hi-d/b ph b">administrator</strong> and <strong class="+ topic/ph hi-d/b ph b">extension
+                    users</strong> to customize cover pages. <ul class="- topic/ul ul" id="set-up-fax-cover-page-in-yeastar-pbx__ul_n3p_y1n_hgc" data-ofbid="set-up-fax-cover-page-in-yeastar-pbx__ul_n3p_y1n_hgc">
+                    <li class="- topic/li li">As an <strong class="+ topic/ph hi-d/b ph b">administrator</strong>, you can configure system-wide fax cover pages
+                        from PBX web portal. These cover pages will be available to the extension
+                        users who are authorized to send outbound faxes. </li>
+                    <li class="- topic/li li">For <strong class="+ topic/ph hi-d/b ph b">extension users</strong>, as long as they are authorized to send outbound
+                        faxes, they can create extension-specific fax cover pages from their Linkus
+                        Desktop or Web Client.</li>
+                </ul></div>
+            <p class="- topic/p p">The following instructions describe how administrator can configure a fax cover page
+                from PBX web portal. For more information about how extension users can proceed from
+                their Linkus clients, see
+                xxx
+                and xxx.</p>
+        </section>
+        <section class="- topic/section section" id="set-up-fax-cover-page-in-yeastar-pbx__section_a3g_3nm_hgc" data-ofbid="set-up-fax-cover-page-in-yeastar-pbx__section_a3g_3nm_hgc"><h2 class="- topic/title title sectiontitle">Limitations</h2>
+            
+            <div class="- topic/p p">A maximum of <span class="+ topic/ph ui-d/uicontrol ph uicontrol">20</span> system-wide custom fax cover pages are
+                    supported.<div class="- topic/note note note note_note" id="set-up-fax-cover-page-in-yeastar-pbx__note_g4l_pcn_hgc" data-ofbid="set-up-fax-cover-page-in-yeastar-pbx__note_g4l_pcn_hgc"><span class="note__title">Note:</span> Each extension user can customize up to
+                        <strong class="+ topic/ph hi-d/b ph b">10</strong> extension-specific custom fax cover pages.</div></div>
+        </section>
+        <section class="- topic/section section" id="set-up-fax-cover-page-in-yeastar-pbx__section_ssf_rsm_hgc" data-ofbid="set-up-fax-cover-page-in-yeastar-pbx__section_ssf_rsm_hgc"><h2 class="- topic/title title sectiontitle">Prerequisites</h2>
+            
+            <p class="- topic/p p">Prepare a cover page file that meets the following requirements:</p>
+            <div class="- topic/p p">
+                <div class="- topic/note note tip note_tip" id="set-up-fax-cover-page-in-yeastar-pbx__note_rbq_ppm_hgc" data-ofbid="set-up-fax-cover-page-in-yeastar-pbx__note_rbq_ppm_hgc"><span class="note__title">Tip:</span> You can download and use the <a class="- topic/xref xref" href="https://help.yeastar.com/download/docs/sample.docx" target="_blank" rel="external noopener">sample.docx</a> file to customize a new cover page, then
+                    convert it to PDF for upload.</div>
+            </div>
+            <div class="- topic/p p">
+                <ul class="- topic/ul ul" id="set-up-fax-cover-page-in-yeastar-pbx__ul_jmx_hfn_hgc" data-ofbid="set-up-fax-cover-page-in-yeastar-pbx__ul_jmx_hfn_hgc">
+                    <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">File format</strong>: <code class="+ topic/ph pr-d/codeph ph codeph">.pdf</code></li>
+                    <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">File size</strong>: Less than 5MB</li>
+                </ul>
+            </div>
+            <div class="- topic/p p">
+                <div class="- topic/note note note note_note" id="set-up-fax-cover-page-in-yeastar-pbx__note_y2h_s3c_3gc" data-ofbid="set-up-fax-cover-page-in-yeastar-pbx__note_y2h_s3c_3gc"><span class="note__title">Note:</span> Encrypted PDF file is NOT supported.</div>
+            </div>
+        </section>
+        <section class="- topic/section section" id="set-up-fax-cover-page-in-yeastar-pbx__section_c2g_p4m_hgc" data-ofbid="set-up-fax-cover-page-in-yeastar-pbx__section_c2g_p4m_hgc"><h2 class="- topic/title title sectiontitle">Procedure</h2>
+            
+            <div class="- topic/p p">
+                <ol class="- topic/ol ol">
+                    <li class="- topic/li li">Access the creation page of fax cover page.<p class="- topic/p p"><img class="- topic/image image" id="set-up-fax-cover-page-in-yeastar-pbx__image_lzn_m2n_hgc" src="screenshots/cover-creation-page (2).png" width="600"/></p><ol class="- topic/ol ol" type="a" id="set-up-fax-cover-page-in-yeastar-pbx__ol_akz_r4m_hgc" data-ofbid="set-up-fax-cover-page-in-yeastar-pbx__ol_akz_r4m_hgc">
+                            <li class="- topic/li li">Log in to PBX web portal, go to <span class="+ topic/ph ui-d/menucascade ph menucascade"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Integrations</span><abbr title="and then"> &gt; </abbr><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Fax</span></span>.</li>
+                            <li class="- topic/li li">Under the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Cover Pages</span> tab, click
+                                    <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Add</span>.</li>
+                        </ol></li>
+                    <li class="- topic/li li">Complete the following settings.<p class="- topic/p p"><img class="- topic/image image" id="set-up-fax-cover-page-in-yeastar-pbx__image_bxl_n2n_hgc" src="screenshots/cover-page-configuration.png" width="600"/></p><div class="- topic/p p">
+                            <table class="- topic/table table frame-all" id="set-up-fax-cover-page-in-yeastar-pbx__table_khs_cpm_hgc" data-ofbid="set-up-fax-cover-page-in-yeastar-pbx__table_khs_cpm_hgc"><caption></caption><colgroup><col style="width:25.97402597402597%"/><col style="width:74.02597402597402%"/></colgroup><thead class="- topic/thead thead">
+                                        <tr class="- topic/row">
+                                            <th class="- topic/entry entry colsep-1 rowsep-1" id="set-up-fax-cover-page-in-yeastar-pbx__table_khs_cpm_hgc__entry__1">Setting</th>
+                                            <th class="- topic/entry entry colsep-0 rowsep-1" id="set-up-fax-cover-page-in-yeastar-pbx__table_khs_cpm_hgc__entry__2">Description</th>
+                                        </tr>
+                                    </thead><tbody class="- topic/tbody tbody">
+                                        <tr class="- topic/row">
+                                            <td class="- topic/entry entry colsep-1 rowsep-1" headers="set-up-fax-cover-page-in-yeastar-pbx__table_khs_cpm_hgc__entry__1">Cover Page Name</td>
+                                            <td class="- topic/entry entry colsep-0 rowsep-1" headers="set-up-fax-cover-page-in-yeastar-pbx__table_khs_cpm_hgc__entry__2">Enter a name to help you identify the cover
+                                                page.</td>
+                                        </tr>
+                                        <tr class="- topic/row">
+                                            <td class="- topic/entry entry colsep-1 rowsep-1" headers="set-up-fax-cover-page-in-yeastar-pbx__table_khs_cpm_hgc__entry__1">Remark</td>
+                                            <td class="- topic/entry entry colsep-0 rowsep-1" headers="set-up-fax-cover-page-in-yeastar-pbx__table_khs_cpm_hgc__entry__2">Enter a short description.</td>
+                                        </tr>
+                                        <tr class="- topic/row">
+                                            <td class="- topic/entry entry colsep-1 rowsep-0" headers="set-up-fax-cover-page-in-yeastar-pbx__table_khs_cpm_hgc__entry__1">Cover Page File</td>
+                                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="set-up-fax-cover-page-in-yeastar-pbx__table_khs_cpm_hgc__entry__2">Click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Upload</span> to upload a
+                                                PDF file.</td>
+                                        </tr>
+                                    </tbody></table>
+                        </div></li>
+                    <li class="- topic/li li">Click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Save</span>.</li>
+                </ol>
+            </div>
+        </section>
+        <section class="- topic/section section" id="set-up-fax-cover-page-in-yeastar-pbx__section_uct_5vm_hgc" data-ofbid="set-up-fax-cover-page-in-yeastar-pbx__section_uct_5vm_hgc"><h2 class="- topic/title title sectiontitle">Result</h2>
+            
+            <div class="- topic/p p">
+                <ul class="- topic/ul ul" id="set-up-fax-cover-page-in-yeastar-pbx__ul_rbq_wfn_hgc" data-ofbid="set-up-fax-cover-page-in-yeastar-pbx__ul_rbq_wfn_hgc">
+                    <li class="- topic/li li">The fax cover page is created and displayed in the list.<div class="- topic/p p">
+                            <div class="- topic/note note tip note_tip" id="set-up-fax-cover-page-in-yeastar-pbx__note_c1g_1gn_hgc" data-ofbid="set-up-fax-cover-page-in-yeastar-pbx__note_c1g_1gn_hgc"><span class="note__title">Tip:</span> You can click <img class="- topic/image image" id="set-up-fax-cover-page-in-yeastar-pbx__image_msz_2qn_hgc" src="screenshots/eye.png" width="20"/>
+                                to preview the cover page in a new browser tab.<p class="- topic/p p"><img class="- topic/image image" id="set-up-fax-cover-page-in-yeastar-pbx__image_tcq_rqn_hgc" src="screenshots/preview-cover-page (2).png" width="650"/></p></div>
+                        </div></li>
+                    <li class="- topic/li li">Extension users authorized to send outbound faxes can view and use the cover
+                        page directly from Linkus Desktop or Web Client.</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</article></main></div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                    
+                        
+                        
+                        
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div> 
+        <footer class="navbar navbar-default wh_footer" whc:version="23.1">
+  <div class=" footer-container mx-auto ">
+    <div class="footer-html-en"></div>
+  </div>
+</footer>
+        
+        <div id="go2top" class="d-print-none">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </div>
+        
+        <!-- The modal container for images -->
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <!-- Modal Content (The Image) -->
+            <img class="modal-content" id="modal-img" alt=""/>
+            <!-- Modal Caption (Image Text) -->
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
+</html>

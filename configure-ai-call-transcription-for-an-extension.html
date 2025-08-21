@@ -1,0 +1,161 @@
+<link rel="stylesheet" href="./css/p-series.css">   
+<link rel="stylesheet" href="./css/notes.css">   
+<script src="./iframe-navigation.js"></script>  
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9CK8527Q6J"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-9CK8527Q6J');
+</script>
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "hxj5h8f90e");
+</script><div class="wh_content_area">
+                <div class="row">
+                    
+                    
+                    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12" id="wh_topic_body">
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="- topic/title title topictitle1" id="ariaid-title1">Configure AI Call Transcription for an Extension</h1>
+    
+    <div class="- topic/body body"><p class="- topic/shortdesc shortdesc">After AI call transcription is enabled, calls for authorized
+        extensions
+        are automatically detected and transcribed in a global preset
+        language. You can adjust the transcription
+        settings for extensions individually to meet their specific needs.</p>
+        <div class="- topic/p p">
+            <div class="- topic/note note note note_note" id="configure-ai-call-transcription-for-an-extension__note_jmk_cl5_hgc" data-ofbid="configure-ai-call-transcription-for-an-extension__note_jmk_cl5_hgc"><span class="note__title">Note:</span> Extension users can also customize the AI call transcription
+                settings directly on their Linkus clients, and the changes will be automatically
+                synchronized to the corresponding extension settings on the PBX. </div>
+        </div>
+        <section class="- topic/section section" id="configure-ai-call-transcription-for-an-extension__section_kmk_cl5_hgc" data-ofbid="configure-ai-call-transcription-for-an-extension__section_kmk_cl5_hgc"><h2 class="- topic/title title sectiontitle">Prerequisites</h2>
+            
+            <p class="- topic/p p">You have <a class="- topic/xref xref" href="enable-ai-call-transcription.html" title="AI call transcription can transcribe calls between two parties into readable text in real-time and quickly generate call summaries. This topic describes how to enable AI call transcription.">enabled AI call
+                    transcription</a> and granted the usage permission for the desired
+                extension.</p>
+        </section>
+        <section class="- topic/section section" id="configure-ai-call-transcription-for-an-extension__section_lmk_cl5_hgc" data-ofbid="configure-ai-call-transcription-for-an-extension__section_lmk_cl5_hgc"><h2 class="- topic/title title sectiontitle">Procedure</h2>
+            
+            <div class="- topic/p p">
+                <ol class="- topic/ol ol" id="configure-ai-call-transcription-for-an-extension__ol_mmk_cl5_hgc" data-ofbid="configure-ai-call-transcription-for-an-extension__ol_mmk_cl5_hgc">
+                    <li class="- topic/li li">Log in to PBX web portal, go to <span class="+ topic/ph ui-d/menucascade ph menucascade"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Extension and Trunk</span><abbr title="and then"> &gt; </abbr><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Extension</span></span>.</li>
+                    <li class="- topic/li li">Click <img class="- topic/image image" id="configure-ai-call-transcription-for-an-extension__image_nmk_cl5_hgc" src="screenshots/edit.png" width="20"/>
+                        beside the desired extension, then click the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">AI</span>
+                        tab.</li>
+                    <li class="- topic/li li">In the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Call Transcription</span> section, configure the
+                        following settings according to extension users' need.<p class="- topic/p p"><img class="- topic/image image" id="configure-ai-call-transcription-for-an-extension__image_omk_cl5_hgc" src="screenshots/ext-ai-call-transcription-setting2.png" width="650"/></p><ul class="- topic/ul ul" id="configure-ai-call-transcription-for-an-extension__ul_pmk_cl5_hgc" data-ofbid="configure-ai-call-transcription-for-an-extension__ul_pmk_cl5_hgc">
+                            <li class="- topic/li li"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Automatic Call Transcription</span>: Specify whether
+                                to automatically transcribe extension's calls in real-time.<p class="- topic/p p">If
+                                    this option is disabled, extension users need to manually enable
+                                        <span class="+ topic/ph ui-d/uicontrol ph uicontrol">AI transcription</span> on the call screen
+                                    during an active call when needed.</p></li>
+                            <li class="- topic/li li"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Show Transcription Text After the Call</span>:
+                                Specify whether to automatically display the transcripts and
+                                summaries in a pop-up window after the call ends.</li>
+                            <li class="- topic/li li"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Language</span>: In the drop-down
+                                            list, select the desired language in which calls will be
+                                            transcribed.</li>
+                            <li class="- topic/li li"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Languages to
+                                                Auto-Detect</span>: If you set the
+                                                <strong class="+ topic/ph hi-d/b ph b">Language</strong> to <strong class="+ topic/ph hi-d/b ph b">Automatic</strong>, select the
+                                            desired languages for auto detection.<p class="- topic/p p">The system will
+                                                automatically detect and transcribe call audios in
+                                                the selected languages.</p><div class="- topic/p p">
+                                                <div class="- topic/note note note note_note" id="configure-ai-call-transcription-for-an-extension__d25e152" data-ofbid="configure-ai-call-transcription-for-an-extension__d25e152"><span class="note__title">Note:</span> 
+                                                  <ul class="- topic/ul ul" id="configure-ai-call-transcription-for-an-extension__d25e154" data-ofbid="configure-ai-call-transcription-for-an-extension__d25e154">
+                                                  <li class="- topic/li li">You can select up to 5 languages for
+                                                  auto-detection simultaneously.</li>
+                                                  <li class="- topic/li li">Only one region can be selected per language.
+                                                  For example, you cannot select both English (UK)
+                                                  and English (US) at the same time.</li>
+                                                  </ul>
+                                                </div>
+                                            </div></li>
+                        </ul></li>
+                    <li class="- topic/li li">Click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Save</span>.</li>
+                </ol>
+            </div>
+        </section>
+        <section class="- topic/section section" id="configure-ai-call-transcription-for-an-extension__section_qmk_cl5_hgc" data-ofbid="configure-ai-call-transcription-for-an-extension__section_qmk_cl5_hgc"><h2 class="- topic/title title sectiontitle">Result</h2>
+            
+            <div class="- topic/p p">
+                <ul class="- topic/ul ul" id="configure-ai-call-transcription-for-an-extension__ul_rmk_cl5_hgc" data-ofbid="configure-ai-call-transcription-for-an-extension__ul_rmk_cl5_hgc">
+                    <li class="- topic/li li">Each
+                        call with <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Call Transcription</span>
+                        enabled will be transcribed in the transcription panel in real-time, either
+                        automatically or manually. </li>
+                    <li class="- topic/li li">Extension users can access the
+                        transcripts
+                        and summaries on their Linkus UC Clients (Path: <span class="+ topic/ph ui-d/menucascade ph menucascade"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Call Logs</span><abbr title="and then"> &gt; </abbr><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Call Transcription</span></span>). The transcribed calls are marked with an icon <img class="- topic/image image" id="configure-ai-call-transcription-for-an-extension__image_umk_cl5_hgc" src="screenshots/ai-logo.png" width="20"/>. <div class="- topic/p p">
+                            <table class="- topic/table table frame-all" id="configure-ai-call-transcription-for-an-extension__table_xmk_cl5_hgc" data-ofbid="configure-ai-call-transcription-for-an-extension__table_xmk_cl5_hgc"><caption></caption><colgroup><col style="width:33.33333333333333%"/><col style="width:33.33333333333333%"/><col style="width:33.33333333333333%"/></colgroup><thead class="- topic/thead thead">
+                                        <tr class="- topic/row">
+                                            <th class="- topic/entry entry colsep-1 rowsep-1" id="configure-ai-call-transcription-for-an-extension__table_xmk_cl5_hgc__entry__1">Linkus Web Client</th>
+                                            <th class="- topic/entry entry colsep-1 rowsep-1" id="configure-ai-call-transcription-for-an-extension__table_xmk_cl5_hgc__entry__2">Linkus Desktop Client</th>
+                                            <th class="- topic/entry entry colsep-0 rowsep-1" id="configure-ai-call-transcription-for-an-extension__table_xmk_cl5_hgc__entry__3">Linkus Mobile Client</th>
+                                        </tr>
+                                    </thead><tbody class="- topic/tbody tbody">
+                                        <tr class="- topic/row">
+                                            <td class="- topic/entry entry colsep-1 rowsep-0" headers="configure-ai-call-transcription-for-an-extension__table_xmk_cl5_hgc__entry__1">
+                                                <p class="- topic/p p"><img class="- topic/image image" id="configure-ai-call-transcription-for-an-extension__image_gjg_tgg_jgc" src="screenshots/ai-transcribe-re1-web.png" width="300"/></p>
+                                            </td>
+                                            <td class="- topic/entry entry colsep-1 rowsep-0" headers="configure-ai-call-transcription-for-an-extension__table_xmk_cl5_hgc__entry__2">
+                                                <p class="- topic/p p"><img class="- topic/image image" id="configure-ai-call-transcription-for-an-extension__image_ark_2f4_hgc" src="screenshots/ai-transcribe-re1-pc.png" width="300"/></p>
+                                            </td>
+                                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="configure-ai-call-transcription-for-an-extension__table_xmk_cl5_hgc__entry__3"><img class="- topic/image image" id="configure-ai-call-transcription-for-an-extension__image_t5k_srb_3gc" src="screenshots/ai-transcribe-res1-mobile.png" width="300"/></td>
+                                        </tr>
+                                    </tbody></table>
+                        </div></li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</article></main></div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                    
+                        
+                        
+                        
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div> 
+        <footer class="navbar navbar-default wh_footer" whc:version="23.1">
+  <div class=" footer-container mx-auto ">
+    <div class="footer-html-en"></div>
+  </div>
+</footer>
+        
+        <div id="go2top" class="d-print-none">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </div>
+        
+        <!-- The modal container for images -->
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <!-- Modal Content (The Image) -->
+            <img class="modal-content" id="modal-img" alt=""/>
+            <!-- Modal Caption (Image Text) -->
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
+</html>

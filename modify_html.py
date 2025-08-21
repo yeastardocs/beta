@@ -4,7 +4,29 @@ import shutil
 
 # 定义要保留的 HTML 文件列表
 published_html_files = [
-    'configure-ringtone-for-linkus-uc-clients.html','add-a-dnc-list.html','delete-dnc-lists.html','export-and-import-a-dnc-list.html','configure-an-attempt-control-rule.html'
+    'add-a-fax-cover-page.html',
+    'add-a-fax-cover-page-admin.html',
+    'cancel-a-scheduled-fax.html',
+    'check-faxes.html',
+    'check-fax-logs-admin.html',
+    'configure-ai-call-transcription-desktop.html',
+    'configure-ai-call-transcription-for-an-extension.html',
+    'configure-ai-call-transcription-mobile.html',
+    'delete-fax-cover-pages.html',
+    'delete-fax-cover-pages-admin.html',
+    'delete-faxes.html',
+    'delete-faxes-admin.html',
+    'download-fax-data.html',
+    'download-fax-data-admin.html',
+    'enable-ai-call-transcription.html',
+    'enable-websocket-real-time-audio-streaming.html',
+    'forward-fax-to-email-or-another-fax-number.html',
+    'integrate-yeastar-p-series-pbx-with-telnyx-fax-admin.html',
+    'send-faxes-from-linkus-desktop-client.html',
+    'transcribe-a-call-desktop.html',
+    'transcribe-a-call-mobile.html',
+    'update-read-status-of-inbound-faxes.html',
+    'websocket-real-time-audio-streaming-overview.html',
 ]
 
 # 定义要保留的其他文件

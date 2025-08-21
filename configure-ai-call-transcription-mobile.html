@@ -1,0 +1,173 @@
+<link rel="stylesheet" href="./css/p-series.css">   
+<link rel="stylesheet" href="./css/notes.css">   
+<script src="./iframe-navigation.js"></script>  
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9CK8527Q6J"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-9CK8527Q6J');
+</script>
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "hxj5h8f90e");
+</script><div class="wh_content_area">
+                <div class="row">
+                    
+                    
+                    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12" id="wh_topic_body">
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="- topic/title title topictitle1" id="ariaid-title1">Configure AI Call Transcription</h1>
+    
+    <div class="- topic/body body"><p class="- topic/shortdesc shortdesc">With AI call transcription feature, your call with the other party can be transcribed
+        to readable text in real-time, and the client will generate a summary after the call. This
+        topic describes how to configure AI call transcription on Linkus Mobile Client.</p>
+        <div class="- topic/note note note note_note" id="configure-ai-transcription-settings__note_g5z_bb1_jgc" data-ofbid="configure-ai-transcription-settings__note_g5z_bb1_jgc"><span class="note__title">Note:</span> The configuration will be synchronized across your Linkus UC
+            Clients.</div>
+        <section class="- topic/section section" id="configure-ai-transcription-settings__section_mfz_wt3_rfc" data-ofbid="configure-ai-transcription-settings__section_mfz_wt3_rfc"><h2 class="- topic/title title sectiontitle">Requirements</h2>
+            
+            <div class="- topic/p p">
+                <dl class="- topic/dl dl">
+                    
+                        <dt class="- topic/dt dt dlterm">PBX Server</dt>
+                        <dd class="- topic/dd dd">
+                            <ul class="- topic/ul ul" id="configure-ai-transcription-settings__d21e34" data-ofbid="configure-ai-transcription-settings__d21e34">
+                                <li class="- topic/li li">The firmware of the PBX server is
+                                        <span class="- topic/ph ph"><span class="- topic/ph ph">83.20.0.x</span></span>
+                                    or later.</li>
+                                <li class="- topic/li li">System administrator has enabled <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Call
+                                        Transcription</span> (Path: <span class="+ topic/ph ui-d/menucascade ph menucascade"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Integrations</span><abbr title="and then"> &gt; </abbr><span class="+ topic/ph ui-d/uicontrol ph uicontrol">AI</span></span>) for your extension.</li>
+                            </ul>
+                        </dd>
+                    
+                    
+                        <dt class="- topic/dt dt dlterm">Linkus Mobile Client</dt>
+                        <dd class="- topic/dd dd">The version of your Linkus Mobile Client meets the following
+                                requirements:<ul class="- topic/ul ul" id="configure-ai-transcription-settings__d21e69" data-ofbid="configure-ai-transcription-settings__d21e69">
+                                <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Linkus iOS
+                                    Client</strong>:
+                                    5.17.x or later</li>
+                                <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Linkus Android Client</strong>:
+                                    5.17.x
+                                    or later</li>
+                            </ul></dd>
+                    
+                </dl>
+            </div>
+        </section>
+        <section class="- topic/section section" id="configure-ai-transcription-settings__section_nkk_xt3_rfc" data-ofbid="configure-ai-transcription-settings__section_nkk_xt3_rfc"><h2 class="- topic/title title sectiontitle">Procedure</h2>
+            
+            <div class="- topic/p p">
+                <ol class="- topic/ol ol" id="configure-ai-transcription-settings__ol_bf5_cv3_rfc" data-ofbid="configure-ai-transcription-settings__ol_bf5_cv3_rfc">
+                    <li class="- topic/li li">At the top-left corner of Linkus Mobile Client, tap your account.</li>
+                    <li class="- topic/li li">Go to <span class="+ topic/ph ui-d/menucascade ph menucascade"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Settings</span><abbr title="and then"> &gt; </abbr><span class="+ topic/ph ui-d/uicontrol ph uicontrol">AI</span></span>.</li>
+                    <li class="- topic/li li">In the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Call Transcription</span> section, configure the
+                        following settings according to your need.<p class="- topic/p p"><img class="- topic/image image" id="configure-ai-transcription-settings__image_jhl_lv3_rfc" src="screenshots/mobile-ai-call-setting1.png" width="300"/></p><div class="- topic/p p">
+                            <ul class="- topic/ul ul">
+                                <li class="- topic/li li"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Automatic Call Transcription</span>: Specify
+                                    whether to automatically transcribe your call in real-time.<p class="- topic/p p">If
+                                        this option is disabled, you need to manually enable
+                                            <span class="+ topic/ph ui-d/uicontrol ph uicontrol">AI Transcription</span> on the call
+                                        screen during an active call to trigger real-time call
+                                        transcription when needed. For more information, see <a class="- topic/xref xref" href="transcribe-a-call.html" title="AI-powered Call Transcription feature supports transcribing a call between two parties into readable texts, and generate a summary, helping you quickly summarize key points and identify to-dos.">Transcribe a Call</a>.</p></li>
+                                <li class="- topic/li li"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Show Transcription Text After the Call</span>:
+                                    Specify whether to automatically display the transcripts and
+                                    summaries in a pop-up panel after the call ends.</li>
+                                <li class="- topic/li li">
+                                    <p class="- topic/p p"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Language</span>: In the drop-down list,
+                                        select the desired language in which calls will be
+                                        transcribed.</p>
+                                </li>
+                                <li class="- topic/li li"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Languages to Auto-Detect</span>: If you set the
+                                        <strong class="+ topic/ph hi-d/b ph b">Language</strong> to <strong class="+ topic/ph hi-d/b ph b">Automatic</strong>, select the desired
+                                    languages for auto detection.<p class="- topic/p p"><img class="- topic/image image" id="configure-ai-transcription-settings__image_ptw_lzm_42c" src="screenshots/language-to-auto-detect.png" width="450"/></p><p class="- topic/p p">The system will
+                                        automatically detect and transcribe calls in the selected
+                                        languages.</p><div class="- topic/p p">
+                                        <div class="- topic/note note note note_note" id="configure-ai-transcription-settings__note_k3k_dlg_jgc" data-ofbid="configure-ai-transcription-settings__note_k3k_dlg_jgc"><span class="note__title">Note:</span> 
+                                            <ul class="- topic/ul ul" id="configure-ai-transcription-settings__ul_mly_dlg_jgc" data-ofbid="configure-ai-transcription-settings__ul_mly_dlg_jgc">
+                                                <li class="- topic/li li">You can select up to 5 languages for
+                                                  auto-detection simultaneously.</li>
+                                                <li class="- topic/li li">Only one region can be selected per language.
+                                                  For example, you cannot select both English (UK)
+                                                  and English (US) at the same time.</li>
+                                            </ul>
+                                        </div>
+                                    </div></li>
+                            </ul>
+                        </div></li>
+                    <li class="- topic/li li">At the top-right corner, tap <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Done</span>.</li>
+                </ol>
+            </div>
+        </section>
+        <section class="- topic/section section" id="configure-ai-transcription-settings__section_yd5_nv3_rfc" data-ofbid="configure-ai-transcription-settings__section_yd5_nv3_rfc"><h2 class="- topic/title title sectiontitle">Result</h2>
+            
+            <ul class="- topic/ul ul" id="configure-ai-transcription-settings__d21e200" data-ofbid="configure-ai-transcription-settings__d21e200">
+                <li class="- topic/li li">During the call, the call audio
+                    will
+                    be transcribed in the AI transcription panel in real
+                    time.</li>
+                <li class="- topic/li li">
+                    <p class="- topic/p p"><img class="- topic/image image" id="configure-ai-transcription-settings__d21e212" src="screenshots/ai-transcribe-re1-mobile.png" width="200"/></p>
+                </li>
+                <li class="- topic/li li">
+                    <p class="- topic/p p">After  the call ends, you can review the summary and transcript in the call
+                        log; Calls that have been transcribed are marked with a <img class="- topic/image image" id="configure-ai-transcription-settings__d21e219" src="screenshots/ai-logo.png" width="20"/>
+                        icon.</p>
+                    <div class="- topic/p p">
+                        <div class="- topic/note note note note_note" id="configure-ai-transcription-settings__d21e224" data-ofbid="configure-ai-transcription-settings__d21e224"><span class="note__title">Note:</span> You can edit the call summary, or search
+                            transcript according to your need.</div>
+                    </div>
+                    <p class="- topic/p p"><img class="- topic/image image" id="configure-ai-transcription-settings__d21e229" src="screenshots/ai-transcribe-res1-mobile.png" width="650"/></p>
+                </li>
+            </ul>
+        </section>
+    </div>
+</article></main></div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                    
+                        
+                        
+                        
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div> 
+        <footer class="navbar navbar-default wh_footer" whc:version="23.1">
+  <div class=" footer-container mx-auto ">
+    <div class="footer-html-en"></div>
+  </div>
+</footer>
+        
+        <div id="go2top" class="d-print-none">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </div>
+        
+        <!-- The modal container for images -->
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <!-- Modal Content (The Image) -->
+            <img class="modal-content" id="modal-img" alt=""/>
+            <!-- Modal Caption (Image Text) -->
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
+</html>

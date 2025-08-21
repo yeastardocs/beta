@@ -1,0 +1,402 @@
+<link rel="stylesheet" href="./css/p-series.css">   
+<link rel="stylesheet" href="./css/notes.css">   
+<script src="./iframe-navigation.js"></script>  
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9CK8527Q6J"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-9CK8527Q6J');
+</script>
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "hxj5h8f90e");
+</script><div class="wh_content_area">
+                <div class="row">
+                    
+                    
+                    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12" id="wh_topic_body">
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="- topic/title title topictitle1" id="ariaid-title1">Integrate <span class="- topic/ph ph">Yeastar P-Series Software Edition</span> with Telnyx Fax</h1>
+    
+    <div class="- topic/body body"><p class="- topic/shortdesc shortdesc">By integrating <span class="- topic/ph ph">Yeastar P-Series Software Edition</span> with Telnyx Fax, employees within your
+        organization can send and receive faxes instantly and securely over the Internet - directly
+        from their own Linkus Web Client or Desktop Client. </p>
+        <section class="- topic/section section" id="integrate-yeastar-p-series-pbx-with-telnyx__section_tgr_ccf_hgc" data-ofbid="integrate-yeastar-p-series-pbx-with-telnyx__section_tgr_ccf_hgc"><h2 class="- topic/title title sectiontitle">Introduction</h2>
+            
+            <p class="- topic/p p"><span class="- topic/ph ph">Yeastar P-Series Software Edition</span> supports the integration with Telnyx to enable
+                internet-based faxing, allowing PBX extension users to send and receive faxes
+                through Telnyx's reliable communications network.</p>
+            <p class="- topic/p p"><img class="- topic/image image" id="integrate-yeastar-p-series-pbx-with-telnyx__image_u4v_mnf_hgc"/></p>
+            <p class="- topic/p p">The integration leverages Yeastar PBX webhooks and Telnyx Fax API V2. Telnyx uses
+                webhooks to notify the PBX of inbound faxes, while Yeastar PBX uses Telnyx API V2
+                endpoints to send faxes and retrieve fax files. </p>
+            <p class="- topic/p p"><img class="- topic/image image" id="integrate-yeastar-p-series-pbx-with-telnyx__image_dw3_yrf_hgc"/></p>
+            <p class="- topic/p p">You can easily set up the integration by following the instructions below:</p>
+            <div class="- topic/p p">
+                <ol class="- topic/ol ol">
+                    <li class="- topic/li li">Obtain Webhook URL from Yeastar PBX.</li>
+                    <li class="- topic/li li">Create the necessary resources and obtain the required credentials from
+                            Telnyx.<ul class="- topic/ul ul" id="integrate-yeastar-p-series-pbx-with-telnyx__ul_nyj_tkf_hgc" data-ofbid="integrate-yeastar-p-series-pbx-with-telnyx__ul_nyj_tkf_hgc">
+                            <li class="- topic/li li">An <strong class="+ topic/ph hi-d/b ph b">API Key</strong> to authenticate your account and access Telnyx API
+                                endpoints.</li>
+                            <li class="- topic/li li">An <strong class="+ topic/ph hi-d/b ph b">Outbound Voice Profile</strong> to initiate outbound fax
+                                traffic.</li>
+                            <li class="- topic/li li">A <strong class="+ topic/ph hi-d/b ph b">Fax-enabled Phone Number</strong> for sending and receiving
+                                faxes.</li>
+                            
+                            <li class="- topic/li li">A <strong class="+ topic/ph hi-d/b ph b">Fax Application</strong> to manage inbound and outbound fax
+                                traffic.</li>
+                        </ul></li>
+                    <li class="- topic/li li">Fill in the obtained credentials in Yeastar PBX, then configure fax-related
+                        settings.</li>
+                </ol>
+            </div>
+        </section>
+        <section class="- topic/section section" id="integrate-yeastar-p-series-pbx-with-telnyx__section_jtz_xwf_jgc" data-ofbid="integrate-yeastar-p-series-pbx-with-telnyx__section_jtz_xwf_jgc"><h2 class="- topic/title title sectiontitle">Requirements </h2>
+            
+            <p class="- topic/p p">To integrate online faxing capability to Yeastar PBX, ensure Yeastar PBX meets the
+                following requirements.</p>
+            <div class="- topic/p p">
+                <ul class="- topic/ul ul">
+                    <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Firmware</strong>: Version <span class="- topic/ph ph">83.20.0.X</span> or
+                        later</li>
+                    <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Plan</strong>: Enterprise Plan or Ultimate Plan</li>
+                    <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Network</strong>: Remotely accessible via a
+                        domain name or public IP.</li>
+                </ul>
+            </div>
+        </section>
+        <section class="- topic/section section" id="integrate-yeastar-p-series-pbx-with-telnyx__section_hr1_sgy_ggc" data-ofbid="integrate-yeastar-p-series-pbx-with-telnyx__section_hr1_sgy_ggc"><h2 class="- topic/title title sectiontitle">Step 1. Obtain Webhook URL from Yeastar PBX</h2>
+            
+            <p class="- topic/p p">Obtain a Webhook URL from Yeastar PBX first, which is required when you set up a fax
+                application on Telnyx.</p>
+            <div class="- topic/p p">
+                <ol class="- topic/ol ol">
+                    <li class="- topic/li li" id="integrate-yeastar-p-series-pbx-with-telnyx__fax-creation-page" data-ofbid="integrate-yeastar-p-series-pbx-with-telnyx__fax-creation-page">Go to the fax integration page.<p class="- topic/p p"><img class="- topic/image image" id="integrate-yeastar-p-series-pbx-with-telnyx__image_wpc_s3z_ggc" src="screenshots/fax-integration-page.png" width="500"/></p><ol class="- topic/ol ol" type="a" id="integrate-yeastar-p-series-pbx-with-telnyx__ol_abz_dgz_ggc" data-ofbid="integrate-yeastar-p-series-pbx-with-telnyx__ol_abz_dgz_ggc">
+                            <li class="- topic/li li">Log in to PBX web portal, go to <span class="+ topic/ph ui-d/menucascade ph menucascade"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Integrations</span><abbr title="and then"> &gt; </abbr><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Fax</span></span>.</li>
+                            <li class="- topic/li li">Under <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Fax Integration</span> tab, click
+                                    <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Add</span>.</li>
+                        </ol></li>
+                    <li class="- topic/li li" id="integrate-yeastar-p-series-pbx-with-telnyx__webhook-url" data-ofbid="integrate-yeastar-p-series-pbx-with-telnyx__webhook-url">Obtain the Webhook URL for Telnyx.<p class="- topic/p p"><img class="- topic/image image" id="integrate-yeastar-p-series-pbx-with-telnyx__image_bnn_jjz_ggc" src="screenshots/webhook-url-pae.png" width="500"/></p><p class="- topic/p p"></p><ol class="- topic/ol ol" type="a" id="integrate-yeastar-p-series-pbx-with-telnyx__ol_pyc_hhz_ggc" data-ofbid="integrate-yeastar-p-series-pbx-with-telnyx__ol_pyc_hhz_ggc">
+                            <li class="- topic/li li">In the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Service Provider</span> drop-down list,
+                                select <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Telnyx</span>.</li>
+                            <li class="- topic/li li">In the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Webhook URL</span> field, click <img class="- topic/image image" id="integrate-yeastar-p-series-pbx-with-telnyx__image_gzg_dhy_ggc" src="screenshots/copy.png" width="20"/>
+                                to copy the URL and save it for later use.</li>
+                        </ol></li>
+                </ol>
+            </div>
+        </section>
+        <section class="- topic/section section" id="integrate-yeastar-p-series-pbx-with-telnyx__section_ysj_4hy_ggc" data-ofbid="integrate-yeastar-p-series-pbx-with-telnyx__section_ysj_4hy_ggc"><h2 class="- topic/title title sectiontitle">Step 2. Create resources and obtain credentials from Telnyx</h2>
+            
+            <p class="- topic/p p">Create the necessary resources and obtain the required credentials from Telnyx, so as
+                to authenticate and authorize interactions between Yeastar PBX and Telnyx.</p>
+            <p class="- topic/p p">You need to complete the following settings within Telnyx portal.</p>
+            <div class="- topic/p p">
+                <ul class="- topic/ul ul" id="integrate-yeastar-p-series-pbx-with-telnyx__ul_nfq_1mf_hgc" data-ofbid="integrate-yeastar-p-series-pbx-with-telnyx__ul_nfq_1mf_hgc">
+                    <li class="- topic/li li"><a class="- topic/xref xref" href="#integrate-yeastar-p-series-pbx-with-telnyx__step1">1. Create an API key</a></li>
+                    <li class="- topic/li li"><a class="- topic/xref xref" href="#integrate-yeastar-p-series-pbx-with-telnyx__step2">2. Create outbound voice profile</a></li>
+                    <li class="- topic/li li"><a class="- topic/xref xref" href="#integrate-yeastar-p-series-pbx-with-telnyx__step3">3. Buy a phone number</a></li>
+                    <li class="- topic/li li"><a class="- topic/xref xref" href="#integrate-yeastar-p-series-pbx-with-telnyx__step4">4. Create a fax application</a></li>
+                </ul>
+            </div>
+            <div class="- topic/p p">
+                <dl class="- topic/dl dl" id="integrate-yeastar-p-series-pbx-with-telnyx__dl_wtc_yjz_ggc" data-ofbid="integrate-yeastar-p-series-pbx-with-telnyx__dl_wtc_yjz_ggc">
+                    
+                        <dt class="- topic/dt dt dlterm" id="integrate-yeastar-p-series-pbx-with-telnyx__step1" data-ofbid="integrate-yeastar-p-series-pbx-with-telnyx__step1">1. Create an API key</dt>
+                        <dd class="- topic/dd dd">
+                            <ol class="- topic/ol ol">
+                                <li class="- topic/li li">Access the creation page of API key.<ol class="- topic/ol ol" type="a" id="integrate-yeastar-p-series-pbx-with-telnyx__ol_fzz_33y_ggc" data-ofbid="integrate-yeastar-p-series-pbx-with-telnyx__ol_fzz_33y_ggc">
+                                        <li class="- topic/li li">Log in to <a class="- topic/xref xref" href="https://portal.telnyx.com/" target="_blank" rel="external noopener">Telnyx
+                                            portal</a>.</li>
+                                        <li class="- topic/li li">At the top-right corner, click your account, then select
+                                                <span class="+ topic/ph ui-d/uicontrol ph uicontrol">API keys</span>.<p class="- topic/p p"><img class="- topic/image image" id="integrate-yeastar-p-series-pbx-with-telnyx__image_bd3_zkz_ggc" src="screenshots/telnyx-api-page.png" width="400"/></p></li>
+                                    </ol></li>
+                                <li class="- topic/li li">Create an API key.<ol class="- topic/ol ol" type="a" id="integrate-yeastar-p-series-pbx-with-telnyx__ol_jgn_m3y_ggc" data-ofbid="integrate-yeastar-p-series-pbx-with-telnyx__ol_jgn_m3y_ggc">
+                                        <li class="- topic/li li">At the top-right corner, click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Create API
+                                                Key</span>.<p class="- topic/p p"><img class="- topic/image image" id="integrate-yeastar-p-series-pbx-with-telnyx__image_exl_mmz_ggc" src="screenshots/create-api-key.png" width="650"/></p></li>
+                                        <li class="- topic/li li">In the pop-up window, set tag and expiration date for
+                                            the API key as needed, then click
+                                                <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Create</span>.<p class="- topic/p p"><img class="- topic/image image" id="integrate-yeastar-p-series-pbx-with-telnyx__image_pv4_xnz_ggc" src="screenshots/api-tag-expdate.png" width="500"/></p><p class="- topic/p p">A new
+                                                API key is generated and displayed.</p></li>
+                                        <li class="- topic/li li" id="integrate-yeastar-p-series-pbx-with-telnyx__api-key" data-ofbid="integrate-yeastar-p-series-pbx-with-telnyx__api-key">Copy
+                                            the API key and save it for later use, then close the
+                                                  window.<p class="- topic/p p"><img class="- topic/image image" id="integrate-yeastar-p-series-pbx-with-telnyx__image_i4h_j4z_ggc" src="screenshots/copy-api-key.png" width="500"/></p></li>
+                                    </ol></li>
+                            </ol>
+                        </dd>
+                    
+                    
+                        <dt class="- topic/dt dt dlterm" id="integrate-yeastar-p-series-pbx-with-telnyx__step2" data-ofbid="integrate-yeastar-p-series-pbx-with-telnyx__step2">2. Create outbound voice profile</dt>
+                        <dd class="- topic/dd dd">
+                            <ol class="- topic/ol ol">
+                                <li class="- topic/li li">Access the creation page of outbound voice profile.<ol class="- topic/ol ol" type="a" id="integrate-yeastar-p-series-pbx-with-telnyx__ol_qlr_f11_hgc" data-ofbid="integrate-yeastar-p-series-pbx-with-telnyx__ol_qlr_f11_hgc">
+                                        <li class="- topic/li li">At the top-left corner, click
+                                                <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Back</span> to return to the home
+                                                  menu.<p class="- topic/p p"><img class="- topic/image image" id="integrate-yeastar-p-series-pbx-with-telnyx__image_rsm_111_hgc" src="screenshots/back-home-menu.png"/></p></li>
+                                        <li class="- topic/li li">On the left navigation bar, go to <span class="+ topic/ph ui-d/menucascade ph menucascade"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Real-Time Communications</span><abbr title="and then"> &gt; </abbr><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Voice</span><abbr title="and then"> &gt; </abbr><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Settings</span><abbr title="and then"> &gt; </abbr><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Outbound Voice Profiles</span></span>.</li>
+                                    </ol></li>
+                                <li class="- topic/li li">At the top-right corner, click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Create
+                                        Profile</span>.<p class="- topic/p p"><img class="- topic/image image" id="integrate-yeastar-p-series-pbx-with-telnyx__image_ans_bb1_hgc" src="screenshots/telnyx-create-voice-profile.png" width="650"/></p></li>
+                                <li class="- topic/li li">Customize the profile as needed.</li>
+                            </ol>
+                        </dd>
+                    
+                    
+                        <dt class="- topic/dt dt dlterm" id="integrate-yeastar-p-series-pbx-with-telnyx__step3" data-ofbid="integrate-yeastar-p-series-pbx-with-telnyx__step3">3. Buy a phone number</dt>
+                        <dd class="- topic/dd dd">
+                            <ol class="- topic/ol ol">
+                                <li class="- topic/li li">On the left navigation bar, go to <span class="+ topic/ph ui-d/menucascade ph menucascade"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Real-Time Communications</span><abbr title="and then"> &gt; </abbr><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Numbers</span><abbr title="and then"> &gt; </abbr><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Buy Numbers</span></span>.<p class="- topic/p p"><img class="- topic/image image" id="integrate-yeastar-p-series-pbx-with-telnyx__image_hgc_vkg_hgc" src="screenshots/telnyx-buy-numbers-entry.png" width="650"/></p></li>
+                                <li class="- topic/li li">Search and buy a number with fax capability.<ol class="- topic/ol ol" type="a" id="integrate-yeastar-p-series-pbx-with-telnyx__ol_rmf_xpz_ggc" data-ofbid="integrate-yeastar-p-series-pbx-with-telnyx__ol_rmf_xpz_ggc">
+                                        <li class="- topic/li li">Under the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Buy Number</span> tab, set
+                                                <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Features</span> to
+                                                <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Fax</span> and configure additional
+                                            filters as needed, then click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Search
+                                                Numbers</span> to display available
+                                                  numbers.<p class="- topic/p p"><img class="- topic/image image" id="integrate-yeastar-p-series-pbx-with-telnyx__image_nss_nrz_ggc" src="screenshots/buy-number-fax-capability.png" width="650"/></p></li>
+                                        <li class="- topic/li li">Select the desired number and complete payment.<p class="- topic/p p">You
+                                                will be redirected to the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Manage
+                                                  Numbers</span> page, where the purchased
+                                                number is displayed.</p><p class="- topic/p p"><img class="- topic/image image" id="integrate-yeastar-p-series-pbx-with-telnyx__image_ilc_zxz_ggc" src="screenshots/telnyx-purchased-number.png" width="650"/></p></li>
+                                    </ol></li>
+                            </ol>
+                        </dd>
+                    
+                </dl>
+                <dl class="- topic/dl dl" id="integrate-yeastar-p-series-pbx-with-telnyx__dl_izx_yjz_ggc" data-ofbid="integrate-yeastar-p-series-pbx-with-telnyx__dl_izx_yjz_ggc">
+                    
+                        <dt class="- topic/dt dt dlterm" id="integrate-yeastar-p-series-pbx-with-telnyx__step4" data-ofbid="integrate-yeastar-p-series-pbx-with-telnyx__step4">4. Create a fax application</dt>
+                        <dd class="- topic/dd dd">
+                            <ol class="- topic/ol ol">
+                                <li class="- topic/li li">Access the fax creation page.<p class="- topic/p p"><img class="- topic/image image" id="integrate-yeastar-p-series-pbx-with-telnyx__image_dnh_htz_ggc" src="screenshots/fax-app-creation-page.png" width="650"/></p><ol class="- topic/ol ol" type="a" id="integrate-yeastar-p-series-pbx-with-telnyx__ol_kqn_qsz_ggc" data-ofbid="integrate-yeastar-p-series-pbx-with-telnyx__ol_kqn_qsz_ggc">
+                                        <li class="- topic/li li">On the left navigation bar, go to <span class="+ topic/ph ui-d/menucascade ph menucascade"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Real-Time Communications</span><abbr title="and then"> &gt; </abbr><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Fax</span></span>.</li>
+                                        <li class="- topic/li li">At the top-right corner, click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Create Fax
+                                                App</span>.</li>
+                                    </ol></li>
+                                <li class="- topic/li li">For <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Details</span>, configure the following
+                                    settings, then click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Create</span>.<p class="- topic/p p"><img class="- topic/image image" id="integrate-yeastar-p-series-pbx-with-telnyx__image_im1_h5z_ggc" src="screenshots/fax-app-detail-pae.png" width="500"/></p><p class="- topic/p p"></p><div class="- topic/p p">
+                                        <table class="- topic/table table frame-all" id="integrate-yeastar-p-series-pbx-with-telnyx__table_osz_fky_ggc" data-ofbid="integrate-yeastar-p-series-pbx-with-telnyx__table_osz_fky_ggc"><caption></caption><colgroup><col style="width:30.120481927710845%"/><col style="width:69.87951807228916%"/></colgroup><thead class="- topic/thead thead">
+                                                  <tr class="- topic/row">
+                                                  <th class="- topic/entry entry colsep-1 rowsep-1" id="integrate-yeastar-p-series-pbx-with-telnyx__table_osz_fky_ggc__entry__1">Setting</th>
+                                                  <th class="- topic/entry entry colsep-0 rowsep-1" id="integrate-yeastar-p-series-pbx-with-telnyx__table_osz_fky_ggc__entry__2">Description</th>
+                                                  </tr>
+                                                </thead><tbody class="- topic/tbody tbody">
+                                                  <tr class="- topic/row">
+                                                  <td class="- topic/entry entry colsep-1 rowsep-1" headers="integrate-yeastar-p-series-pbx-with-telnyx__table_osz_fky_ggc__entry__1">Application name</td>
+                                                  <td class="- topic/entry entry colsep-0 rowsep-1" headers="integrate-yeastar-p-series-pbx-with-telnyx__table_osz_fky_ggc__entry__2">Enter a name to help you identify the
+                                                  application.</td>
+                                                  </tr>
+                                                  <tr class="- topic/row">
+                                                  <td class="- topic/entry entry colsep-1 rowsep-1" headers="integrate-yeastar-p-series-pbx-with-telnyx__table_osz_fky_ggc__entry__1">Webhook URL</td>
+                                                  <td class="- topic/entry entry colsep-0 rowsep-1" headers="integrate-yeastar-p-series-pbx-with-telnyx__table_osz_fky_ggc__entry__2">Paste the <a class="- topic/xref xref" href="#integrate-yeastar-p-series-pbx-with-telnyx__webhook-url">Webhook URL</a> obtained from
+                                                  Yeastar PBX.</td>
+                                                  </tr>
+                                                  <tr class="- topic/row">
+                                                  <td class="- topic/entry entry colsep-1 rowsep-0" headers="integrate-yeastar-p-series-pbx-with-telnyx__table_osz_fky_ggc__entry__1">Timezone</td>
+                                                  <td class="- topic/entry entry colsep-0 rowsep-0" headers="integrate-yeastar-p-series-pbx-with-telnyx__table_osz_fky_ggc__entry__2">
+                                                  <p class="- topic/p p">Specify the time zone used in the fax header
+                                                  timestamps.</p>
+                                                  </td>
+                                                  </tr>
+                                                </tbody></table>
+                                    </div></li>
+                                <li class="- topic/li li">For <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Inbound</span>, retain the default settings
+                                    or configure it as needed, then click
+                                        <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Next</span>.<p class="- topic/p p"><img class="- topic/image image" id="integrate-yeastar-p-series-pbx-with-telnyx__image_as3_dvz_ggc" src="screenshots/fax-app-inbound.png" width="550"/></p></li>
+                                <li class="- topic/li li">For <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Outbound</span>, select <a class="- topic/xref xref" href="#integrate-yeastar-p-series-pbx-with-telnyx__step2">the OVP</a> from the drop-down list of
+                                        <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Outbound Voice Profile</span> to enable
+                                    outbound fax traffic, the click
+                                            <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Next</span>.<p class="- topic/p p"><img class="- topic/image image" id="integrate-yeastar-p-series-pbx-with-telnyx__image_hpg_mvz_ggc" src="screenshots/fax-app-outbound.png" width="550"/></p></li>
+                                <li class="- topic/li li">For <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Numbers</span>, click <img class="- topic/image image" id="integrate-yeastar-p-series-pbx-with-telnyx__image_ikt_lyz_ggc" src="screenshots/link-telnyx.png" width="20"/> to assign <a class="- topic/xref xref" href="#integrate-yeastar-p-series-pbx-with-telnyx__step3">the number</a> to the application.<p class="- topic/p p"><img class="- topic/image image" id="integrate-yeastar-p-series-pbx-with-telnyx__image_n1v_zyz_ggc" src="screenshots/telnyx-assign-number.png" width="650"/></p></li>
+                                <li class="- topic/li li">At the bottom-left corner, click
+                                        <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Complete</span>.<p class="- topic/p p">A window pops up,
+                                        indicating that the fax application is created.</p><p class="- topic/p p"><img class="- topic/image image" id="integrate-yeastar-p-series-pbx-with-telnyx__image_ahn_3zz_ggc" src="screenshots/telnyx-app-created.png" width="500"/></p></li>
+                                <li class="- topic/li li">Obtain the application ID.<ol class="- topic/ol ol" type="a" id="integrate-yeastar-p-series-pbx-with-telnyx__ol_lky_2my_ggc" data-ofbid="integrate-yeastar-p-series-pbx-with-telnyx__ol_lky_2my_ggc">
+                                        <li class="- topic/li li">Click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">View my
+                                                  application</span>.<p class="- topic/p p"><img class="- topic/image image" id="integrate-yeastar-p-series-pbx-with-telnyx__image_gmp_4zz_ggc" src="screenshots/telnyx-view-app.png" width="500"/></p></li>
+                                        <li class="- topic/li li" id="integrate-yeastar-p-series-pbx-with-telnyx__app-id" data-ofbid="integrate-yeastar-p-series-pbx-with-telnyx__app-id">Under the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Details</span>
+                                            tab, copy the application ID and save it for later
+                                                  use.<p class="- topic/p p"><img class="- topic/image image" id="integrate-yeastar-p-series-pbx-with-telnyx__image_idk_tzz_ggc" src="screenshots/telnyx-app-id.png" width="550"/></p></li>
+                                    </ol></li>
+                            </ol>
+                        </dd>
+                    
+                </dl>
+            </div>
+        </section>
+        <section class="- topic/section section" id="integrate-yeastar-p-series-pbx-with-telnyx__section_j1j_kmy_ggc" data-ofbid="integrate-yeastar-p-series-pbx-with-telnyx__section_j1j_kmy_ggc"><h2 class="- topic/title title sectiontitle">Step 3. Fill in credentials and configure fax settings on Yeastar PBX</h2>
+            
+            <p class="- topic/p p">On Yeastar PBX, fill in the credentials obtained from Telnyx, then configure the
+                fax-related settings to complete the fax integration.</p>
+            <div class="- topic/p p">
+                <ol class="- topic/ol ol">
+                    <li class="- topic/li li">Go to the fax integration page.<p class="- topic/p p"><img class="- topic/image image" id="integrate-yeastar-p-series-pbx-with-telnyx__d23e140" src="screenshots/fax-integration-page.png" width="500"/></p><ol class="- topic/ol ol" type="a" id="integrate-yeastar-p-series-pbx-with-telnyx__d23e141" data-ofbid="integrate-yeastar-p-series-pbx-with-telnyx__d23e141">
+                            <li class="- topic/li li">Log in to PBX web portal, go to <span class="+ topic/ph ui-d/menucascade ph menucascade"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Integrations</span><abbr title="and then"> &gt; </abbr><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Fax</span></span>.</li>
+                            <li class="- topic/li li">Under <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Fax Integration</span> tab, click
+                                    <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Add</span>.</li>
+                        </ol></li>
+                    <li class="- topic/li li">In the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Authorization</span> section, complete the
+                        authorization settings.<p class="- topic/p p"><img class="- topic/image image" id="integrate-yeastar-p-series-pbx-with-telnyx__image_isw_wng_hgc" src="screenshots/telnyx-auth-pae.png" width="650"/></p><p class="- topic/p p"></p><div class="- topic/p p">
+                            <table class="- topic/table table frame-all" id="integrate-yeastar-p-series-pbx-with-telnyx__table_kfb_qmy_ggc" data-ofbid="integrate-yeastar-p-series-pbx-with-telnyx__table_kfb_qmy_ggc"><caption></caption><colgroup><col style="width:21.929824561403507%"/><col style="width:78.07017543859648%"/></colgroup><thead class="- topic/thead thead">
+                                        <tr class="- topic/row">
+                                            <th class="- topic/entry entry colsep-1 rowsep-1" id="integrate-yeastar-p-series-pbx-with-telnyx__table_kfb_qmy_ggc__entry__1">Setting</th>
+                                            <th class="- topic/entry entry colsep-0 rowsep-1" id="integrate-yeastar-p-series-pbx-with-telnyx__table_kfb_qmy_ggc__entry__2">Description</th>
+                                        </tr>
+                                    </thead><tbody class="- topic/tbody tbody">
+                                        <tr class="- topic/row">
+                                            <td class="- topic/entry entry colsep-1 rowsep-1" headers="integrate-yeastar-p-series-pbx-with-telnyx__table_kfb_qmy_ggc__entry__1">Name</td>
+                                            <td class="- topic/entry entry colsep-0 rowsep-1" headers="integrate-yeastar-p-series-pbx-with-telnyx__table_kfb_qmy_ggc__entry__2">Enter a name to help you identify the
+                                                integration.</td>
+                                        </tr>
+                                        <tr class="- topic/row">
+                                            <td class="- topic/entry entry colsep-1 rowsep-1" headers="integrate-yeastar-p-series-pbx-with-telnyx__table_kfb_qmy_ggc__entry__1">Service Provider</td>
+                                            <td class="- topic/entry entry colsep-0 rowsep-1" headers="integrate-yeastar-p-series-pbx-with-telnyx__table_kfb_qmy_ggc__entry__2">Select <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Telnyx</span>.</td>
+                                        </tr>
+                                        <tr class="- topic/row">
+                                            <td class="- topic/entry entry colsep-1 rowsep-1" headers="integrate-yeastar-p-series-pbx-with-telnyx__table_kfb_qmy_ggc__entry__1">API Key</td>
+                                            <td class="- topic/entry entry colsep-0 rowsep-1" headers="integrate-yeastar-p-series-pbx-with-telnyx__table_kfb_qmy_ggc__entry__2">Paste the <a class="- topic/xref xref" href="#integrate-yeastar-p-series-pbx-with-telnyx__api-key">API key</a> obtained from
+                                                Telnyx.</td>
+                                        </tr>
+                                        <tr class="- topic/row">
+                                            <td class="- topic/entry entry colsep-1 rowsep-0" headers="integrate-yeastar-p-series-pbx-with-telnyx__table_kfb_qmy_ggc__entry__1">Application ID</td>
+                                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="integrate-yeastar-p-series-pbx-with-telnyx__table_kfb_qmy_ggc__entry__2">Paste the <a class="- topic/xref xref" href="#integrate-yeastar-p-series-pbx-with-telnyx__app-id">application ID</a> obtained from
+                                                Telnyx.</td>
+                                        </tr>
+                                    </tbody></table>
+                        </div></li>
+                    <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Optional:</strong> To forward inbound faxes as email attachments to designated
+                        addresses, perform the following operations.<p class="- topic/p p"><img class="- topic/image image" id="integrate-yeastar-p-series-pbx-with-telnyx__image_xp3_yqg_hgc" src="screenshots/fax-to-email-setting.png" width="650"/></p><ol class="- topic/ol ol" type="a" id="integrate-yeastar-p-series-pbx-with-telnyx__ol_ph1_mc1_hgc" data-ofbid="integrate-yeastar-p-series-pbx-with-telnyx__ol_ph1_mc1_hgc">
+                            <li class="- topic/li li">Click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Add</span>.<div class="- topic/p p">
+                                    <div class="- topic/note note note note_note" id="integrate-yeastar-p-series-pbx-with-telnyx__note_jxh_tpg_hgc" data-ofbid="integrate-yeastar-p-series-pbx-with-telnyx__note_jxh_tpg_hgc"><span class="note__title">Note:</span> You can add up to <strong class="+ topic/ph hi-d/b ph b">5</strong> email
+                                        entries.</div>
+                                </div></li>
+                            <li class="- topic/li li">In the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Email Type</span> drop-down list, select the
+                                type of email address and complete the corresponding settings.<ul class="- topic/ul ul" id="integrate-yeastar-p-series-pbx-with-telnyx__ul_i5l_sc1_hgc" data-ofbid="integrate-yeastar-p-series-pbx-with-telnyx__ul_i5l_sc1_hgc">
+                                    <li class="- topic/li li"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Extension's Email</span>: Send the inbound
+                                        faxes as email attachments to extension users'
+                                            mailboxes.<div class="- topic/p p">If you choose this option, select the
+                                            desired extensions from the
+                                                <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Extension/Email</span> drop-down
+                                                list.<div class="- topic/note note note note_note" id="integrate-yeastar-p-series-pbx-with-telnyx__note_lnm_pqg_hgc" data-ofbid="integrate-yeastar-p-series-pbx-with-telnyx__note_lnm_pqg_hgc"><span class="note__title">Note:</span> Ensure the selected
+                                                extensions have valid email addresses configured.
+                                                Otherwise, users will not receive the
+                                            emails.</div></div></li>
+                                    <li class="- topic/li li"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Specified Email</span>: Send the inbound
+                                        faxes as email attachments to a specified email
+                                            address.<p class="- topic/p p">If you choose this option, enter a custom
+                                            email address in the
+                                                <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Extension/Email</span>
+                                        field.</p></li>
+                                </ul></li>
+                        </ol></li>
+                    <li class="- topic/li li">Set fax number(s) and specify which extension users are authorized to send
+                        and receive faxes.<ol class="- topic/ol ol" type="a" id="integrate-yeastar-p-series-pbx-with-telnyx__ol_rwc_jd1_hgc" data-ofbid="integrate-yeastar-p-series-pbx-with-telnyx__ol_rwc_jd1_hgc">
+                            <li class="- topic/li li" id="integrate-yeastar-p-series-pbx-with-telnyx__a" data-ofbid="integrate-yeastar-p-series-pbx-with-telnyx__a">In the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Fax Number</span> section, click
+                                    <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Add</span>.</li>
+                            <li class="- topic/li li" id="integrate-yeastar-p-series-pbx-with-telnyx__b" data-ofbid="integrate-yeastar-p-series-pbx-with-telnyx__b">In the pop-up window, configure the following settings, then
+                                click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Save</span>.<div class="- topic/p p">
+                                    <table class="- topic/table table frame-all" id="integrate-yeastar-p-series-pbx-with-telnyx__table_mnr_vsg_hgc" data-ofbid="integrate-yeastar-p-series-pbx-with-telnyx__table_mnr_vsg_hgc"><caption></caption><colgroup><col style="width:29.850746268656714%"/><col style="width:70.1492537313433%"/></colgroup><thead class="- topic/thead thead">
+                                                <tr class="- topic/row">
+                                                  <th class="- topic/entry entry colsep-1 rowsep-1" id="integrate-yeastar-p-series-pbx-with-telnyx__table_mnr_vsg_hgc__entry__1">Setting</th>
+                                                  <th class="- topic/entry entry colsep-0 rowsep-1" id="integrate-yeastar-p-series-pbx-with-telnyx__table_mnr_vsg_hgc__entry__2">Description</th>
+                                                </tr>
+                                            </thead><tbody class="- topic/tbody tbody">
+                                                <tr class="- topic/row">
+                                                  <td class="- topic/entry entry colsep-1 rowsep-1" headers="integrate-yeastar-p-series-pbx-with-telnyx__table_mnr_vsg_hgc__entry__1">Fax Number</td>
+                                                  <td class="- topic/entry entry colsep-0 rowsep-1" headers="integrate-yeastar-p-series-pbx-with-telnyx__table_mnr_vsg_hgc__entry__2">Enter the <a class="- topic/xref xref" href="#integrate-yeastar-p-series-pbx-with-telnyx__step3">fax number</a> in E.164
+                                                  format.<div class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Example</strong>:
+                                                  +12498037994<div class="- topic/note note important note_important" id="integrate-yeastar-p-series-pbx-with-telnyx__note_yvc_r2w_hgc" data-ofbid="integrate-yeastar-p-series-pbx-with-telnyx__note_yvc_r2w_hgc"><span class="note__title">Important:</span> Remove
+                                                  hyphens <code class="+ topic/ph pr-d/codeph ph codeph">-</code> from the fax number,
+                                                  otherwise the fax delivery will
+                                                  fail.</div></div></td>
+                                                </tr>
+                                                <tr class="- topic/row">
+                                                  <td class="- topic/entry entry colsep-1 rowsep-1" headers="integrate-yeastar-p-series-pbx-with-telnyx__table_mnr_vsg_hgc__entry__1">Fax Reception Destination</td>
+                                                  <td class="- topic/entry entry colsep-0 rowsep-1" headers="integrate-yeastar-p-series-pbx-with-telnyx__table_mnr_vsg_hgc__entry__2">Select extensions or extension groups that
+                                                  can receive inbound faxes.<p class="- topic/p p">The designated users
+                                                  can view inbound faxes from Linkus Desktop or Web
+                                                  Client (Path: <span class="+ topic/ph ui-d/menucascade ph menucascade"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Fax</span><abbr title="and then"> &gt; </abbr><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Fax</span></span>).</p></td>
+                                                </tr>
+                                                <tr class="- topic/row">
+                                                  <td class="- topic/entry entry colsep-1 rowsep-0" headers="integrate-yeastar-p-series-pbx-with-telnyx__table_mnr_vsg_hgc__entry__1">Extensions Allowed to Send Fax</td>
+                                                  <td class="- topic/entry entry colsep-0 rowsep-0" headers="integrate-yeastar-p-series-pbx-with-telnyx__table_mnr_vsg_hgc__entry__2">Select extensions/extension groups that can
+                                                  send faxes.<p class="- topic/p p">The designated users can send faxes
+                                                  from Linkus Desktop or Web Client (Path: <span class="+ topic/ph ui-d/menucascade ph menucascade"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Fax</span><abbr title="and then"> &gt; </abbr><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Fax</span></span>).</p></td>
+                                                </tr>
+                                            </tbody></table>
+                                </div></li>
+                            <li class="- topic/li li">To add more fax numbers, repeat steps <a class="- topic/xref xref" href="#integrate-yeastar-p-series-pbx-with-telnyx__a"><strong class="+ topic/ph hi-d/b ph b">a</strong></a>-<a class="- topic/xref xref" href="#integrate-yeastar-p-series-pbx-with-telnyx__b"><strong class="+ topic/ph hi-d/b ph b">b</strong></a>.</li>
+                        </ol></li>
+                    <li class="- topic/li li">Click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Save</span>.</li>
+                </ol>
+            </div>
+        </section>
+        <section class="- topic/section section" id="integrate-yeastar-p-series-pbx-with-telnyx__section_vwz_m21_hgc" data-ofbid="integrate-yeastar-p-series-pbx-with-telnyx__section_vwz_m21_hgc"><h2 class="- topic/title title sectiontitle">Result</h2>
+            
+            <p class="- topic/p p">The <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Status</span> displays <img class="- topic/image image" id="integrate-yeastar-p-series-pbx-with-telnyx__image_zr3_jf1_hgc" src="screenshots/trunk-ok.png" width="20"/>, indicating the integration with Telnyx has
+                been set up successfully.</p>
+            <p class="- topic/p p"><img class="- topic/image image" id="integrate-yeastar-p-series-pbx-with-telnyx__image_gyg_lg1_hgc" src="screenshots/telnyx-succeed.png" width="650"/>
+            </p>
+        </section>
+        <section class="- topic/section section" id="integrate-yeastar-p-series-pbx-with-telnyx__section_zc5_h5g_hgc" data-ofbid="integrate-yeastar-p-series-pbx-with-telnyx__section_zc5_h5g_hgc"><h2 class="- topic/title title sectiontitle">What to do next</h2>
+            
+            <div class="- topic/p p">
+                <ol class="- topic/ol ol">
+                    <li class="- topic/li li">(Optional) Customize cover pages, which will be accessible to extension
+                        users when they send faxes.<p class="- topic/p p">For more information, see <a class="- topic/xref xref" href="add-a-fax-cover-page.html" title="Fax Cover Page appears as the first page of an outbound fax, typically displaying essential fields such as sender information, recipient details, brief message, etc. This topic describes how administrator can configure a fax cover page from PBX web portal.">Add a Fax Cover Page</a>.</p></li>
+                    <li class="- topic/li li">Instruct extension users on how to send faxes from their Linkus Desktop or
+                        Web Client.<p class="- topic/p p">For more information, see
+                            xxx.</p></li>
+                </ol>
+            </div>
+        </section>
+    </div>
+</article></main></div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                    
+                        
+                        
+                        
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div> 
+        <footer class="navbar navbar-default wh_footer" whc:version="23.1">
+  <div class=" footer-container mx-auto ">
+    <div class="footer-html-en"></div>
+  </div>
+</footer>
+        
+        <div id="go2top" class="d-print-none">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </div>
+        
+        <!-- The modal container for images -->
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <!-- Modal Content (The Image) -->
+            <img class="modal-content" id="modal-img" alt=""/>
+            <!-- Modal Caption (Image Text) -->
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
+</html>

@@ -1,0 +1,146 @@
+<link rel="stylesheet" href="./css/p-series.css">   
+<link rel="stylesheet" href="./css/notes.css">   
+<script src="./iframe-navigation.js"></script>  
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9CK8527Q6J"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-9CK8527Q6J');
+</script>
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "hxj5h8f90e");
+</script><div class="wh_content_area">
+                <div class="row">
+                    
+                    
+                    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12" id="wh_topic_body">
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="- topic/title title topictitle1" id="ariaid-title1">Enable WebSocket Real Time Audio Streaming</h1>
+    
+    <div class="- topic/body body"><p class="- topic/shortdesc shortdesc">This topic describes how to enable WebSocket Real Time Audio Streaming, including
+        configuring server address and
+        selecting
+        which extensions, trunks, or DID numbers' call audio streams will be
+        transmitted.</p>
+        <section class="- topic/section section" id="enable-websocket-real-time-audio-streaming__section_f13_snl_qfc" data-ofbid="enable-websocket-real-time-audio-streaming__section_f13_snl_qfc"><h2 class="- topic/title title sectiontitle">Requirements</h2>
+            
+            <div class="- topic/p p">
+                <ul class="- topic/ul ul">
+                    <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Firmware</strong>:
+                            <span class="- topic/ph ph">83.20.0.x</span>
+                        or later</li>
+                    <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Subscription</strong>: <strong class="+ topic/ph hi-d/b ph b">Ultimate Plan</strong></li>
+                    <li class="- topic/li li">
+                        <p class="- topic/p p">You
+                            have obtained the server address of the third-party platform for
+                            receiving the audio
+                            stream.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="- topic/section section" id="enable-websocket-real-time-audio-streaming__section_iln_fyf_qfc" data-ofbid="enable-websocket-real-time-audio-streaming__section_iln_fyf_qfc"><h2 class="- topic/title title sectiontitle">Procedure</h2>
+            
+            <div class="- topic/p p">
+                <ol class="- topic/ol ol" id="enable-websocket-real-time-audio-streaming__ol_zkx_fyf_qfc" data-ofbid="enable-websocket-real-time-audio-streaming__ol_zkx_fyf_qfc">
+                    <li class="- topic/li li">Log in to PBX web portal, go to <span class="+ topic/ph ui-d/menucascade ph menucascade"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Integrations</span><abbr title="and then"> &gt; </abbr><span class="+ topic/ph ui-d/uicontrol ph uicontrol">WebSocket Audio Streaming</span></span>.</li>
+                    <li class="- topic/li li">Turn on <span class="+ topic/ph ui-d/uicontrol ph uicontrol">WebSocket Audio Streaming</span> to enable the
+                        feature.</li>
+                    <li class="- topic/li li">Configure WebSocket audio streaming settings:<p class="- topic/p p"><img class="- topic/image image" id="enable-websocket-real-time-audio-streaming__image_vdp_1gm_qfc" src="screenshots/websocket-audio-streaming-setting.png" width="650"/></p><ol class="- topic/ol ol" type="a" id="enable-websocket-real-time-audio-streaming__ol_qf5_zgl_qfc" data-ofbid="enable-websocket-real-time-audio-streaming__ol_qf5_zgl_qfc">
+                            <li class="- topic/li li">In the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Server Address</span>, select the protocol
+                                    (<code class="+ topic/ph pr-d/codeph ph codeph">ws://</code> or <code class="+ topic/ph pr-d/codeph ph codeph">wss://</code>) and enter
+                                the server address for receiving real-time audio streaming.</li>
+                            <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Optional:</strong>
+                                In
+                                the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Secret</span> field,
+                                enter
+                                the authentication credentials provided by the
+                                third-party platform. <div class="- topic/p p">
+                                    <div class="- topic/note note note note_note" id="enable-websocket-real-time-audio-streaming__note_tct_pwz_3gc" data-ofbid="enable-websocket-real-time-audio-streaming__note_tct_pwz_3gc"><span class="note__title">Note:</span> You can click <img class="- topic/image image" id="enable-websocket-real-time-audio-streaming__image_umk_cl5_hgc" src="screenshots/edit.png" width="20"/> to customize the option name
+                                        based on the specific authentication field names required by
+                                        different platforms.</div>
+                                </div></li>
+                            <li class="- topic/li li">In the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Sample Rate</span> drop-down list, select the
+                                sample rate of the audio stream to be transmitted.<div class="- topic/p p">
+                                    <div class="- topic/note note note note_note" id="enable-websocket-real-time-audio-streaming__note_cck_jpm_jgc" data-ofbid="enable-websocket-real-time-audio-streaming__note_cck_jpm_jgc"><span class="note__title">Note:</span> The audio encoding format is fixed
+                                        as <code class="+ topic/ph pr-d/codeph ph codeph">PCM</code>.</div>
+                                </div></li>
+                            <li class="- topic/li li">In the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Subscription Object</span>, specify which
+                                calls will be transmit to the third-party platform via WebSocket.<ul class="- topic/ul ul" id="enable-websocket-real-time-audio-streaming__ul_mb3_2zz_3gc" data-ofbid="enable-websocket-real-time-audio-streaming__ul_mb3_2zz_3gc">
+                                    <li class="- topic/li li"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Extension</span>: Audio streams from calls
+                                        involving the selected extensions will be transmitted to the
+                                        third-party platform.</li>
+                                    <li class="- topic/li li"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Trunk</span>: Audio streams from inbound and
+                                        outbound calls routed through the selected trunks will be
+                                        transmitted to the third-party platform.</li>
+                                    <li class="- topic/li li"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">DID Number</span>: Audio streams from
+                                        inbound calls
+                                        via the trunks
+                                        associated with the selected DID numbers
+                                        will be transmitted to the third-party platform. <div class="- topic/note note note note_note" id="enable-websocket-real-time-audio-streaming__note_r2y_xcn_jgc" data-ofbid="enable-websocket-real-time-audio-streaming__note_r2y_xcn_jgc"><span class="note__title">Note:</span> The DID numbers listed here are
+                                            synchronized from the DID numbers configured in
+                                            trunks.</div></li>
+                                </ul></li>
+                        </ol></li>
+                    <li class="- topic/li li">Click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Save</span>.</li>
+                </ol>
+            </div>
+        </section>
+        <section class="- topic/section section" id="enable-websocket-real-time-audio-streaming__section_twh_c1l_qfc" data-ofbid="enable-websocket-real-time-audio-streaming__section_twh_c1l_qfc"><h2 class="- topic/title title sectiontitle">Result</h2>
+            
+            <p class="- topic/p p">For calls that match the subscribed extension, trunk, or DID number criteria, the
+                complete audio streams of all participants in the call will be transmitted to the
+                third-party platform in real time.</p>
+        </section>
+    </div>
+</article></main></div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                    
+                        
+                        
+                        
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div> 
+        <footer class="navbar navbar-default wh_footer" whc:version="23.1">
+  <div class=" footer-container mx-auto ">
+    <div class="footer-html-en"></div>
+  </div>
+</footer>
+        
+        <div id="go2top" class="d-print-none">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </div>
+        
+        <!-- The modal container for images -->
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <!-- Modal Content (The Image) -->
+            <img class="modal-content" id="modal-img" alt=""/>
+            <!-- Modal Caption (Image Text) -->
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
+</html>
